@@ -10,8 +10,11 @@
 
     <!-- Publish static files -->
     <browser:resourceDirectory
-      name="sac.aerofacil"
-      directory="static"
-      />
+        name="sac.aerofacil"
+        directory="static"
+        />
+
+    <!-- Register a theme for installation into the site -->
+    <plone:static directory="static" name="aerofacil" type="theme" />
 
 </configure>

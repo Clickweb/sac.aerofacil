@@ -22,9 +22,9 @@
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
         name="default"
-        title="sac.aerofacil"
+        title="Aerofácil"
         directory="profiles/default"
-        description="Extension profile for sac.aerofacil."
+        description="Perfil de instalação do hotsite Aerofácil (SAC/PR)"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 

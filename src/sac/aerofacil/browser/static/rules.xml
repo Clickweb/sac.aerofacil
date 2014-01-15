@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <theme href="theme.html" css:if-content="#visual-portal-wrapper" />
+  <xsl:output method="html" />
+
+  <!-- Head -->
+  <copy attributes="lang dir" css:content="html" css:theme="html" />
+  <!-- TODO: Descartar linhas comentadas quando resolver bug do registro dos resources: http://stackoverflow.com/questions/18877354/how-can-i-make-plone-portal-registries-find-and-cook-new-style-static-resources -->
+  <!--before css:content="head base, head meta, head link, head style, head script" css:theme-children="head" /-->
+  <!--replace css:content="head title" css:theme="head title" /-->
+  <replace css:content-children="head" css:theme-children="head" />
+
+  <!-- Top -->
+  <copy attributes="*" css:content="body" css:theme="body" />
+  <before css:content="#portal-header > p.hiddenStructure" css:theme-children="body" />
+  <before css:content="#portal-personaltools-wrapper" css:theme-children="body" css:if-content="#user-name" />
+  <copy attributes="action" css:content="#portal-searchbox form" css:theme="#global-nav-search" />
+  <copy attributes="href title" css:content="#portal-logo" css:theme="#logo" />
+
+  <!-- Column Content -->
+  <copy css:content-children="#portal-column-content" css:theme="#column-content" />
+  <replace css:content-children="#portal-column-one" css:theme="#portal-column-one" />
+  <drop css:theme="#portal-column-two" />
+
+  <!-- Footer -->
+  <replace css:content="#portal-footer-wrapper footer" css:theme="footer" />
+  
+</rules>
