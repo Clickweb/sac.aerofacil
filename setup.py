@@ -43,6 +43,8 @@ setup(
         'plone.api',
         'setuptools',
         'z3c.jbot',
+        'collective.cover',
+        'sc.embedder'
     ],
     extras_require={
         'test': [
