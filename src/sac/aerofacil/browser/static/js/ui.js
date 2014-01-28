@@ -37,7 +37,7 @@
         if (lista_noticias.length) {
           lista_noticias.flexslider({
             animation: "slide",
-            controlNav: false  
+            controlNav: false
           });
         }
 
@@ -49,7 +49,7 @@
             }, 1000);
             return false;
         });
-        
+
         $('.lk-aeroporto-home').click(function (){
             $(this).hide();
             $('.select-aeroporto-home').fadeIn();

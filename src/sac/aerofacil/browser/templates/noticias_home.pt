@@ -18,7 +18,7 @@
                 tal:attributes="href noticia/getURL;
                                 title noticia/Description">Saiba mais</a>
           </li>
-        </ul>        
+        </ul>
       </div>
     </div>
   </div>

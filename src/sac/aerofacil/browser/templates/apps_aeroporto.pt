@@ -8,17 +8,17 @@
     <div class="box-apps-aero box-app-taxi" id="app-1">
       <h3>Aplicativo <span>Onde tem táxi aqui</span></h3>
       <p>Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
-      <a href="aplicativos-taxi.html" class="lk-seta verde">Acesse</a>   
+      <a href="aplicativos-taxi.html" class="lk-seta verde">Acesse</a>
     </div>
     <div class="box-apps-aero box-app-voo" id="app-2">
       <h3>Aplicativo <span class="amarelo">Infraero voos online</span></h3>
       <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas. Com ele, você pode consultar os horários de partidas e chegadas, distância entre aeroportos.</p>
-      <a href="aplicativos-voo.html" class="lk-seta verde">Acesse</a>          
+      <a href="aplicativos-voo.html" class="lk-seta verde">Acesse</a>
     </div>
     <div class="box-apps-aero box-app-viajantes" id="app-3">
       <h3>Aplicativo <span>Viajantes</span></h3>
       <p>Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais. Dicas de viagem, Declaração Eletrônica de Bens de Viajante entre outros serviços.</p>
-      <a href="aplicativos-viajantes.html" class="lk-seta verde">Acesse</a>          
+      <a href="aplicativos-viajantes.html" class="lk-seta verde">Acesse</a>
     </div>
   </div>
 </div>

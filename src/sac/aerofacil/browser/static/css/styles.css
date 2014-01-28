@@ -25,7 +25,7 @@ body {
     src: url('../fonts/gothamrnd-light-webfont.svg#gotham_roundedlight') format('svg'),
          url('../fonts/gothamrnd-light-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/gothamrnd-light-webfont.woff') format('woff'),
-         url('../fonts/gothamrnd-light-webfont.ttf') format('truetype');         
+         url('../fonts/gothamrnd-light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -117,19 +117,19 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .topo h1 {
   float: left;
   width: 200px;
-  height: 130px;  
-  margin: 100px 0 0 80px;  
+  height: 130px;
+  margin: 100px 0 0 80px;
 }
   .topo h1 a {
     float: left;
     width: 200px;
-    height: 130px;  
+    height: 130px;
     text-indent: -9999px;
   }
 
 .menu {float: right; width: 440px; padding: 90px 0 0 0;}
   .menu li {
-    float: left;        
+    float: left;
     width: 420px;
     padding: 0 0 5px 0;
   }
@@ -142,7 +142,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     color: #2d2d2d;
     font-weight: bold;
     font-family: 'gotham_roundedmedium';
-    background: url(../images/marcador.png) no-repeat 0 0; 
+    background: url(../images/marcador.png) no-repeat 0 0;
     padding: 0 0 10px 20px;
   }
   .menu span {width: 17px; height: 17px; display: inline-block; vertical-align: top; margin: 3px 0 0 4px;}
@@ -220,7 +220,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 /* AEROPORTOS */
 .aeroportos-brasileiros .miolo {
-  float: left; 
+  float: left;
   padding: 230px 0 0 160px;
   width: 520px; 
 }
@@ -358,7 +358,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   border: 1px solid #007739;
   padding: 5px;
   margin: 2px 0 0 0;
-  width: 250px;  
+  width: 250px;
   display: none;
 }
 
@@ -376,11 +376,11 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
     .centraliza {
       width: 100%;
-      padding: 0; 
+      padding: 0;
     }
 
-    
     #topo { position: relative; }
+
     .barra-topo { height: 40px; padding: 0; }
 
     .topo {
@@ -407,10 +407,10 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     }
     .redes .rede-twitter a {background-position: 12px 10px;}
     .redes .rede-youtube a {background-position: -28px 10px;}
-    .redes .rede-facebook a {background-position: -69px 10px;} 
+    .redes .rede-facebook a {background-position: -69px 10px;}
 
     .menu { position: absolute; float: inherit; width: 100%; padding:0; left: 0; top:40px; z-index: 2;}
-    .menu li { float: inherit; width: 100%; height: 40px; padding: 0; background: #cb9900; display: none; 
+    .menu li { float: inherit; width: 100%; height: 40px; padding: 0; background: #cb9900; display: none;
       background: -moz-linear-gradient(top,  rgba(184,139,0,0.91) 0%, rgba(185,140,0,1) 3%, rgba(186,140,0,0.95) 5%, rgba(190,143,0,0.95) 23%, rgba(212,160,0,0.95) 77%, rgba(217,163,0,0.95) 95%, rgba(217,163,0,1) 97%, rgba(218,164,0,0.91) 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(184,139,0,0.91)), color-stop(3%,rgba(185,140,0,1)), color-stop(5%,rgba(186,140,0,0.95)), color-stop(23%,rgba(190,143,0,0.95)), color-stop(77%,rgba(212,160,0,0.95)), color-stop(95%,rgba(217,163,0,0.95)), color-stop(97%,rgba(217,163,0,1)), color-stop(100%,rgba(218,164,0,0.91))); /* Chrome,Safari4+ */
       background: -webkit-linear-gradient(top,  rgba(184,139,0,0.91) 0%,rgba(185,140,0,1) 3%,rgba(186,140,0,0.95) 5%,rgba(190,143,0,0.95) 23%,rgba(212,160,0,0.95) 77%,rgba(217,163,0,0.95) 95%,rgba(217,163,0,1) 97%,rgba(218,164,0,0.91) 100%); /* Chrome10+,Safari5.1+ */
@@ -428,8 +428,8 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       font-size: 14px;
       color: #ffffff;
       font-weight: bold;
-      background: none; 
-      padding:10px;
+      background: none;
+      padding: 10px;
       display: block;
     }
     .menu span {width: 30px; height: 21px; margin: 0; }
@@ -448,9 +448,9 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       float: right;
       width: 40px;
       height: 40px;
-      background: url(../images/mobile/topo-menu.png) no-repeat 8px 10px;    
+      background: url(../images/mobile/topo-menu.png) no-repeat 8px 10px;
       text-indent: -99999px;
-      border-left: 2px solid #e7af00; 
+      border-left: 2px solid #e7af00;
     }
 
   .menu-mobile.hover { background-color: #B88B00; }
@@ -524,7 +524,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       background-image: url(../images/mobile/topo-menu-icones@2x.png);
       background-size: 17px 140px;
   }
- 
+
   .topo h1 { background-image: url(../images/mobile/topo-logo@2x.png); background-size: 250px 102px; }
 
 }
