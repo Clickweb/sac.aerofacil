@@ -15,17 +15,20 @@
 
   <!-- Top -->
   <copy attributes="*" css:content="body" css:theme="body" />
-  <before css:content="#portal-header > p.hiddenStructure" css:theme-children="body" />
-  <before css:content="#portal-personaltools-wrapper" css:theme-children="body" css:if-content="#user-name" />
-  <copy attributes="action" css:content="#portal-searchbox form" css:theme="#global-nav-search" />
-  <copy attributes="href title" css:content="#portal-logo" css:theme="#logo" />
+  <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="body" />
+  <after css:content="#portal-personaltools-wrapper" css:theme=".barra-topo .centraliza" css:if-content="#user-name" />
+  <copy attributes="href title" css:content="#portal-logo" css:theme=".topo h1 a" />
+  <replace css:content=".menu" css:theme=".menu" />
 
   <!-- Column Content -->
-  <copy css:content-children="#portal-column-content" css:theme="#column-content" />
-  <replace css:content-children="#portal-column-one" css:theme="#portal-column-one" />
-  <drop css:theme="#portal-column-two" />
-
-  <!-- Footer -->
-  <replace css:content="#portal-footer-wrapper footer" css:theme="footer" />
+  <replace css:content-children="#portal-column-content" css:theme-children=".conteudo"
+      css:if-not-content=".section-home.template-view, .section-home.template-folder_listing" />
+  <before css:content-children="#portal-column-one" css:theme-children=".conteudo" css:if-content="" />
+  <after css:content-children="#portal-column-two" css:theme-children=".conteudo" css:if-content="" />
+  
+  <!-- Home -->
+  <before css:content="#edit-bar" css:theme="#topo" css:if-content=".section-home" />
+  <replace css:content=".destaques" css:theme-children=".destaques" css:if-content="" />
+  <replace css:content=".noticias" css:theme-children=".noticias" css:if-content="" />
   
 </rules>
