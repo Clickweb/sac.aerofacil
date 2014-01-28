@@ -1,0 +1,24 @@
+  <div class="faixa noticias"
+      tal:define="noticias view/noticias"
+      tal:condition="noticias">
+    <div class="centraliza">
+      <div class="lista-noticias">
+        <ul class="slides"
+            tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+          <li class="lista-noticia"
+              tal:repeat="noticia noticias">
+            <p>
+              <strong tal:content="noticia/pretty_title_or_id">Pesquisa revela humor do brasileiro com aeroportos</strong><br>
+              <span tal:content="python:toLocalizedTime(noticia.Date)">13/01/2014</span>
+            </p>
+            <p tal:content="noticia/Description">
+              Usuários mostram satisfação com cordialidade no atendimento e insatisfação com preços dentro dos saguões.
+            </p>
+            <a class="lk-seta-left verde"
+                tal:attributes="href noticia/getURL;
+                                title noticia/Description">Saiba mais</a>
+          </li>
+        </ul>        
+      </div>
+    </div>
+  </div>

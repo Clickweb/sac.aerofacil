@@ -6,15 +6,94 @@
 
     <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
     <include package="z3c.jbot" file="meta.zcml" />
-    <browser:jbot directory="overrides" layer="..interfaces.ISacAerofacilLayer" />
+    <browser:jbot directory="overrides" layer="..interfaces.ISACAerofacilLayer" />
 
     <!-- Publish static files -->
-    <browser:resourceDirectory
-        name="sac.aerofacil"
-        directory="static"
-        />
+    <browser:resourceDirectory name="sac.aerofacil" directory="static" />
 
     <!-- Register a theme for installation into the site -->
     <plone:static directory="static" name="aerofacil" type="theme" />
+
+    <!-- Viewlets registration -->
+
+    <browser:viewlet
+        name="sac.aerofacil.destaques_home"
+        for="..interfaces.IHome"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class=".viewlets.DestaquesHomeViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.noticias_home"
+        for="..interfaces.IHome"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.NoticiasHomeViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.outras_noticias"
+        for="Products.ATContentTypes.interface.IATNewsItem"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.OutrasNoticiasViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.ebook"
+        for="..interfaces.IGuiaDoPassageiro"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.EBookViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.apps_aplicativo"
+        for="..interfaces.IAplicativo"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.AppsAplicativoViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.apps_aeroporto"
+        for="..interfaces.IAeroporto"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.AppsAeroportoViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <!--browser:viewlet
+        name="sac.aerofacil.select_aeroporto"
+        for="..interfaces.IAeroporto"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class=".viewlets.SelectAeroportoViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.share"
+        for="*"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.ShareViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        /-->
 
 </configure>

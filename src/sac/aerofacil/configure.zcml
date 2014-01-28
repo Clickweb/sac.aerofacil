@@ -13,7 +13,7 @@
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
 
-    <!-- Include sub-packages that use their own configure.zcml files. -->
+    <!-- Include sub-packages that use their own configure.zcml files -->
     <include package=".browser" />
 
     <!-- Register all components defined with grok -->

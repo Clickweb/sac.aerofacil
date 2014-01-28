@@ -1,0 +1,11 @@
+<div class="outras-noticias">
+  <div class="centraliza">
+    <strong>Outras notícias:</strong><br>
+    <tal:block repeat="noticia view/noticias">
+      <a tal:attributes="href noticia/getURL;
+                         title noticia/pretty_title_or_id;
+                         rel noticia/id">
+        Pesquisa revela humor do brasileiro com aeroportos</a><br>
+    </tal:block>
+  </div>
+</div>

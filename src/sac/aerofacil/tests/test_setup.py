@@ -24,7 +24,7 @@ class TestInstall(IntegrationTestCase):
 
     # browserlayer.xml
     def test_browserlayer(self):
-        """Test that ISacAerofacilLayer is registered."""
-        from sac.aerofacil.interfaces import ISacAerofacilLayer
+        """Test that ISACAerofacilLayer is registered."""
+        from sac.aerofacil.interfaces import ISACAerofacilLayer
         from plone.browserlayer import utils
-        self.failUnless(ISacAerofacilLayer in utils.registered_layers())
+        self.failUnless(ISACAerofacilLayer in utils.registered_layers())

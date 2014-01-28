@@ -1,0 +1,19 @@
+<div class="aplicativos-interna">
+  <ul class="slides lista-aplicativos-interna">
+    <li class="app-viajantes">
+      <h3>Aplicativo <span>Viajantes</span></h3>
+      <p>Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais.</p>
+      <a href="aplicativos-viajantes.html" class="lk-seta verde">Acesse</a>
+    </li>
+    <li class="app-taxi">
+      <h3>Aplicativo <span>Onde tem táxi aqui</span></h3>
+      <p>Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
+      <a href="aplicativos-taxi.html" class="lk-seta verde">Acesse</a>
+    </li>
+    <li class="app-voo">
+      <h3>Aplicativo <span class="amarelo">Infraero voos online</span></h3>
+      <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas. </p>
+      <a href="aplicativos-voo.html" class="lk-seta verde">Acesse</a>
+    </li>
+  </ul>
+</div>

@@ -2,6 +2,6 @@
 <layers>
   <layer
     name="sac.aerofacil"
-    interface="sac.aerofacil.interfaces.ISacAerofacilLayer"
+    interface="sac.aerofacil.interfaces.ISACAerofacilLayer"
   />
 </layers>

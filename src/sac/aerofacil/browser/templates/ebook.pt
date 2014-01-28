@@ -1,0 +1,10 @@
+<div class="col-download-ebook">
+  <a class="download-ebook" target="_blank"
+    tal:attributes="href ${context/@@plone_portal_state/portal_url}/guia-do-passageiro/guia-do-passageiro.pdf" >
+  ebook
+    <span class="titulo verde">Guia do Passageiro</span>
+    <span class="descricao">Baixe a versão em PDF do Guia do Passageiro e fique sempre bem informado.</span>
+    <span class="lk-seta amarelo">Baixar</span><br>
+  </a>
+  <a href="http://issuu.com/manunodari/docs/guiapassageiro" target="_blank" class="lk-seta amarelo lk-issu">Visualizar</a>
+</div>
