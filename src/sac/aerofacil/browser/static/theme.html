@@ -1,171 +1,290 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
 <head>
-    <title>Aerofácil &ndash; Serviço de Aviação Civil</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.ico" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ui.js"></script>
+  <meta charset="UTF-8">  
+  <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>    
+  <script src="js/ui.js"></script>  
+  <title>Aerofácil | Seu guia para viajar de avião | Página inicial</title>
+  <meta property="og:image" content="http://www.aerofacil.gov.br/images/logo-face.jpg"/>
+  <meta name="keywords" content="viagem, guia de viagem, aerofacil, aeroporto, guia aeroportos, aeroportos do brasil, horarios de voos, turismo, viagem aerea, viajar de avião, viagem de avião, organizar viagem, planejar viagem, aviação civil, ANAC, Infraero, taxi, taxi aeroporto" />
+  <meta name="description" content="Tudo o que você precisa saber para organizar sua viagem aérea. Conheça os aeroportos do Brasil. Veja nosso Guia do Passageiro, notícias, aplicativos e informações úteis para quem quer aproveitar o máximo da viagem. Turismo. Aviação Civil. ANAC. Infraero." />
 </head>
-
 <body class="section-home">
-
-    <div class="navbar navbar-fixed-top">
-        <ul class="container">
-            <li><a href="#Twitter">&nbsp;</a></li>
-            <li><a href="#YouTube">&nbsp;</a></li>
-            <li><a href="#Facebook">&nbsp;</a></li>
-            <li><a href="#AviacaoGovBr">&nbsp;</a></li>
-            <li class="pull-right">Compartilhe</li>
+  <div id="topo">
+    <div class="barra-topo">
+      <div class="centraliza">
+        <ul class="redes">
+          <li class="rede-twitter"><a href="https://twitter.com/AviacaoGovBr">twitter</a></li>
+          <li class="rede-youtube" style="display:none"><a href="#">youtube</a></li>
+          <li class="rede-facebook"><a href="https://www.facebook.com/AviacaoGovBr">facebook</a></li>
+          <li>/AviacaoGovBr</li>
         </ul>
-    </div>
-    
-    <div id="container" class="container">
-      <div class="row">
-        <div id="column-content" class="span12">
-            <div id="topo" class="row">
-                <a id="logo" class="span3" href="#" title="Acessar a página inicial">
-                    <img src="imgs/logo.png" width="196" height="115" alt="Logomarca Aerofácil" />
-                </a>
-                <ul id="menu" class="offset8">
-                    <li><a href="#">Aplicativos e ferramentas</a></li>
-                    <li><a href="#">Guia do passageiro</a></li>
-                    <li><a href="#">Aeroportos brasileiros</a></li>
-                    <li><a href="#">Notícias</a></li>
-                    <li><a href="#">Informações</a></li>
-                </ul>
-            </div>
-            <div id="destaques" class="row">
-                <div class="span6">
-                    <h4>Destaques</h4>
-                    <h2>Primeiro aeromóvel do Brasil é inaugurado em Porto Alegre</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis. Maecenas tristique, elit ac tempus auctor, odio turpis placerat felis, vel auctor justo augue sit amet ante. Quisque pharetra neque porta, bibendum tellus in, dictum magna. In sit amet erat dictum, accumsan ipsum nec, lobortis tortor.</p>
-                    <p class="mais"><a href="#">Saiba mais</a></p>
-                </div>
-                <div class="span6">
-                    <img src="imgs/destaque-foto.jpg" class="pull-right" width="540" height="540" alt="Destaque - Foto" />
-                </div>
-            </div>
-            <div id="apps">
-                <div class="row">
-                    <div class="offset4 span8">
-                        <h4>Aplicativo</h4>
-                        <h2>Infraero voos online</h2>
-                        <img src="imgs/apps-01.jpg" class="pull-right" width="220" height="200" alt="Captura de tela" />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                        <p class="mais"><a href="#">Acesse</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="offset4 span4">
-                        <h4>Aplicativo</h4>
-                        <h2>Viajantes</h2>
-                        <img src="imgs/apps-02.jpg" class="pull-right" width="220" height="200" alt="Captura de tela" />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                        <p class="mais"><a href="#">Acesse</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span4">
-                        <h4>Aplicativo</h4>
-                        <h2>Onde tem táxi aqui</h2>
-                        <img src="imgs/apps-03.jpg" class="pull-right" width="220" height="200" alt="Captura de tela" />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                        <p class="mais"><a href="#">Acesse</a></p>
-                    </div>
-                </div>
-            </div>
-            <div id="guia-passageiro" class="row">
-                <div class="span6">
-                    <img src="imgs/guia-passageiro.jpg" width="528" height="396" alt="Guia do passageiro" />
-                </div>
-                <div class="span6">
-                    <h2>Guia do passageiro</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                    <ul>
-                        <li><a href="#">Antes de viajar</a></li>
-                        <li><a href="#">Durante o voo</a></li>
-                        <li><a href="#">No desembarque</a></li>
-                        <li><a href="#">Viagens internacionais</a></li>
-                        <li><a href="#">Clique aqui para baixar a versão em PDF</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="aeroportos" class="row">
-                <div class="span6">
-                    <h2>Aeroportos do Brasil</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                    <form>
-                        <select>
-                            <option>Aracaju</a></li>
-                            <option>Rio de Janeiro - Galeão</a></li>
-                            <option>São Paulo - Guarulhos</a></li>
-                        </select>
-                    </form>
-                </div>
-                <div class="span6">
-                    <img src="imgs/aeroportos.jpg" width="440" height="510" alt="Aeroportos" />
-                </div>
-            </div>
-            <div id="noticias">
-                <h2>Aeroporto de Manaus terá lanchonete popular</h2>
-                <p class="byline">Quinta-feira, 14 de novembro de 2013</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae ornare lectus, vel pretium urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis condimentum in eros sit amet bibendum. Morbi convallis sapien ut mollis venenatis.</p>
-                <p class="mais"><a href="#">Saiba mais</a></p>
-            </div>
-            <div id="informacoes">
-                <div class="row">
-                    <div class="span6">
-                        <h2>Informações</h2>
-                        <ul>
-                            <li><a href="#">Aviação Civil</a></li>
-                            <li><a href="#">ANAC</a></li>
-                            <li><a href="#">Aviação Civil</a></li>
-                            <li><a href="#">Infraero</a></li>
-                            <li><a href="#">Ministério das Cidades</a></li>
-                        </ul>
-                    </div>
-                    <div class="span6">
-                        <h2>Redes sociais</h2>
-                        <ul>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">YouTube</a></li>
-                            <li><a href="#">Facebook</a></li>
-                            <li><a href="#">Aerofácil</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="parceiros">
-                <div class="row">
-                    <div class="span6">
-                        <h2>Parceiros</h2>
-                        <ul>
-                            <li><a href="#">Aviação Civil</a></li>
-                            <li><a href="#">Ministério das Cidades</a></li>
-                            <li><a href="#">Infraero</a></li>
-                            <li><a href="#">ANAC</a></li>
-                            <li><a href="#">Embratur</a></li>
-                            <li><a href="#">Portal Brasil</a></li>
-                            <li><a href="#">Ministério do Turismo</a></li>
-                        </ul>
-                    </div>
-                    <div class="span6">
-                        <ul>
-                            <li><a href="#">Secretaria da Aviação Civil</a></li>
-                            <li><a href="#">Ministério das Cidades</a></li>
-                            <li><a href="#">Governo Federal</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="compartilha-topo">
+          <!--div class="addthis_toolbox addthis_default_style" addthis:title="Aerofácil | Seu guia para viajar de avião" addthis:url="http://aerofacil.gov.br/">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a class="addthis_counter addthis_pill_style"></a>
+          </div-->  
         </div>
       </div>
     </div>
-
+    <div class="faixa topo">
+      <div class="centraliza">
+        <h1><a href="theme.html">Aerofácil | Seu guia para viajar de avião</a></h1>
+        <ul class="menu">
+          <li><a href="${portal_url}/aplicativos-e-ferramentas" title="Aplicativos e ferramentas" rel="aplicativos"><span class="ico-aplicativos-e-ferramentas"></span>Aplicativos e ferramentas</a></li>
+          <li class="menu-nivel-2"><a href="guia-do-passageiro" title="Guia do passageiro" rel="guia"><span class="ico-guia-do-passageiro"></span>Guia do passageiro</a></li>
+          <li class="menu-nivel-3"><a href="aeroportos-brasileiros" title="Aeroportos brasileiros" rel="aeroportos"><span class="ico-aeroportos-brasileiros"></span>Aeroportos brasileiros</a></li>
+          <li class="menu-nivel-4"><a href="noticias" title="Notícias" rel="noticias"><span class="ico-noticias"></span>Notícias</a></li>
+          <li class="menu-nivel-5"><a href="informacoes" title="Informações" rel="informacoes"><span class="ico-informacoes"></span>Informações</a></li>
+        </ul>
+      </div>    
+    </div>
+    <!--script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52d689b815098ae7"></script>
+    <script type="text/javascript">
+      var addthis_config = addthis_config||{};
+      addthis_config.data_track_addressbar = false;
+      addthis_config.data_track_clickback = false;
+    </script-->
+  </div>
+  <div class="conteudo">
+    <div class="menu-flutuante">
+      <a href="#" class="flut-home" rel="barra-topo">Home</a>
+      <a href="#" class="flut-aplicativos" rel="aplicativos-e-ferramentas">Aplicativos</a>
+      <a href="#" class="flut-guia" rel="guia-do-passageiro">Guia</a>
+      <a href="#" class="flut-aeroportos" rel="aeroportos-brasileiros">Aeroportos</a>
+      <a href="#" class="flut-infos" rel="noticias">Infos</a>
+    </div>
+    <div class="faixa destaques">    
+      <div class="centraliza">
+        <div class="miolo">
+          <span class="label-destaques">Destaques</span>
+          <h2>Novos Modelos <span class="amarelo">de Integração de Meios de Transportes.</span></h2>
+          <p>
+            O aeromóvel é um meio de transporte urbano automatizado em via elevada de concepção inteiramente brasileira e que utiliza um singular sistema de propulsão pneumática, inventado por Oskar Coester.<br>
+            <strong>Em Porto Alegre o projeto contou com investimento de R$ 37,8 milhões – 1 km - Concluído em Agosto de 2013 – Ligação entre a estação de Trem até o Aeroporto</strong>
+          </p>
+          <a href="destaques.html" class="lk-seta-grande amarelo">Saiba mais</a>
+          <!-- XXX: Transformar imagem de css: background-image para tag
+          <img src="imgs/destaque-foto.jpg" class="pull-right" width="540" height="540" alt="Destaque - Foto" />
+          -->
+        </div>
+      </div>
+    </div>
+    <div class="faixa aplicativos-e-ferramentas">
+      <div class="centraliza">
+        <ul class="lista-aplicativos">
+          <li class="app-voo">
+            <h3>Aplicativo <span class="amarelo">Infraero voos online</span></h3>
+            <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas. </p>
+            <a href="aplicativos-e-ferramentas/infraero-voos-online" class="lk-seta verde">Acesse</a>
+          </li>
+          <li class="app-viajantes">
+            <h3>Aplicativo <span>Viajantes</span></h3>
+            <p>Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais.</p>
+            <a href="aplicativos-e-ferramentas/viajantes" class="lk-seta verde">Acesse</a>          
+          </li>
+          <li class="app-taxi">
+            <h3>Aplicativo <span>Onde tem táxi aqui</span></h3>
+            <p>Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
+            <a href="aplicativos-e-ferramentas/onde-tem-taxi-aqui" class="lk-seta verde">Acesse</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="faixa guia-do-passageiro">
+      <div class="centraliza">
+        <div class="miolo">
+          <h2><a href="guia-do-passageiro">Guia do passageiro.</a></h2>
+          <p>
+            Tudo o que você precisa saber para fazer uma boa viagem.<br>
+            Conheça o Guia do Passageiro, desenvolvido para facilitar e tirar qualquer dúvida que você tenha sobre sua viagem de avião.<br>
+            Basta escolher um dos temas:<br>   
+            <a href="guia-do-passageiro/antes-de-viajar" class="lk-seta-left verde">Antes de viajar</a><br>
+            <a href="guia-do-passageiro/durante-voo" class="lk-seta-left verde">Durante o voo</a><br>
+            <a href="guia-do-passageiro/desembarque" class="lk-seta-left verde">No desembarque</a><br>
+            <a href="guia-do-passageiro/viagens-internacionais" class="lk-seta-left verde">Viagens internacionais</a>
+          </p>
+          <a href="guia-do-passageiro/guia-do-passageiro.pdf" target="_blank" class="lk-seta-left verde small">Clique aqui para baixar a versão em PDF</a>
+        </div>
+      </div>
+    </div>
+    <div class="faixa aeroportos-brasileiros">
+      <div class="centraliza">
+        <div class="miolo">
+          <h2>Aeroportos <span class="amarelo">do Brasil.</span></h2>
+          <p>Informações sobre os principais aeroportos do Brasil, mapas, lojas, restaurantes, entre outros.</p>
+          <a href="aeroporto" class="lk-aeroporto-home verde"><span>Escolha o aeroporto</span></a>
+          <select class="select-aeroporto-home">
+            <!--<option value="Acre">Acre</option>-->
+            <option value="altamira">Altamira - PA</option>
+            <option value="bage">Bagé - RS</option>
+            <option value="belem">Belém/VAL-DE-CANS - PA</option>
+            <option value="pampulha">Belo Horizonte - Pampulha - BH</option>
+            <option value="boa-vista">Boa Vista - RR</option>
+            <option value="brasilia">Brasília - DF</option>
+            <option value="campina-grande">Campina Grande - PB</option>
+            <option value="campo-grande">Campo Grande - MS</option>
+            <option value="carajas">Carajás - PA</option>
+            <option value="confins">Confins - MG</option>
+            <option value="congonhas">São Paulo - Congonhas - SP</option>
+            <option value="corumba">Corumbá - MS</option>
+            <option value="cuiaba">Cuiabá - MT</option>
+            <option value="curitiba">Curitiba - PR</option>
+            <option value="florianopolis">Florianópolis - SC</option>
+            <option value="fortaleza">Fortaleza - CE</option>          
+            <option value="foz-do-iguacu">Foz do Iguaçu - PR</option>
+            <option value="goiania">Goiânia - GO</option>
+            <option value="guarulhos">Guarulhos - SP</option>
+            <option value="ilheus">Ilhéus - BA</option>
+            <option value="imperatriz-maranhao">Imperatriz - MA</option>
+            <option value="joao-pessoa">João Pessoa - PB</option>
+            <option value="juazeiro-norte">Juazeiro do Norte - CE</option>
+            <option value="londrina">Londrina - PR</option>
+            <option value="macapa">Macapá - AP</option>
+            <option value="alagoas">Maceiío - AL</option>
+            <option value="manaus">Manaus - AM</option>
+            <option value="maraba">Marabá - PA</option>
+            <option value="montes-claros">Montes Claros - MG</option>
+            <option value="natal">Natal - RN</option>
+            <option value="navegantes">Navegantes - SC</option>          
+            <option value="paulo-afonso">Paulo Afonso - BA</option>
+            <option value="pelotas">Pelotas - RS</option>
+            <option value="petrolina">Petrolina - PE</option>
+            <option value="ponta-pora">Ponta Porã - MS</option>
+            <option value="porto-alegre">Porto Alegre - RS</option>
+            <option value="porto-velho">Porto Velho - RO</option>
+            <option value="recife">Recife - PE</option>
+            <option value="rio-branco">Rio Branco - AC</option>
+            <option value="rio-de-janeiro-galeao">Rio de Janeiro - Galeão - RJ</option>
+            <option value="rio-de-janeiro-santos-dumont">Rio de Janeiro - Santos Dumont - RJ</option>
+            <option value="salvador">Salvador - BA</option>
+            <option value="santarem">Santarém - PA</option>
+            <option value="sao-luis">São Luis - MA</option>
+            <option value="tefe">Tefé - AM</option>
+            <option value="uberaba">Uberaba - MG</option>
+            <option value="uberlandia">Uberlândia - MG</option>
+            <option value="uruguaiana">Uruguaiana - RS</option>
+            <option value="vitoria">Vitória - ES</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="faixa noticias">
+      <div class="centraliza">
+        <div class="lista-noticias">
+          <ul class="slides">
+            <li class="lista-noticia">
+              <p>
+                <strong>Pesquisa revela humor do brasileiro com aeroportos</strong><br>
+                <span>13/01/2014</span>
+              </p>
+              <p>
+                Usuários mostram satisfação com cordialidade no atendimento e insatisfação com preços dentro dos saguões.
+              </p>
+              <a href="noticias/pesquisa-revela-humor-do-brasileiro-com-aeroportos" class="lk-seta-left verde">Saiba mais</a>
+            </li>
+            <li class="lista-noticia">        
+              <p>
+                <strong>Artigo - Leitura equivocada</strong><br>
+                <span>06/01/2014</span>
+              </p>
+              <p>
+                Italianos de São Paulo têm uma ótima expressão para qualificar proposições que têm toda aparência de verdade, mas podem ser falsas: se non è vero, è ben trovato ("algo como "se não for verdade, pelo menos é uma boa tentativa").
+              </p>
+              <a href="noticias/artigo-leitura-equivocada" class="lk-seta-left verde">Saiba mais</a>
+            </li>
+            <li class="lista-noticia">        
+              <p>
+                <strong>BNDES aprova financiamento de R$ 1,5 bilhão para concessionária do Aeroporto de Viracopos</strong><br>
+                <span>31/12/2013</span>
+              </p>
+              <p>
+                Aeroportos Brasil Viracopos investirá em obras de ampliação e modernização
+              </p>
+              <a href="noticias/bndes-aprova-financiamento" class="lk-seta-left verde">Saiba mais</a>
+            </li>
+            <li class="lista-noticia">        
+              <p>
+                <strong>Nota Oficial - Resultado operacional nos aeroportos</strong><br>
+                <span>20/12/2013</span>
+              </p>
+              <p>
+                A Secretaria de Aviação Civil considera positivo o resultado operacional obtido nesta sexta-feira, 20 de dezembro, nos aeroportos de todo o país.
+              </p>
+              <a href="noticias/resultado-operacional-aeroportos" class="lk-seta-left verde">Saiba mais</a>
+            </li>
+            <li class="lista-noticia">        
+              <p>
+                <strong>O antes e o depois das melhorias no Santos Dumont</strong><br>
+                <span>20/12/2013</span>
+              </p>
+              <p>
+                Comparativo entre passado e presente a partir das melhorias feitas no aeroporto Santos Dumont para beneficiar usuários do terminal aéreo.
+              </p>
+              <a href="noticias/antes-depois-santos-dumont" class="lk-seta-left verde">Saiba mais</a>
+            </li>
+          </ul>        
+        </div>
+      </div>
+    </div>
+    <div class="faixa informacoes" id="informacoes">
+      <div class="centraliza">
+        <div class="miolo">
+          <h2>Informações</h2>
+          <div class="bloco-informacoes">
+            <div>
+              <a href="#" class="lk-seta-left verde open">Secretaria de Aviação Civil (SAC)</a>
+              <span class="texto-info" style="display:block">
+                A Secretaria de Aviação Civil da Presidência da República (SAC) é responsável por formular, coordenar e supervisionar as políticas para o desenvolvimento da aviação civil e das infraestruturas aeroportuária e aeronáutica civil. Possui status de Ministério e é subordinada à Presidência da República. A SAC também elabora estudos e projeções relativos aos assuntos de aviação civil, formula e implementa o planejamento estratégico do setor, elabora e aprova os planos de outorgas para exploração da infraestrutura aeroportuária e coordena os órgãos e entidades do sistema de aviação civil. <br>
+                <a href="http://www.aviacaocivil.gov.br" class="seta-info" target="_blank">Saiba Mais</a>
+              </span>
+            </div>
+            <div>
+              <a href="#" class="lk-seta-left verde">ANAC</a>
+              <span class="texto-info">
+                A ANAC regula e fiscaliza as atividades de aviação civil e de infraestrutura aeronáutica e aeroportuária;<br>
+                <a href="http://www.anac.gov.br" class="seta-info" target="_blank">Saiba Mais</a>
+              </span>
+            </div>  
+            <div>        
+              <a href="#" class="lk-seta-left verde">Infraero</a>
+              <span class="texto-info">
+                Vinculada à Secretaria de Aviação Civil, a Infraero administra desde grandes aeroportos brasileiros até alguns tão pequenos que ainda não recebem voos comerciais regulares e representam a soberania nacional em áreas longínquas. Ao todo são 63 aeroportos, 75 Estações Prestadoras de Serviços de Telecomunicações e de Tráfego Aéreo e 31 terminais de logística de carga.<br>
+                <a href="http://www.infraero.gov.br" class="seta-info" target="_blank">Saiba Mais</a>
+              </span>
+            </div>          
+          </div>
+          <div class="bloco-redes">
+            <h2>Redes Sociais</h2>
+            <ul class="redes-rodape">
+              <li class="rede-twitter"><a href="https://twitter.com/AviacaoGovBr">twitter</a></li>
+              <!--<li class="rede-youtube" style"display:none"><a href="#">youtube</a></li>-->
+              <li class="rede-facebook"><a href="https://www.facebook.com/AviacaoGovBr">facebook</a></li>          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="rodape">
+    <div class="faixa rodape">
+        <div class="centraliza">
+          <h2 class="amarelo">Parceiros</h2>
+          <ul class="nav-rodape">
+            <li><a href="http://www.cidades.gov.br/" class="lk-seta-left amarelo" target="_blank">Ministério das Cidades</a></li>
+            <li><a href="http://www.infraero.gov.br/" class="lk-seta-left amarelo" target="_blank">Infraero</a></li>
+            <li><a href="http://www.anac.gov.br/" class="lk-seta-left amarelo" target="_blank">ANAC</a></li>
+            <li><a href="http://www.embratur.gov.br/" class="lk-seta-left amarelo" target="_blank">Embratur</a></li>
+            <li><a href="http://www.brasil.gov.br/" class="lk-seta-left amarelo" target="_blank">Portal Brasil</a></li>
+            <li><a href="http://www.turismo.gov.br/turismo/home.html" class="lk-seta-left amarelo" target="_blank">Ministério do Turismo</a></li>
+          </ul>
+          <span class="ministerios"></span>
+        </div>
+      </div>
+  </div>
 </body>
-
 </html>
