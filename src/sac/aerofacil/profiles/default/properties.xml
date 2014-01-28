@@ -3,7 +3,7 @@
  <property
     name="title">Aerofácil</property>
  <property
-    name="description">Um hotsite do Serviço de Aviação Civil.</property>
+    name="description">Seu guia para viajar de avião</property>
  <property name="validate_email" type="boolean">True</property>
  <property name="email_charset" type="string">utf-8</property>
  <property name="enable_permalink" type="boolean">False</property>
