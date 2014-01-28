@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.abovecontent" skinname="sac.aerofacil Default">
+    <viewlet name="sac.aerofacil.destaques_home" />
+  </order>
+  <order manager="plone.belowcontent" skinname="sac.aerofacil Default">
+    <viewlet name="sac.aerofacil.noticias_home" />
+    <viewlet name="sac.aerofacil.outras_noticias" />
+    <viewlet name="sac.aerofacil.ebook" />
+    <viewlet name="sac.aerofacil.apps_aplicativo" />
+    <viewlet name="sac.aerofacil.apps_aeroporto" />
+    <viewlet name="sac.aerofacil.select_aeroporto" />
+    <viewlet name="sac.aerofacil.share" />
+  </order>
+  <hidden manager="plone.portalheader" skinname="sac.aerofacil Default">
+    <viewlet name="plone.searchbox" />
+  </hidden>
+  <hidden manager="plone.abovecontent" skinname="sac.aerofacil Default">
+    <viewlet name="plone.path_bar" />
+  </hidden>
+  <hidden manager="plone.portalfooter" skinname="sac.aerofacil Default">
+    <viewlet name="plone.footer" />
+    <viewlet name="plone.colophon" />
+    <viewlet name="plone.site_actions" />
+  </hidden>
+</object>
