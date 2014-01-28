@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
+ <javascript id="++resource++sac.aerofacil/js/jquery.flexslider-min.js" />
+ <javascript id="++resource++sac.aerofacil/js/jcarousellite_1.0.1.min.js" />
+ <javascript id="++resource++sac.aerofacil/js/jquery.mCustomScrollbar.min.js" />
  <javascript id="++resource++aerofacil/js/ui.js" />
 </object>
