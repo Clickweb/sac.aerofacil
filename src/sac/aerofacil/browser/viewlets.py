@@ -6,6 +6,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.navigation.root import getNavigationRootObject
 from plone.memoize.view import memoize
 
+
 class DestaquesHomeViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/destaques_home.pt')
 
@@ -70,27 +71,35 @@ class OutrasNoticiasViewlet(NoticiasHomeViewlet):
 
 class EBookViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/ebook.pt')
-    def update(self):
-        self.computed_value = 'any output'
 
 
 class AppsAplicativoViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/apps_aplicativo.pt')
-    def update(self):
-        self.computed_value = 'any output'
 
 
 class AppsAeroportoViewlet(AppsAplicativoViewlet):
     render = ViewPageTemplateFile('templates/apps_aeroporto.pt')
 
 
-# class SelectAeroportoViewlet(ViewletBase):
-#     render = ViewPageTemplateFile('templates/select_aeroporto.pt')
-#     def update(self):
-#         self.computed_value = 'any output'
+class SelectAeroportoViewlet(ViewletBase):
+    render = ViewPageTemplateFile('templates/select_aeroporto.pt')
+
+    @memoize
+    def aeroportos(self):
+        context = aq_inner(self.context)
+        portal = self.portal_state.portal()
+        path = tuple()
+        if 'aeroportos-brasileiros' in getNavigationRootObject(context, portal).objectIds():
+            path = portal['aeroportos-brasileiros'].getPhysicalPath()
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(portal_type='News Item',
+                         review_state='published',
+                         path='/'.join(path),
+                         sort_on='Date',
+                         sort_order='reverse')
+        brains = [b for b in brains if not b.id == context.id]
+        return brains
 
 
-# class ShareViewlet(ViewletBase):
-#     render = ViewPageTemplateFile('templates/share.pt')
-#     def update(self):
-#         self.computed_value = 'any output'
+class ShareViewlet(ViewletBase):
+    render = ViewPageTemplateFile('templates/share.pt')

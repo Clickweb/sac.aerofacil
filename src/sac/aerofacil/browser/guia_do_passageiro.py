@@ -12,5 +12,6 @@ class GuiaDoPassageiro(grok.View):
     """
 
     grok.context(IATFolder)
+    grok.name('@@guia')
     grok.require('zope2.View')
     # grok.template('guia_do_passageiro.pt')
