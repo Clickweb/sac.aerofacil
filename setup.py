@@ -40,6 +40,7 @@ setup(
         'five.pt',
         'Pillow',
         'Plone',
+        'plone.app.dexterity [grok]',
         'plone.api',
         'setuptools',
         'z3c.jbot',

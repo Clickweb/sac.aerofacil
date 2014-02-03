@@ -3,7 +3,7 @@
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('sac.aerofacil')
+MessageFactory = MessageFactory('sac.aerofacil')
 
 
 def initialize(context):

@@ -1,0 +1,28 @@
+<model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="title" type="zope.schema.TextLine">
+      <description/>
+      <title>Nome do aeroporto</title>
+    </field>
+    <field name="body" type="plone.app.textfield.RichText">
+      <description>Descri&#231;&#227;o detalhada do aeroporto</description>
+      <title>Corpo de texto</title>
+    </field>
+    <field name="restaurantes" type="plone.app.textfield.RichText">
+      <description>Lista de restaurantes do aeroporto</description>
+      <title>Restaurantes</title>
+    </field>
+    <field name="lojas" type="plone.app.textfield.RichText">
+      <description>Lista de lojas do aeroporto</description>
+      <title>Lojas</title>
+    </field>
+    <field name="localizacao" type="zope.schema.Text">
+      <description>C&#243;digo HTML de incorpora&#231;&#227;o do mapa de localiza&#231;&#227;o do aeroporto</description>
+      <title>Localiza&#231;&#227;o</title>
+    </field>
+    <field name="estacionamento" type="plone.app.textfield.RichText">
+      <description>Informa&#231;&#245;es sobre o estacionamento do aeroporto</description>
+      <title>Estacionamento</title>
+    </field>
+  </schema>
+</model>

@@ -1,0 +1,568 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="sac.aerofacil">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <div class=""
+            tal:content="structure context/body/output" />
+
+<div class="limites">
+
+  <div class="guia-menu">
+    <a href="antes-de-viajar" class="antes-viajar">Antes de viajar</a>
+    <a href="viagens-internacionais" class="viagens-internacionais">Viagens internacionais</a>
+    <a href="durante-o-voo" class="durante-voo">Durante o voo</a>
+    <a href="no-desembarque" class="desembarque">No desembarque</a>
+  </div>
+
+  <div class="guia-conteudo">
+    
+    <!-- TABS -->
+    <ul id="tabs">
+      <li class="current"><a href="#aba2" class="ico2"> Compra da passagem </a></li>
+      <li><a href="#aba3" class="ico3"> Chegada ao aeroporto e check-in</a></li>
+      <li><a href="#aba4" class="ico4"> Bagagem</a></li>
+      <li><a href="#aba5" class="ico5"> Documento para embarque</a></li>
+      <li><a href="#aba6" class="ico6"> Acesso às salas de embarque</a></li>
+      <li><a href="#aba7" class="ico7"> Assistência especial</a></li>
+      <li><a href="#aba8" class="ico8"> Transporte de animais domésticos</a></li>
+      <li><a href="#aba9" class="ico9"> Na hora do embarque</a></li>
+      <li><a href="#aba10" class="ico10"> Direitos do passageiro em caso de atraso, cancelamento ou não embarque</a></li>
+      <li><a href="#aba11" class="ico11"> Reembolso de passagem</a></li>
+      <li><a href="#aba12" class="ico12"> Aeroporto fechado</a></li>
+    </ul>
+
+    <!-- TAB CONTENT -->
+    <div id="tabs-content">
+      <div id="aba2" class="animated current">
+        <div class="tabs-content-scrool">               
+          <p><strong>O governo controla o preço das passagens aéreas?</strong></p>
+          <p>Não. São as empresas aéreas que estabelecem os preços
+          das passagens. As tarifas aéreas no Brasil seguem o regime de
+          liberdade tarifária, que vale tanto para voos nacionais quanto
+          para voos internacionais com origem no país.</p>
+          <p><strong>Sou obrigado a adquirir o seguro de viagem?</strong></p>
+          <p>Ao comprar sua passagem, você não é obrigado a adquirir
+          seguros de viagem: esses serviços são adicionais e facultativos.
+          O preço da passagem para crianças é igual ao de adultos?
+          Em voos nacionais, o valor da passagem de crianças de colo
+          com menos de dois anos de idade que não estejam ocupando
+          assento não poderá ultrapassar 10% da tarifa paga pelo adulto.</p>
+          <p><strong>Para que serve a taxa de embarque?</strong></p>
+          <p>A taxa de embarque é cobrada pelas empresas aéreas, no
+          ato da venda da passagem, e repassada à administração do
+          aeroporto para manutenção da infraestrutura e dos serviços.
+          Pistas, pátios de aeronaves, salas de embarque, elevadores,
+          escadas rolantes, ar-condicionado, sistema de som e
+          limpeza são alguns dos itens que são de responsabilidade da
+          administração aeroportuária. O valor é determinado em função
+          da categoria do aeroporto e da natureza da viagem (doméstica
+          ou internacional).</p>
+          <p><strong>Posso levar a cadeirinha de bebê (até dois anos) no
+          assento da cabine?</strong></p>
+          <p>Sim, desde que a cadeira caiba no assento do avião e
+          seja certificada para uso aeronáutico. Nesse caso, como a
+          criança não será transportada no colo, é necessário comprar a
+          passagem para o bebê.</p>
+          <p><strong>A Anac regula programas de milhagem?</strong></p>
+          <p>Não. As vantagens oferecidas por meio de programas de
+          milhagem caracterizam relações comerciais entre empresa e
+          consumidor. Por isso, esses programas não são regulados e/ou
+          fiscalizados pela Anac. Os passageiros que utilizaram milhas
+          aéreas para viajar devem ser tratados da mesma forma que
+          aqueles que compraram passagem sem o benefício.</p>
+          <p><strong>Como eu faço para mudar a data da minha viagem?</strong></p>
+          <p>Para fazer qualquer mudança no seu voo, consulte a
+          empresa aérea ou o agente de viagens. As alterações são feitas
+          de acordo com a disponibilidade de voos e podem gerar custos
+          adicionais para o passageiro, que variam conforme a tarifa da
+          passagem. O prazo de validade da passagem é de um ano, a
+          contar da data de sua emissão.</p>
+          <p><strong>Posso transferir a minha passagem para outra pessoa?</strong></p>
+          <p>Não. A passagem aérea é pessoal e intransferível, ou seja,
+          o nome do passageiro registrado na passagem, no momento
+          da compra, não poderá ser mudado depois. Isso significa que
+          somente essa pessoa está autorizada a viajar com esse bilhete.</p>
+          <p><strong>O que acontece se eu desistir da viagem?</strong></p>
+          <p>Para cancelar sua viagem, verifique as regras em seu
+          contrato de transporte, pois essa mudança poderá gerar custos
+          adicionais (em caso de remarcação) ou a empresa poderá reter
+          uma parte do valor pago (em caso de reembolso). Se você
+          desistir de sua viagem, o prazo máximo que a empresa aérea
+          tem para fazer o pagamento do reembolso ao passageiro é de
+          30 dias, contados a partir da data da solicitação. A empresa
+          aérea não tem a obrigação de fazer o reembolso se o passageiro
+          decidir interromper a viagem no aeroporto de escala, nos casos
+          em que o voo não é direto.</p>
+        </div>
+      </div>
+      <div id="aba3" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Quanto tempo antes do voo eu devo chegar ao aeroporto?</strong></p>
+          <p>Você deve se apresentar para check-in no horário estipulado
+          pela companhia aérea. Na maior parte das vezes, deve-se
+          obedecer ao prazo de pelo menos uma hora de antecedência
+          para voos nacionais e duas horas para voos internacionais.</p>
+          <p><strong>Como devo proceder com o horário de verão e o fuso
+          horário?</strong></p>
+          <p>Siga o horário local. Não é preciso calcular fuso horário ou
+          horário de verão. Os bilhetes e os sites das companhias aéreas
+          informam a hora local, tanto na origem quanto no destino. Se
+          tiver dúvidas, consulte a companhia aérea.</p>
+          <p><strong>O que é o check-in?</strong></p>
+          <p>O check-in é o procedimento realizado pela companhia
+          aérea para a identificação do passageiro, o despacho de
+          bagagens e a emissão de cartão de embarque. Pode ser
+          feito no balcão da empresa, pela internet, em pontos de
+          auto-atendimento e em aplicativos para celular ou tablets. O
+          atendimento e a organização das filas são de responsabilidade
+          das companhias aéreas. Após o check-in, você deve ir para
+          o portão de embarque designado pela companhia aérea, no
+          horário estipulado.</p>
+          <p><strong>Fiz o check-in pela internet, o que faço com a minha
+          bagagem?</strong></p>
+          <p>Se você estiver sem bagagem ou apenas com bagagem de
+          mão, deve imprimir o cartão de embarque e seguir diretamente
+          para o portão de embarque indicado pela companhia aérea, no
+          horário informado pela empresa. Se estiver com bagagem a
+          ser despachada, vá ao balcão de check-in da companhia, com
+          tempo suficiente para se identificar, despachar a bagagem e
+          apresentar-se no portão de embarque, no horário informado
+          pela empresa aérea. Algumas empresas têm balcões exclusivos
+          para o despacho da bagagem.</p>
+          <p><strong>Como posso me informar sobre o horário do meu voo?</strong></p>
+          <p>Nos aeroportos da Rede Infraero existem monitores instalados
+          com informações sobre os voos em diversos locais. É fundamental
+          que o passageiro fique sempre atento às informações de seu voo,
+          pois podem sofrer alterações. Também é possível acompanhar os
+          horários de chegadas e partidas pelo site da Infraero, na internet:
+          www.infraero.gov.br, e ainda por meio do aplicativo para celular
+          Infraero Voos Online – consulte o portal da Infraero. Os horários
+          dos voos são fornecidos pelas companhias aéreas.</p>
+        </div>
+      </div>
+      <div id="aba4" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Qual o tamanho da bagagem de mão permitido?</strong></p>
+          <p>Os limites da bagagem de mão são definidos por critérios
+          de segurança para atender ao peso máximo de decolagem
+          do avião e ações preventivas de segurança a bordo. Em
+          voos domésticos, a bagagem não pode ser maior que 115
+          cm (considerando altura + comprimento + largura) e o
+          peso máximo é de 5 kg. Caso exceda essa especificação, a
+          companhia aérea poderá exigir que a bagagem não viaje com
+          você e seja despachada.</p>
+          <p><strong>Qual o peso da bagagem que posso despachar sem
+          custo adicional?</strong></p>
+          <p>Depende do tamanho da aeronave e da classe na qual
+          o passageiro está viajando (primeira classe ou classe
+          econômica, por exemplo). Em média, cada passageiro pode
+          levar até 23 kg. A companhia aérea é autorizada a cobrar pelo
+          excesso de bagagem, no ato do check-in, um valor que pode
+          chegar a 0,5% da tarifa cheia por quilo de excesso. A empresa
+          também pode negar o transporte da bagagem excedente
+          ou transportá-la em outro voo. Artigos esportivos em geral
+          (prancha de surfe, bicicleta etc.), instrumentos musicais e
+          outros tipos de bagagem especial deverão ser incluídos na
+          franquia, da mesma forma que uma bagagem comum. Para
+          mais informações, consulte a empresa aérea.
+          <p><strong>O que eu faço para despachar algo de valor em minha
+          bagagem?</strong></p>
+          <p>Na bagagem a ser despachada, o passageiro deve evitar
+          transportar bens de valor (como joias ou aparelhos eletrônicos).
+          Mas, se houver necessidade, você pode declarar o valor dos
+          bens transportados ainda no check-in. Para isso, peça o
+          formulário à empresa aérea, que se responsabilizará pelos bens
+          declarados mediante taxa a ser cobrada no ato de confirmação
+          dos bens. Consulte os valores com a companhia aérea.</p>
+          <p><strong>As regras de bagagens para voos internacionais são
+          diferentes?</strong></p>
+          <p>Sim. Alguns itens permitidos em voos domésticos não
+          são liberados para voos internacionais porque dependem das
+          normas do país de destino. Consulte também, neste guia, o
+          tópico Viagens Internacionais.</p>
+        </div>
+      </div>
+      <div id="aba5" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Quais documentos são necessários para a identificação
+          em voos domésticos?</strong></p>
+          <p>Você pode apresentar um documento oficial com foto
+          que permita a sua identificação, por exemplo: carteira de
+          identidade (RG); carteira nacional de habilitação (CNH);
+          carteira de identidade emitida por conselho ou federação
+          profissional, com fotografia (OAB, Crea e outras); carteira
+          de trabalho; passaporte nacional; cartões de identificação
+          expedidos pelos Poderes Judiciário e Legislativo Federal
+          ou estaduais; documento expedido por ministério ou órgão
+          subordinado à Presidência da República; licenças de piloto,
+          comissário, mecânico de voo e despachante operacional de voo
+          emitidas pela Anac. Em casos de voos domésticos, são aceitas
+          as cópias autenticadas desses documentos.</p>
+          <p><strong>E, se os meus documentos tiverem sido roubados, por
+          exemplo?</strong></p>
+          <p>Em caso de furto, roubo ou extravio de documento, será
+          aceito o Boletim de Ocorrência emitido há menos de 60 dias.</p>
+          <p><strong>Quais são os documentos necessários para embarque
+          das crianças?</strong></p>
+          <p>Para crianças e adolescentes, é aceita a certidão de
+          nascimento (original ou cópia autenticada). Em caso de viagem
+          com apenas um dos pais ou desacompanhado, verifique as
+          exigências da Vara da Infância e da Juventude da localidade de
+          embarque. Nenhuma criança poderá viajar para fora da cidade
+          onde mora desacompanhada dos pais ou responsáveis sem
+          expressa autorização judicial. Essa autorização é dispensada
+          quando a criança estiver acompanhada de um dos pais.
+          Além disso, é possível que crianças e adolescentes viajem
+          desacompanhados de ambos os pais, desde que observadas as
+          exigências legais. Consulte a empresa aérea com antecedência
+          e verifique o que diz o Estatuto da Criança e do Adolescente,
+          além das exigências da Vara da Infância e da Juventude da
+          localidade de embarque. As regras para os voos internacionais
+          são diferentes. Verifique as informações no tópico Voos
+          Internacionais.</p>
+          <p><strong>Existem regras diferentes para embarque de passageiros
+          estrangeiros?</strong></p>
+          <p>Passageiros de outras nacionalidades devem apresentar
+          um dos documentos a seguir, considerada a respectiva validade:
+          passaporte estrangeiro; cédula de identidade de estrangeiro – CIE
+          (RNE), respeitados os acordos internacionais firmados pelo Brasil;
+          identidade diplomática ou consular; outro documento legal de
+          viagem, resultado de acordos internacionais firmados pelo Brasil.
+          No caso de viagem dentro do Brasil, o protocolo de pedido de CIE
+          expedido pelo Departamento de Polícia Federal pode ser aceito em
+          substituição ao documento original, pelo período máximo de 180
+          dias, contados a partir da data de sua expedição.</p>
+        </div>
+      </div>
+      <div id="aba6" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Quem pode entrar nas salas de embarque?</strong></p>
+          <p>O acesso às salas de embarque é restrito aos passageiros
+          que tenham em mãos os cartões de embarque válidos da
+          companhia aérea. Observe o horário em que você deve entrar
+          na sala de embarque que está informado em seu cartão.</p>
+          <p><strong>Posso entrar com carrinhos de bagagem na sala de
+          embarque?</strong></p>
+          <p>Não é permitida a entrada de carrinhos de bagagem na
+          sala de embarque. Eles são disponibilizados gratuitamente nos
+          aeroportos administrados pela Infraero, para uso nas áreas
+          públicas dos terminais de passageiros. Crianças não devem
+          ser transportadas nos carrinhos de bagagem, para evitar
+          acidentes.</p>
+          <p><strong>Por que é preciso passar pelo equipamento de raio-X?</strong></p>
+          <p>São normas internacionais de segurança. Antes de entrar
+          na sala de embarque, todos os passageiros e as bagagens de
+          mão devem passar pela inspeção no raio-X. É proibido portar
+          objetos cortantes ou perfurantes como canivetes, tesouras de
+          unha etc. Assim, caso você se esqueça de despachá-los, esses
+          itens terão de ser descartados no momento da inspeção.</p>
+          <p><strong>Como devo proceder na hora de passar pelo equipamento
+          detector de metais?</strong></p>
+          <p>A inspeção dos passageiros no detector de metais é
+          obrigatória, exceto para portadores de marca-passo (com
+          documentação que comprove essa condição) e de implante
+          coclear. Lembre-se de retirar dos bolsos as moedas, celulares,
+          chaves e outros objetos metálicos. Você também pode ter que
+          retirar cintos ou sapatos que contenham partes metálicas para
+          passar pelo detector.</p>
+          <p><strong>O passageiro pode sair da sala de embarque?</strong></p>
+          <p>Caso precise sair da sala de embarque, peça orientações
+          a um funcionário do aeroporto para poder voltar. Lembre-se
+          de estar no portão de embarque no horário determinado pela
+          companhia aérea.</p>
+          <p><strong>Preciso me identificar de novo na hora de entrar no avião?</strong></p>
+          <p>Sim. Por isso tenha em mãos um dos documentos oficiais
+          de identificação com foto relacionados anteriormente, que
+          deverá ser apresentado ao funcionário da companhia aérea no
+          momento da chamada para embarque na aeronave.</p>
+        </div>
+      </div>
+      <div id="aba7" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Como proceder em caso de passageiros que precisam de
+          assistência especial?</strong></p>
+          <p>As crianças desacompanhadas, pessoas com deficiência ou
+          mobilidade reduzida, gestantes, lactantes, pessoas com criança
+          de colo, idosos e obesos têm direito a atendimento especial.
+          Esses passageiros deverão avisar a empresa aérea sobre suas
+          necessidades no ato da compra da passagem, até mesmo pela
+          internet, ou com antecedência mínima de 48 horas do embarque.
+          Eles também têm direito a atendimento preferencial no checkin
+          e no embarque. Já o desembarque dessas pessoas é feito
+          por último, exceto nos casos em que o tempo disponível para a
+          conexão ou outro motivo justifique a priorização.
+          Além disso, o passageiro poderá usar a cadeira de rodas
+          ou outras ajudas técnicas (bengalas, muletas, andadores etc.)
+          para locomover-se até a porta do avião, desde que o equipamento
+          passe pela inspeção de segurança do aeroporto. Os passageiros
+          que necessitam solicitar ajudas técnicas e/ou uso de oxigênio
+          suplementar devem entrar em contato com a empresa aérea com
+          pelo menos 72 horas de antecedência.</p>
+          <p><strong>Quais são os direitos dos passageiros que necessitam de
+          assistência especial?</strong></p>
+          <p>Esses passageiros têm direito a atendimento prioritário no
+          check-in e no embarque; telefones adaptados, nas áreas comuns
+          dos aeroportos; e informações na Língua Brasileira de Sinais (Libras),
+          para pessoas com deficiência auditiva. Além disso, contam com
+          informações em braile (em pelo menos dois idiomas, quando se tratar
+          de um aeroporto internacional), para passageiros com deficiência
+          visual. Nos casos em que a empresa aérea exigir um acompanhante
+          para a pessoa com deficiência, a empresa deverá justificar o fato por
+          escrito e oferecer desconto de, no mínimo, 80% do valor cobrado pelo
+          bilhete do passageiro com deficiência. Vale lembrar que o passageiro
+          deverá viajar ao lado de seu acompanhante.</p>
+          <p><strong>Existe alguma limitação na viagem de gestantes?</strong></p>
+          <p>É importante entrar em contato com a empresa aérea e com
+          o seu médico antes de comprar a passagem, porque algumas
+          empresas têm restrições para o transporte de gestantes.</p>
+          <p><strong>Como devem ser transportados bengalas, muletas,
+          andadores e outros?</strong></p>
+          <p>Conhecidos como “ajudas técnicas”, esses equipamentos
+          devem ser levados na cabine de passageiros, exceto quando suas
+          dimensões ou da aeronave (ou, ainda, aspectos de segurança)
+          inviabilizarem o transporte na cabine, caso em que esses
+          equipamentos deverão ser transportados no compartimento
+          de bagagem. Quando as ajudas técnicas tiverem de ser
+          despachadas, serão consideradas bagagem prioritária.</p>
+          <p><strong>Como é feito o embarque e o desembarque de passageiros
+          com deficiência ou mobilidade reduzida?</strong></p>
+          <p>Caso o avião esteja parado junto a uma ponte de embarque,
+          a entrada ou saída do usuário com deficiência ou mobilidade
+          reduzida é feita de forma prioritária nessas estruturas. Entretanto,
+          se o aeroporto não possuir ponte de embarque ou o avião parar
+          em posição remota, as empresas aéreas deverão oferecer veículos
+          equipados com elevadores ou outros dispositivos apropriados
+          para efetuar, com segurança, o embarque e desembarque de
+          pessoas portadoras de deficiência ou com mobilidade reduzida,
+          conforme estabelece a Resolução nº 9, de junho de 2007, da
+          Agência Nacional de Aviação Civil (Anac). O passageiro que
+          precisar de assistência especial deve informar a empresa aérea
+          sobre sua condição no ato da reserva ou com antecedência
+          mínima de 48 horas antes do embarque. No desembarque, o
+          pessoal de bordo comandará a saída do passageiro da aeronave,
+          que deverá ser acompanhado por funcionários da companhia ou
+          por ela contratados, todos com o devido treinamento.
+          <p><strong>Onde são transportadas as cadeiras de rodas?</strong></p>
+          <p>Quando houver espaço disponível, a cadeira de rodas deve ser
+          transportada gratuitamente no interior da cabine de passageiros.
+          Caso contrário, será considerada bagagem prioritária. O usuário
+          de cadeira de rodas deve ser acomodado em assento especial,
+          dotado de braços removíveis, próximo ao corredor, localizado da
+          primeira à terceira fileira da aeronave, de acordo com a classe
+          escolhida.</p>
+          <p><strong>Como é realizado o transporte de cão-guia?</strong></p>
+          <p>O cão-guia deve ser transportado gratuitamente, no chão
+          da cabine da aeronave, ao lado de seu dono e sob seu controle,
+          na primeira fileira. O animal deverá estar equipado com arreio e
+          dispensado do uso de focinheira. No caso de viagem nacional, é
+          obrigatória a apresentação de carteira de vacinação do animal
+          atualizada, com comprovação de vacina múltipla, antirrábica
+          e tratamento anti-helmíntico, expedida por médico veterinário.
+          Para viagem internacional, será obrigatória a apresentação
+          do Certificado Zoossanitário Internacional (CZI), expedido pela
+          unidade de Vigilância Agropecuária Internacional do Ministério
+          da Agricultura, de acordo com os requisitos exigidos pelo país de
+          destino.</p>
+        </div>
+      </div>
+      <div id="aba8" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Como eu faço para levar o meu animal doméstico na
+          viagem?</strong></p>
+          <p>O transporte de animais domésticos pode ser autorizado no
+          interior ou no porão da aeronave, conforme as regras de cada
+          companhia.</p>
+          <p><strong>É preciso pagar por esse serviço?</strong></p>
+          <p>O serviço não está incluído no preço da passagem e
+          a solicitação e a consulta de preços devem ser feitas com
+          antecedência. Caso o transporte de animais seja autorizado
+          pela empresa aérea, é necessário apresentar para embarque
+          o atestado de sanidade do animal, fornecido por médico
+          veterinário. Dependendo do porte do animal ou raça, ele deve
+          usar focinheira para ter acesso ao terminal do aeroporto.
+          Exceção para os cães-guia, devidamente documentados.</p>
+          <p><strong>Quais são as regras para viajar com animais em voos
+          domésticos?</strong></p>
+          <p>Cães e gatos devem ser transportados com atestado
+          emitido por veterinário particular. Para movimentação de
+          quaisquer outros animais, o responsável precisa obter a Guia
+          de Trânsito Animal (GTA), por meio dos veterinários oficiais ou
+          credenciados.</p>
+        </div>
+      </div>
+      <div id="aba9" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>O portão onde vou embarcar pode mudar?</strong></p>
+          <p>Sim. Os portões de embarque podem sofrer mudanças
+          devido à acomodação das aeronaves nos pátios em função de
+          uma maior comodidade para o passageiro ou do cumprimento
+          dos horários dos voos. Assim, você deve ficar atento aos avisos
+          sonoros sobre as chamadas para embarque e aos painéis de
+          chegadas e partidas.</p>
+          <p><strong>É possível que eu não consiga embarcar em um voo que
+          havia planejado?</strong></p>
+          <p>Sim. Em alguns casos, o passageiro pode ser impedido
+          de embarcar no voo que havia planejado. Isso pode acontecer
+          porque algumas aeronaves podem precisar de manutenções
+          não programadas. Todas as vezes que um avião chega a um
+          aeroporto, ele é inspecionado pela equipe de manutenção da
+          companhia aérea. Se houver necessidade de manutenção não
+          programada, será preciso trocar os passageiros de avião e
+          nem sempre a companhia dispõe de aeronave reserva no local.
+          Dessa forma, os passageiros terão que ser reacomodados em
+          outros voos.</p>
+          <p><strong>Em que outras situações o horário do meu embarque
+          pode ser alterado?</strong></p>
+          <p>São normais casos em que uma aeronave passa a noite
+          em um aeroporto de menor movimento e, quando inicia sua
+          jornada, percorre várias cidades. Se um aeroporto amanhece
+          fechado por mau tempo, por exemplo, aquele avião poderá não
+          decolar. Isso cria um efeito dominó, já que os passageiros nos
+          outros aeroportos que também aguardavam por aquele avião
+          terão que ser reacomodados em outros voos.</p>
+        </div>
+      </div>
+      <div id="aba10" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Quais os meus direitos nos casos de atraso ou
+          cancelamento?</strong></p>
+          <p>Nos casos de atraso, cancelamento de voo e preterição
+          de embarque (embarque não realizado por motivo de
+          segurança operacional, troca de aeronave, overbooking etc.),
+          o passageiro que comparecer para embarque tem direito à
+          assistência material, que envolve comunicação, alimentação
+          e acomodação. Essas medidas têm como objetivo minimizar
+          o desconforto dos passageiros enquanto aguardam o voo,
+          atendendo às suas necessidades imediatas. A assistência é
+          oferecida gradualmente, pela empresa aérea, de acordo com o
+          tempo de espera, contado a partir do momento em que houve
+          o atraso, cancelamento ou preterição de embarque, conforme
+          demonstrado a seguir:
+          A partir de uma hora: comunicação (internet, telefonemas
+          etc.).
+          A partir de duas horas: alimentação (voucher, lanche,
+          bebidas etc.).
+          A partir de quatro horas: acomodação ou hospedagem (se
+          for o caso) e transporte do aeroporto ao local de acomodação.
+          Se você estiver no local de seu domicílio, a empresa poderá
+          oferecer apenas o transporte para sua residência e desta para
+          o aeroporto.
+          Se o atraso for superior a quatro horas (ou a empresa já
+          tenha a estimativa de que o voo atrasará esse tempo) ou houver
+          cancelamento de voo ou preterição de embarque, a empresa
+          aérea deverá oferecer ao passageiro, além da assistência
+          material, opções de reacomodação ou reembolso.
+          A assistência material deverá ser oferecida também aos
+          passageiros que já estiverem a bordo da aeronave, em solo,
+          no que for cabível. A empresa poderá suspender a prestação
+          da assistência material para proceder ao embarque imediato.
+          <p><strong>O que é preterição de embarque?</strong></p>
+          <p>A preterição de embarque (embarque não realizado por
+          motivo de segurança operacional, substituição de avião,
+          overbooking etc.) ocorre na situação em que o passageiro
+          teve o seu embarque negado, mesmo tendo cumprido todos os
+          requisitos para o embarque. Logo que a empresa constatar que
+          há possibilidade de preterição, deverá procurar por voluntários
+          que aceitem embarcar em outro voo, mediante a oferta de
+          compensações (dinheiro, bilhetes extras, milhas, diárias em
+          hotéis etc.). Caso você aceite essa compensação, a empresa
+          poderá solicitar a assinatura de um recibo, comprovando que
+          foi aceita a proposta. Caso você não aceite a compensação, e
+          seja preterido, caberá à empresa aérea oferecer alternativas de
+          reacomodação e reembolso, além da assistência material.</p>
+        </div>
+      </div>
+      <div id="aba11" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Como é feito o reembolso da passagem?</strong></p>
+          <p>Caso o voo atrase por mais de quatro horas, seja cancelado
+          ou, ainda, o passageiro tenha seu embarque negado (preterição
+          de embarque), a empresa deverá reembolsar o passageiro de
+          acordo com a forma de pagamento utilizada na compra da
+          passagem. A devolução dos valores já quitados e recebidos
+          pela empresa aérea (compra à vista em dinheiro, cheque
+          compensado ou débito em conta-corrente) deverá ser imediata,
+          em dinheiro ou por meio de crédito em conta bancária. Se a
+          passagem aérea foi financiada no cartão de crédito e tem
+          parcelas a vencer, o reembolso obedecerá às regras da
+          administradora do cartão. As providências para o reembolso
+          devem ser imediatas. Se for do interesse do passageiro, a
+          empresa poderá oferecer, em vez de reembolso, créditos em
+          programas de milhagem.</p>
+        </div>
+      </div>
+      <div id="aba12" class="animated">
+        <div class="tabs-content-scrool">
+          <p><strong>Como fica a situação do passageiro no caso em que o
+          aeroporto foi fechado?</strong></p>
+          <p>Um aeroporto “fecha” quando as condições meteorológicas
+          ou operacionais naquele local não são adequadas para
+          pousos e decolagens. Nesse caso, chegadas e/ou partidas são
+          suspensas ou canceladas até a reabertura do aeroporto. Em
+          consequência, os aviões podem ser encaminhados para outros
+          aeroportos ou permanecer em espera. Os direitos à assistência
+          material, reacomodação e reembolso são devidos mesmo nos
+          casos em que o atraso tenha sido causado por condições
+          meteorológicas ou operacionais adversas.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!--div tal:replace="structure provider:plone.belowcontentbody" /-->
+    <div class="compartilhe-guia">
+      <!-- AddThis Button BEGIN -->         
+      <div class="addthis_toolbox addthis_default_style" addthis:title="Antes de Viajar | Guia do Passageiro | Aerofácil" addthis:url="http://aerofacil.gov.br/antes-de-viajar.html">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+      </div>      
+      <!-- AddThis Button END -->
+    </div>
+
+  </div>
+  
+  <div tal:replace="structure provider:plone.belowcontentbody" />
+  <!-- <div class="col-download-ebook">
+    <a class="download-ebook" href="guiapassageiro.pdf" target="_blank">
+      ebook
+      <span class="titulo verde">Guia do Passageiro</span>
+      <span class="descricao">Baixe a versão em PDF do Guia do Passageiro e fique sempre bem informado.</span>
+      <span class="lk-seta amarelo">Baixar</span><br>          
+    </a>
+    <a href="http://issuu.com/manunodari/docs/guiapassageiro" target="_blank" class="lk-seta amarelo lk-issu">Visualizar</a>
+  </div> -->
+
+  <!-- <div class="depoimentos">
+    depoimentos
+    <span class="titulo verde">De brasileiro para brasileiro</span>
+    <a href="#" class="dep-1" data-id-video="EqDsU62ZOrg">Depoimento 1</a>
+    <a href="#" class="dep-2" data-id-video="EqDsU62ZOrg">Depoimento 2</a>
+    <a href="#" class="dep-3" data-id-video="EqDsU62ZOrg">Depoimento 3</a>
+    <a href="#" class="dep-4" data-id-video="EqDsU62ZOrg">Depoimento 4</a>
+    <a href="#" class="dep-5" data-id-video="EqDsU62ZOrg">Depoimento 5</a>
+    <a href="#" class="dep-6" data-id-video="EqDsU62ZOrg">Depoimento 6</a>
+    <a href="#" class="dep-7" data-id-video="EqDsU62ZOrg">Depoimento 7</a>
+  </div> -->
+
+</div>
+        
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>
