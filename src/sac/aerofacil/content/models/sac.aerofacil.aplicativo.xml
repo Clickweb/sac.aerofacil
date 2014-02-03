@@ -1,0 +1,36 @@
+<model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:indexer="http://namespaces.plone.org/supermodel/indexer" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="title" type="zope.schema.TextLine">
+      <description/>
+      <title>Nome do aplicativo</title>
+    </field>
+    <field name="description" type="zope.schema.Text">
+      <description>Sum&#225;rio do aplicativo, exibido na p&#225;gina inicial.</description>
+      <title>Chamada</title>
+    </field>
+    <field name="body" type="plone.app.textfield.RichText">
+      <description>Descri&#231;&#227;o detalhada do aplicativo.</description>
+      <title>Corpo de texto</title>
+    </field>
+    <field name="android" type="zope.schema.TextLine">
+      <description>URL para download</description>
+      <required>False</required>
+      <title>Android</title>
+    </field>
+    <field name="ios" type="zope.schema.TextLine">
+      <description>URL para download</description>
+      <required>False</required>
+      <title>IOS</title>
+    </field>
+    <field name="windows" type="zope.schema.TextLine">
+      <description>URL para download</description>
+      <required>False</required>
+      <title>Windows</title>
+    </field>
+    <field name="web" type="zope.schema.TextLine">
+      <description>URL para acesso</description>
+      <required>False</required>
+      <title>Voos Online Web</title>
+    </field>
+  </schema>
+</model>

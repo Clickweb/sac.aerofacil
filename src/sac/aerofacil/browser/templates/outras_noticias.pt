@@ -1,7 +1,9 @@
-<div class="outras-noticias">
+<div class="outras-noticias"
+    tal:define="noticias view/noticias"
+    tal:condition="noticias">
   <div class="centraliza">
     <strong>Outras notícias:</strong><br>
-    <tal:block repeat="noticia view/noticias">
+    <tal:block repeat="noticia noticias">
       <a tal:attributes="href noticia/getURL;
                          title noticia/pretty_title_or_id;
                          rel noticia/id">
