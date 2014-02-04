@@ -529,7 +529,964 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 }
 
-  /* Plone */
+/* APLICATIVOS */
+
+.conteudo-aplicativo {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
+.share-aplicativo {background: #fbb900;height: 63px;}
+.page-aplicativo .rodape {background: #353535;}
+.share-aplicativo .centraliza {width: 915px;}
+.share-aplicativo .addthis_toolbox {margin: 20px 0 0 0;}
+
+.conteudo-aero .miolo {
+  float: left; 
+  width: 655px;
+  padding: 80px 0 0 155px;
+  position: relative;
+}
+
+.mostra-app {
+  float: left;
+  margin: 60px 0 0 90px;
+  padding: 150px 0 0 250px;
+  width: 580px;
+}
+  .app-voos {background: url(../images/app-voo.png) no-repeat 0 5px;}
+  .app-viajantes {background: url(../images/app-viajantes.png) no-repeat 0 5px;}
+  .app-taxi {background: url(../images/app-taxi.png) no-repeat 0 5px;}
+
+  .mostra-app h2 {font-size: 21px; line-height: 28px;}
+    .mostra-app h2 span {font-size: 26px;}
+  .mostra-app p {
+    padding: 10px 0 20px 0;
+  }
+.down-app {
+  font-size: 18px;
+  color: #2d2d2d;
+  font-family: 'gotham_roundedlight';
+}
+  .down-app a {margin: 10px 15px 0 0; display: inline-block;}
+
+.aplicativos-interna {
+  float: left;
+  margin: 93px 0 0 333px;
+  position: relative;
+  width: 450px;
+}
+.lista-aplicativos-interna {position: relative;}
+.lista-aplicativos-interna li {
+    float: left;    
+    font-size: 13px;
+    line-height: 18px;
+    text-align: right;
+    height: 160px;
+    /*padding: 0 110px 0 0;
+    height: 160px;
+    width: 340px;*/
+  }
+    .lista-aplicativos-interna li.app-voo {background: url(../images/lista-app-voo.png) no-repeat right 0;}
+    .lista-aplicativos-interna li.app-viajantes {background: url(../images/lista-app-viajantes.png) no-repeat right 0;}
+    .lista-aplicativos-interna li.app-taxi {background: url(../images/lista-app-taxi.png) no-repeat right 0;}
+
+  .lista-aplicativos-interna h3 {
+    font-size: 20px;
+    color: #007739;
+    line-height: 25px;
+    font-family: 'gothambold';
+    padding-right: 110px;
+  }
+    .lista-aplicativos-interna h3 span {
+      color: #fbb900;
+      font-size: 25px;
+      clear: both;
+      display: block;
+    }
+
+  .lista-aplicativos-interna p { padding-right: 110px; }
+  .lk-seta { margin-right: 110px; }
+
+.conteudo-aplicativo .flex-prev {
+  position: absolute;
+  width: 31px;
+  height: 60px;
+  background: url(../images/setas-noticias.png) no-repeat 0 0;  
+  text-indent: -9999px;
+  clear: both;
+  top: 45px;
+  left: -55px;
+  
+}
+.conteudo-aplicativo .flex-next {
+  position: absolute;
+  width: 31px;
+  height: 60px;
+  background: url(../images/setas-noticias.png) no-repeat -43px 0;  
+  text-indent: -9999px;    
+  top: 45px;
+  right: -55px;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .conteudo-aplicativo { background-image: none; max-height: none; padding-bottom: 40px; }
+
+  .mostra-app { margin: 0; padding: 0 10px; width: auto; }
+
+  .app-voos { background: url(../images/mobile/home-aplicativos-voos.jpg) no-repeat top right; }
+  .app-viajantes { background: url(../images/mobile/home-aplicativos-viajantes.jpg) no-repeat top right; }
+  .app-taxi { background: url(../images/mobile/home-aplicativos-taxi.jpg) no-repeat top right; }
+
+  .down-app a { display: block; }
+  .mostra-app h2 { font-size: 16px; line-height: 28px; padding: 25px 0 15px; }
+  .mostra-app h2 span { font-size: 18px; }
+
+  .share-aplicativo .centraliza { width: auto; padding: 0 10px;  }
+
+  
+  .aplicativos-interna { margin: 93px 0 0 0; width: 100%; }
+
+  .lista-aplicativos-interna h3 { font-size: 16px; line-height: 18px; }
+  .lista-aplicativos-interna h3 span { font-size: 20px; line-height: 22px; }
+
+  .lista-aplicativos-interna li { padding-bottom: 40px; }
+
+  .conteudo-aplicativo .flex-next { background-position: -16px 6px; left: 40px; }
+  .conteudo-aplicativo .flex-prev { left: inherit; left: 0px; background-position: 8px 6px; }
+  .conteudo-aplicativo .flex-next,
+  .conteudo-aplicativo .flex-prev { background-size: 37px 30px; height: 40px; bottom: -25px; top: inherit; }
+
+}
+
+/* AEROPORTOS */
+
+.conteudo-aero {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;height: 1050px; position: relative;}
+.share-aero {background: #fbb900;height: 63px;}
+
+.conteudo-aero .miolo {
+  float: left; 
+  width: 655px;
+  padding: 80px 0 0 155px;
+  position: relative;
+}
+.conteudo-aero .miolo h2.verde {
+  background: url(../images/seta_dir.png) no-repeat 0 center;
+  text-indent: 20px;
+  float: left;
+}
+.conteudo-aero .lk-outro-aero {
+  font-size: 12px;
+  color: #989993;
+  text-decoration: none;
+  font-family: 'gothambold';
+  background: url(../images/seta-cinza.png) no-repeat 0 center;
+  float: left;  
+  padding: 1px 0 0 18px;
+  margin: 5px 0 0 10px;
+}
+.conteudo-aero .miolo h2 {
+  clear: both;
+}
+.desc-aero {
+  font-size: 12px;
+  float: left;
+  width: 630px;  
+  margin: 0 0 40px 0;
+}
+.item-aero {
+  float: left;
+  width: 565px;
+  padding: 0 0 10px 75px;
+}
+  .item-restaurante {background: url(../images/item-aero-restaurante.png) no-repeat 0 0;}
+  .item-lojas {background: url(../images/item-aero-lojas.png) no-repeat 0 0;}
+  .item-localizacao {background: url(../images/item-aero-localizacao.png) no-repeat 0 0;}
+  .item-estacionamento {background: url(../images/item-aero-estacionamento.png) no-repeat 0 0;}
+
+  .item-aero a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #262626;
+    float: left;
+    width: 100%;
+    margin: 0 0 5px -75px;
+    padding: 15px 0 10px 70px;
+  }
+    .item-aero span a {
+      padding: 0;
+      margin: 0;
+      width: auto;
+      float: none;
+      color: #007739;
+      text-decoration: underline;      
+    }
+    .item-aero a strong {
+      font-size: 20px;
+      color: #007739;
+      font-family: 'gothambold';
+    }
+    .item-aero span {
+      font-size: 12px;
+      float: left;
+      width: 100%;
+      padding: 0 0 0 0; 
+      display: none;     
+    }
+    .item-aero p {
+      padding: 0 0 10px 0;
+    }
+.overflow-aero {
+  float: left;
+  width: 655px;
+  height: 720px;  
+  overflow: hidden;
+  position: relative;
+}
+
+.mCSB_container {
+  width:auto;
+  overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
+.mCustomScrollBox>.mCSB_scrollTools{
+  width:20px;
+  height:100%;
+  top:0;
+  right:0;
+  margin: 0 0 0 0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0; 
+  height:auto;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
+.mCSB_scrollTools .mCSB_draggerRail{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+  background-color: #007739; 
+}
+.mCSB_scrollTools .mCSB_dragger{
+  cursor:pointer;
+  width:100%;
+  height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+  background: #005428;
+}
+.box-apps {
+  float: left;
+  width: 450px;
+  height: 154px;  
+  margin: 28px 0 0 120px;
+  position: relative;
+}
+  .flex-control-nav {
+    position: absolute;
+    top: 80px;
+    right: -60px;    
+  }
+  .flex-control-nav li { float: left; }
+    .flex-control-nav a {
+      float: left;
+      width: 15px;
+      height: 19px;
+      background: url(../images/marcadores-apps.png) no-repeat 0 center;
+      text-indent: -9999px;
+      margin: 0 0 0 3px;
+    }
+      .flex-control-nav a.flex-active {
+        background: url(../images/marcadores-apps.png) no-repeat -15px center;
+        width: 16px;
+      }
+
+      .box-app-voo {
+  height: 154px;
+  background: url(../images/lista-app-voo.png) no-repeat right top;
+  text-align: right;  
+}
+
+.box-app-viajantes {
+  height: 154px;
+  background: url(../images/lista-app-viajantes.png) no-repeat right top;
+  text-align: right;
+  }
+
+.box-app-taxi {
+
+background: url(../images/lista-app-taxi.png) no-repeat right top;
+height: 154px;
+text-align: right;
+
+  
+}
+  .box-apps h3 {
+    font-size: 20px;
+    color: #007739;
+    line-height: 25px;
+    font-family: 'gothambold';
+    padding: 0 120px 0 0;
+  }
+    .box-apps h3 span {
+      color: #fbb900;
+      font-size: 25px;
+      clear: both;
+      display: block;
+    }
+    .box-apps p {
+      padding-right: 120px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+  .box-apps .lk-seta {
+      margin-right: 120px;
+    }
+
+.share-aero .centraliza {width: 915px;}
+.share-aero .addthis_toolbox {margin: 20px 0 0 0;}
+.page-aeroporto .rodape {background: #353535;}
+#aeroporto {float: left; width: 100%;}
+
+.select-aeroporto {
+  font-family: Verdana;
+  color: #262626;
+  background: #fff;
+  border: 1px solid #007739;
+  padding: 5px;
+  margin: 2px 0 0 20px;
+  width: 250px;
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .conteudo-aero { background-image: none; height: auto; }
+  .conteudo-aero .centraliza { width: auto; padding: 0 10px; }
+  .conteudo-aero .miolo { width: 100%; padding: 0; }
+  .conteudo-aero .miolo h2.verde { float: initial; }
+  .conteudo-aero .lk-outro-aero { float: initial; display: block; margin: 10px 0 0 0; }
+  .conteudo-aero .select-aeroporto { margin: 10px 0 0 0; }
+
+
+  .conteudo-aero #aeroporto { padding-top: 10px; }
+
+  .conteudo-aero .overflow-aero { width: 100%; height: auto; }
+  .conteudo-aero .desc-aero { width: auto; margin: 0 0 20px 0; }
+  .conteudo-aero .item-aero { width: auto; margin-left: 10px; clear: both; }
+
+  .share-aero .centraliza { width: auto; padding: 0 10px; }
+
+  .box-apps { width: 100%; height: 154px; margin: 0; }
+  .box-apps h3 { font-size: 16px; }
+  .box-apps h3 span { font-size: 18px; }
+  .box-apps p { font-size: 12px; line-height: 14px; }
+
+  .flex-control-nav {
+    top: 168px;
+    right: 24px;
+  }
+
+  iframe { width: auto; height: 350px; margin: 10px 0 0 -70px; }
+
+}
+
+/* GUIA DO PASSAGEIRO */
+
+* {outline-color: transparent; outline-style: none; outline-width: medium}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+a, img, ul, ol, li, fieldset, form, label, input, select,
+textarea, legend, table tbody, tfoot, thead, tr, th,
+td, dl, dt, dd, address {
+border: 0;
+font-weight: normal;
+font-style: inherit;
+font-size: inherit;
+font-family: Arial,Helvetica,sans-serif;
+margin: 0;
+outline: 0;
+padding: 0;
+vertical-align: baseline;
+}
+:focus {outline: 0}
+body {background: #fff; color: #000; line-height: 1}
+a {text-decoration: none}
+ul, ol {list-style: none}
+textarea {resize: vertical}
+table {border-collapse: separate; border-spacing: 0}
+th, td {font-weight: normal; text-align: left}
+
+
+.conteudo { background: #fcfef1 url(../images/guia-pagebg2.jpg) center -69px no-repeat; padding-top: 46px; min-height: 820px; clear: both; }
+
+.rodape { background: #353535; }
+
+.limites { width: 1167px; margin: 0 auto; }
+
+
+.guia-menu { display: table;  }
+
+
+.guia-menu a {
+  display: table-cell;
+  height: 75px;
+  text-align: center;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 19px;
+    width: 290px;
+    border-left: 2px solid #efa60d;
+    font-family: 'gotham_roundedmedium'; 
+}
+
+.guia-menu a.antes-de-viajar { background: #f78600; }
+.guia-menu a.viagens-internacionais { background: #93166e; }
+.guia-menu a.durante-o-voo { background: #005428; }
+.guia-menu a.no-desembarque { background: #085973; }
+
+.guia-menu a:first-child { width: 291px; border-left: 0; }
+
+.guia-conteudo { height: 453px; overflow: hidden; }
+.guia-conteudo #tabs { overflow: hidden; display: table; }
+.guia-conteudo #tabs li { list-style: none; display: table-cell; vertical-align: top; }
+.guia-conteudo #tabs li a {
+  display: table-cell;
+  color: #fff;
+  width: 87px;
+  height: 85px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 10px;
+  border: 1px solid #efa60d;
+  vertical-align: middle;
+  padding: 0 4px 65px;
+  background-image: url(../images/guia-sprite.png);
+  background-repeat: no-repeat;
+  line-height: 12px;
+  font-family: 'gotham_roundedmedium'; 
+}
+
+.guia-conteudo #tabs li.current a { color: #fbaa11; }
+
+.antes-de-viajar #tabs li a { background-color: #f78600; }
+.antes-de-viajar #tabs li a:hover { background-color: #84400d; }
+.antes-de-viajar #tabs li.current a { background-color: #84400d; color: #fbaa11; }
+
+.viagens-internacionais #tabs li a { background-color: #93166e; }
+.viagens-internacionais #tabs li a:hover { background-color: #7c105c; }
+.viagens-internacionais #tabs li.current a { background-color: #7c105c; }
+
+.durante-o-voo #tabs li a { background-color: #005428; }
+.durante-o-voo #tabs li a:hover { background-color: #007739; }
+.durante-o-voo #tabs li.current a { background-color: #007739; }
+
+.no-desembarque #tabs li a { background-color: #085973; }
+.no-desembarque #tabs li a:hover { background-color: #05475c; }
+.no-desembarque #tabs li.current a { background-color: #05475c; }
+
+.guia-conteudo #tabs li a.ico1 { background-position: 16px 73px; }
+.guia-conteudo #tabs li a.ico2 { background-position: -80px 73px; }
+.guia-conteudo #tabs li a.ico3 { background-position: -176px 73px; }
+.guia-conteudo #tabs li a.ico4 { background-position: -275px 73px; }
+.guia-conteudo #tabs li a.ico5 { background-position: -370px 73px; }
+.guia-conteudo #tabs li a.ico6 { background-position: -472px 73px; }
+.guia-conteudo #tabs li a.ico7 { background-position: -566px 73px; }
+.guia-conteudo #tabs li a.ico8 { background-position: -666px 73px; }
+.guia-conteudo #tabs li a.ico9 { background-position: -763px 73px; }
+.guia-conteudo #tabs li a.ico10 { background-position: -859px 73px; }
+.guia-conteudo #tabs li a.ico11 { background-position: -958px 73px; }
+.guia-conteudo #tabs li a.ico12 { background-position: -1053px 73px; }
+.guia-conteudo #tabs li a.ico13 { background-position: -1148px 73px; }
+
+.guia-conteudo #tabs li:first-child a { width: 88px; }
+.guia-conteudo #tabs li:last-child a { width: 88px; }
+
+.guia-conteudo #tabs-content > div { clear: both; display: none; }
+.guia-conteudo #tabs-content .current { display: block; }
+.guia-conteudo #tabs-content #home.first { display: block; }
+.guia-conteudo #tabs-content p { margin: 0 60px 20px 0; color:#262626; font-size: 17px; line-height: 28px; font-family: 'gotham_roundedbook'; }
+.guia-conteudo #tabs-content p strong { font-family: 'gotham_roundedmedium'; }
+
+.durante-o-voo #tabs,
+.no-desembarque #tabs { float: left; }
+.durante-o-voo #tabs-content,
+.no-desembarque #tabs-content { float: right; width: 960px; }
+.durante-o-voo #tabs-content .tabs-content-scrool,
+.no-desembarque #tabs-content .tabs-content-scrool { padding: 40px 0 10px 40px; height: 370px; }
+
+.viagens-internacionais #tabs-content .tabs-content-scrool,
+.antes-de-viajar #tabs-content .tabs-content-scrool { padding: 40px 0 10px 40px; height: 220px; }
+
+.compartilhe-guia {float: left; width: 100%;}
+.guia-conteudo .addthis_toolbox { float: right; min-width: 280px; }
+
+
+.mCSB_container {
+  width:auto;
+  overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
+.mCustomScrollBox>.mCSB_scrollTools{
+  width:20px;
+  height:100%;
+  top:0;
+  right:0;
+  margin: 0 20px 0 0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0; 
+  height:auto;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
+.mCSB_scrollTools .mCSB_draggerRail{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+  background-color: #007739; 
+}
+.mCSB_scrollTools .mCSB_dragger{
+  cursor:pointer;
+  width:100%;
+  height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+    background: #005428;
+}
+.col-download-ebook {
+  float: left;
+  width: 400px;
+  margin: 47px 10px 10px 210px;
+  position: relative;
+}
+  .lk-issu {
+    position: absolute;
+    bottom: 22px;
+    left: 125px;
+  }
+.download-ebook {
+  background: url(../images/ebook.png) 0 0 no-repeat;
+  display: block;
+  height: 155px;
+  width: 275px;  
+  padding: 20px 0 0 125px;
+  font-family: 'gotham_roundedlight';
+  color: #2d2d2d;
+  font-size: 15px;
+  float: left;
+}
+
+.download-ebook span.titulo {
+  font-family: 'gothambold';
+  display: block;
+  font-size: 26px;
+  line-height: 40px;
+}
+.download-ebook span.descricao { font-size: 11px; display: block; line-height: 18px; }
+.download-ebook span.baixar {
+  font-family: 'gothambold';
+  display: block;
+  font-size: 11px;
+  line-height: 24px;
+}
+
+.depoimentos {
+  background: url(../images/depoimentos.png) 0 74px no-repeat;
+  display: block;
+  height: 120px;
+  width: 454px;
+  margin: 47px 0 0 0;
+  padding: 20px 0 0;
+  font-family: 'gotham_roundedlight';
+  color: #2d2d2d;
+  font-size: 15px;
+  float: right;
+  position: relative;
+  display: none;
+}
+.depoimentos span.titulo {
+  font-family: 'gothambold';
+  display: block;
+  font-size: 26px;
+  line-height: 40px;
+}
+  .depoimentos a {
+    position: absolute;
+    float: left;
+    width: 64px;
+    height: 64px;
+    text-indent: -9999px;    
+  }
+  .depoimentos .dep-1 {top: 72px; left: 0;}
+  .depoimentos .dep-2 {top: 72px; left: 65px;}
+  .depoimentos .dep-3 {top: 72px; left: 128px;}
+  .depoimentos .dep-4 {top: 72px; left: 195px;}
+  .depoimentos .dep-5 {top: 72px; left: 256px;}
+  .depoimentos .dep-6 {top: 72px; left: 325px;}
+  .depoimentos .dep-7 {top: 72px; left: 388px;}
+
+.overlay {
+  float: left;
+  width: 100%;
+  height: 1000px;
+  position: fixed;
+  background: #001f0f;
+  z-index: 1;  
+  opacity: 0.7;
+  display: none;
+}
+.fechar-float {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'gothambold'; 
+  color: #262626;
+  font-size: 14px;
+  text-decoration: none;
+}
+.float {
+  position: fixed;
+  z-index: 2;
+  width: 1060px;
+  padding: 0 35px 0 65px;
+  left: -100%;
+  margin: -260px 0 0 -580px;
+  top: 50%;  
+  background: #fbb900;
+  float: left;
+  height: 520px;
+}
+  .float #video {
+    float: left;  
+    height: 520px;
+    width: 820px;  
+  }
+  .miniaturas-float {
+    padding: 40px 0 0 30px;
+    float: left;
+    width: 210px;
+  }
+  .miniaturas-float h2 {
+    font-size: 25px; 
+    color: #007739; 
+    line-height: 29px; 
+    letter-spacing: -1px; 
+    font-family: 'gothambold'; 
+    font-weight: normal;
+  }
+
+.miniaturas-float ul {float: left; width: 100%;}
+.miniaturas-float li {
+  float: left;
+  width: 100%;
+  height: 63px;
+  margin: 0 0 4px 0;
+}
+  .miniaturas-float li a {
+    float: left;
+    width: 63px;
+    height: 63px;
+  }  
+    .miniaturas-float li img {max-width: 100%;}
+  .miniaturas-float .prev {
+    float: left;
+    width: 100%;
+    height: 30px;
+    background: url(../images/setas-miniaturas.png) no-repeat center 0;
+    text-indent: -9999px;
+  }
+  .miniaturas-float .next {
+    float: left;
+    width: 100%;
+    height: 30px;
+    background: url(../images/setas-miniaturas.png) no-repeat center bottom;
+    text-indent: -9999px;
+  }
+
+.lista-miniaturas-float {float: left; width: 100%; margin: 10px 0 10px 0;}
+
+
+
+
+@media only screen and (max-width: 767px) {
+
+  .float { display: none; }
+
+  .limites { width: 100%; }
+
+  .conteudo { background-image: none; min-height: none; padding-top: 0; }
+
+  .guia-conteudo {
+    height: auto;
+    background-color: #f78600;
+  }
+  .compartilhe-guia { padding: 10px 0; background-color: #f78600; }
+
+  .guia-menu {display: block; margin-bottom: 50px; width: 100%; }
+  .guia-menu a {
+    display: block;
+    height: auto;
+    font-size: 14px;
+    width: auto;
+    padding: 10px;
+    margin: 5px 0;
+    border: 0!important;
+    text-align: left;
+    position: relative;
+  }
+  .guia-menu a:first-child { width: auto; position: relative; bottom: -156px;  background-image:url(../images/mobile/seta-branca-ativo.png)!important; }
+  .guia-menu a.antes-de-viajar { background: #f78600 url(../images/mobile/seta-branca.png) right center no-repeat; }
+  .guia-menu a.viagens-internacionais { background: #93166e url(../images/mobile/seta-branca.png) right center no-repeat; }
+  .guia-menu a.durante-o-voo { background: #005428 url(../images/mobile/seta-branca.png) right center no-repeat; }
+  .guia-menu a.no-desembarque { background: #085973 url(../images/mobile/seta-branca.png) right center no-repeat; }
+
+  .guia-conteudo #tabs { display: inherit; width: 100%; }
+  .guia-conteudo #tabs li { display: block; }
+  .guia-conteudo #tabs li a {
+    display: block;
+    
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-size: 10px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #efa60d;
+    padding: 10px 28px 10px 40px;
+    background-image: url(../images/mobile/guia-sprite.png);
+  }
+  .guia-conteudo #tabs li:last-child a,
+  .guia-conteudo #tabs li:first-child a { width: auto; }
+
+  .guia-conteudo #tabs li a.ico1 { background-position: 8px 2px; }
+  .guia-conteudo #tabs li a.ico2 { background-position: 8px -33px; }
+  .guia-conteudo #tabs li a.ico3 { background-position: 8px -68px; }
+  .guia-conteudo #tabs li a.ico4 { background-position: 8px -105px; }
+  .guia-conteudo #tabs li a.ico5 { background-position: 8px -141px; }
+  .guia-conteudo #tabs li a.ico6 { background-position: 8px -179px; }
+  .guia-conteudo #tabs li a.ico7 { background-position: 8px -216px; }
+  .guia-conteudo #tabs li a.ico8 { background-position: 8px -257px; }
+  .guia-conteudo #tabs li a.ico9 { background-position: 8px -297px; }
+  .guia-conteudo #tabs li a.ico10 { background-position: 8px -329px; }
+  .guia-conteudo #tabs li a.ico11 { background-position: 8px -374px; }
+  .guia-conteudo #tabs li a.ico12 { background-position: 8px -413px; }
+  .guia-conteudo #tabs li a.ico13 { background-position: 8px -454px; }
+
+
+  .guia-conteudo #tabs.hover li { display: block; }
+  .guia-conteudo #tabs li { display: none; }
+  .guia-conteudo #tabs li.current { display: block; position: relative; }
+
+  .guia-conteudo #tabs li.current a:after { content:''; display: block; width: 25px; height: 17px; background-image: url(../images/mobile/seta-branca-voltar.png); background-position: right center; background-repeat: no-repeat; position: absolute; top: 7px; right: 0; }
+  .guia-conteudo #tabs.hover li.current a:after { background-image: none; }
+
+  #tabs-content .tabs-content-scrool { height: auto!important; padding: 10px!important; }
+
+  .durante-o-voo #tabs-content,
+  .no-desembarque #tabs-content { width: auto; }
+
+  .guia-conteudo #tabs-content p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .col-download-ebook { width: 100%; margin: 47px 0 0; }
+
+  .download-ebook {
+    background-size: 80px 103px;
+    background-position: 10px 15px;
+    height: 155px;
+    width: auto;
+    padding: 20px 0 0 95px;
+
+
+  }
+
+  .col-download-ebook .lk-seta.amarelo:last-child {
+    position: absolute;
+    top: 98px;
+    left: 181px;
+    background-position: right 3px;
+    bottom: 0;
+  }
+
+  .download-ebook span.titulo { font-size: 18px; line-height: 28px; }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+
+  .guia-conteudo #tabs li a { background-image: url(../images/mobile/guia-sprite@2x.png); background-size: 25px 488px ; }
+
+  .guia-menu a:first-child { background-image:url(../images/mobile/seta-branca-ativo@2x.png)!important; background-size: 25px 17px; }
+  .guia-menu a.antes-de-viajar { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
+  .guia-menu a.viagens-internacionais { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
+  .guia-menu a.durante-o-voo { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
+  .guia-menu a.no-desembarque { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
+
+  .guia-conteudo #tabs li.current a:after { background-image: url(../images/mobile/seta-branca-voltar@2x.png); background-size: 25px 17px; }
+
+}
+
+/* DESTAQUES */
+
+.conteudo-destaques {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
+
+.page-destaques .rodape {background: #353535;}
+
+.conteudo-destaques .miolo {
+  float: left; 
+  width: 655px;
+  padding: 60px 0 30px 80px;
+  position: relative;
+}
+  .conteudo-destaques .miolo h2 {padding: 0 0 20px 0;}
+  .conteudo-destaques .miolo p {padding: 0 0 20px 30px;}
+
+.conteudo-destaques .miolo h2.verde {
+  background: url(../images/seta_dir.png) no-repeat 0 8px;
+  float: left;
+  padding: 0 0 20px 25px;
+}
+.share-noticias {background: #fbb900;height: 63px;}
+.share-noticias .centraliza {width: 915px;}
+.share-noticias .addthis_toolbox {margin: 20px 0 0 0;}
+
+
+@media only screen and (max-width: 767px) {
+  .conteudo-destaques { background-image: none; }
+  .conteudo-destaques .miolo { width: auto; padding: 0 10px; }
+
+  .share-noticias .centraliza { width: auto; padding: 0 10px; }
+
+}
+
+/* NOTICIAS */
+
+.conteudo-noticias {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
+
+.share-noticias {background: #fbb900;height: 63px;}
+.share-noticias .centraliza {width: 915px;}
+.share-noticias .addthis_toolbox {margin: 20px 0 0 0;}
+
+.page-noticias .rodape {background: #353535;}
+
+.conteudo-noticias .miolo {
+  float: left; 
+  width: 745px;
+  padding: 60px 0 30px 80px;
+  position: relative;
+}
+  .conteudo-noticias .miolo h2 {
+    padding: 0 20px 20px 20px;
+    background: url(../images/seta_dir.png) no-repeat 0 10px;
+  }
+  .conteudo-noticias .miolo p {padding: 0 30px 20px 20px;}
+
+#miolo-noticias {max-height: 800px;}
+
+.mCSB_container {
+  width:auto;
+  overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
+.mCustomScrollBox>.mCSB_scrollTools{
+  width:20px;
+  height:100%;
+  top:0;
+  right:0;
+  margin: 0 0 0 0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0; 
+  height:auto;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
+.mCSB_scrollTools .mCSB_draggerRail{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+  background-color: #007739; 
+}
+.mCSB_scrollTools .mCSB_dragger{
+  cursor:pointer;
+  width:100%;
+  height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  width:20px;
+  height:100%;
+  margin:0 auto;
+  background: #005428;
+}
+
+.outras-noticias {
+  float: left;
+  width: 100%;
+  background: #fcfef1;
+  padding: 20px 0 20px 0;
+}
+  .outras-noticias strong {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+    color: #2d2d2d;
+    font-family: 'gotham_roundedlight';
+    float: left;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  .outras-noticias .centraliza {
+    width: 915px;
+  }
+  .outras-noticias a {
+    font-size: 19px;
+    font-family: 'gothambold';
+    color: #007739;
+    text-decoration: none;
+    background: url(../images/seta_dir.png) no-repeat 0 0;
+    padding: 0 0 0 20px;
+    line-height: 30px;
+  }
+    .outras-noticias a.amarelo {
+      color: #fbb900;
+      background: url(../images/seta-amarelo-normal.png) no-repeat 0 0;      
+    }
+
+@media only screen and (max-width: 767px) {
+
+    .conteudo-noticias { background-image: none; max-height: inherit; }
+    .conteudo-noticias .miolo { width: auto; padding: 0 10px; max-height: none; }
+    #miolo-noticias { max-height: none; }
+    .conteudo-noticias .miolo h2 { background-position: 0 0; }
+    .conteudo-noticias .miolo p { padding: 0 10px 20px 20px; }
+
+    .share-noticias .centraliza { width: auto; padding: 0 10px; }
+
+    .outras-noticias .centraliza { width: auto; padding: 0 10px; }
+    .outras-noticias a { font-size: 14px; padding: 0 0 0 20px; line-height: 17px; display: block; }
+    .outras-noticias strong { margin: 0; display: block; float: inherit; }
+
+}
+
+/* PLONE */
 
 #portal-personaltools {
     background: #fcbe00;
