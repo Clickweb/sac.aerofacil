@@ -233,7 +233,7 @@
                   updateOnContentResize: true
               }
           });
-      });    
+      });
 
       $(".guia-conteudo #tabs li a").on("click", function() {
           $(".guia-conteudo #tabs").toggleClass("hover");

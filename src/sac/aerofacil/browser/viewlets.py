@@ -103,3 +103,28 @@ class SelectAeroportoViewlet(ViewletBase):
 
 class ShareViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/share.pt')
+
+
+def search_catalog(context=None,
+                   portal=None,
+                   portal_type='',
+                   review_state='',
+                   path='',
+                   sort_on='',
+                   sort_order='',
+                   sort_limit=None):
+    portal_type = portal_type or 'News Item'
+    review_state = review_state or 'published'
+    sort_on = sort_on or 'Date',
+    sort_order = sort_order or 'reverse',
+    sort_limit = sort_limit
+    if path in getNavigationRootObject(context, portal).objectIds():
+        path = portal[path].getPhysicalPath()
+    catalog = getToolByName(context, 'portal_catalog')
+    brains = catalog(portal_type=portal_type,
+                     review_state=review_state,
+                     path='/'.join(path),
+                     sort_on=sort_on,
+                     sort_order=sort_order,
+                     sort_limit=sort_limit)
+    return brains
