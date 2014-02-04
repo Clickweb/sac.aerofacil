@@ -31,15 +31,15 @@ class GuiaDoPassageiro(grok.View):
                         path='/'.join(portal['guia-do-passageiro'].getPhysicalPath()),
                         sort_on='getObjPositionInParent',
                         sort_limit=4)[:4]
-        return {guia: _abas(guia) for guia in guias}
+        return {guia: self.abas(guia) for guia in guias}
 
     @memoize
-    def _abas(self, guia):
+    def abas(self, guia=None):
         """Devolve abas a partir das guias da seção Guia do passageiro.
         """
         context = aq_inner(self.context)
         portal = self.portal_state.portal()
-        path = portal['guia-do-passageiro'][brain.id].getPhysicalPath()
+        path = portal['guia-do-passageiro'][guia.id].getPhysicalPath()
         catalog = getToolByName(self.context, 'portal_catalog')
         abas = catalog(portal_type='Document',
                        review_state='published',
@@ -47,4 +47,3 @@ class GuiaDoPassageiro(grok.View):
                        sort_on='getObjPositionInParent',
                        sort_limit=12)[:12]
         return abas
-

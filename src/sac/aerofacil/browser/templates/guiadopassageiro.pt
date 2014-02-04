@@ -17,23 +17,25 @@
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
-          <div class="limites">
+          <div class="limites"
+              tal:define="guias view/guias">
 
             <div class="guia-menu">
-              <a href="antes-de-viajar" class="antes-viajar">Antes de viajar</a>
-              <a href="viagens-internacionais" class="viagens-internacionais">Viagens internacionais</a>
-              <a href="durante-o-voo" class="durante-voo">Durante o voo</a>
-              <a href="no-desembarque" class="desembarque">No desembarque</a>
+              <tal:block repeat="guia guias">
+              <a tal:attributes="href guia/getURL;
+                                 class guia/id"
+                  tal:content="guia/Title">Antes de viajar</a>
+              </tal:block>
             </div>
 
             <div class="guia-conteudo">
               
               <!-- TABS -->
               <ul id="tabs">
-                <tal:block repeat="aba view/abas">
+                <tal:block repeat="aba python:view.abas(context)">
                 <!-- TODO: Condição para aba atual -->
                 <li tal:define="numero python:repeat['aba'].number() + 1"
-                    tal:attributes="class python:nothing and 'current' or ''">
+                    tal:attributes="class python:'current' if view.current() else ''">
                   <a tal:attributes="href string:#aba${numero};
                                      class string:ico${numero}"
                       tal:content="aba/Title">Compra da passagem</a>
