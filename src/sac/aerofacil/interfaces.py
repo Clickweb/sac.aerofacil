@@ -9,11 +9,6 @@ class ISACAerofacilLayer(IDefaultPloneLayer):
     """Interface de marcação que define um Zope 3 browser layer."""
 
 
-class IHome(Interface):
-    """Interface de marcação para Home.
-    """
-
-
 class IAeroporto(Interface):
     """Interface de marcação para seção Aeroporto.
     """

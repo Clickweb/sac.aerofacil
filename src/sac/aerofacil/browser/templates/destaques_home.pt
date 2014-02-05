@@ -11,9 +11,8 @@
       </p>
       <a class="lk-seta-grande amarelo"
           tal:attributes="href destaque/getURL">Saiba mais</a>
-      <div>
-        <img class="pull-right"
-            tal:attributes="src string:${destaque/getURL}/image;
+      <div tal:replace="nothing">
+        <img tal:attributes="src string:${destaque/getURL}/image/image_view_fullscreen;
                             alt destaque/Title" />
       </div>
     </div>

@@ -18,7 +18,7 @@
 
     <browser:viewlet
         name="sac.aerofacil.destaques_home"
-        for="..interfaces.IHome"
+        for="plone.app.layout.navigation.interfaces.INavigationRoot"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         class=".viewlets.DestaquesHomeViewlet"
@@ -28,7 +28,7 @@
 
     <browser:viewlet
         name="sac.aerofacil.noticias_home"
-        for="..interfaces.IHome"
+        for="plone.app.layout.navigation.interfaces.INavigationRoot"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.NoticiasHomeViewlet"
