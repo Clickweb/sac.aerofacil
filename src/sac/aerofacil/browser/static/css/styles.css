@@ -174,6 +174,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .menu-flutuante a.flut-infos {background-position: 0 -256px;}
 
 /* DESTAQUES */
+
 .destaques .miolo {float: left; width: 585px; padding: 230px 0 0 50px; position: relative;}
 .destaques .label-destaques {font-size: 18px; color: #2d2d2d; padding: 0 0 10px 0; float: left; width: 100%; font-family: 'gotham_roundedlight';}
 .destaques p {padding: 5px 0 10px 0;}
@@ -181,6 +182,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .destaques .miolo strong {font-family: 'gothambold';}
 
 /* APLICATIVOS */
+
 .lista-aplicativos {position: relative;}
   .lista-aplicativos li {
     float: left;
@@ -209,6 +211,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     }
 
 /* GUIA DO PASSAGEIRO */
+
 .guia-do-passageiro .miolo {
   float: right;
   width: 460px;
@@ -219,6 +222,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .guia-do-passageiro .miolo p a {line-height: 28px;}
 
 /* AEROPORTOS */
+
 .aeroportos-brasileiros .miolo {
   float: left;
   padding: 230px 0 0 160px;
@@ -228,6 +232,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .aeroportos-brasileiros .miolo p {padding: 5px 0 10px 0;}
 
 /* NOTICIAS */
+
 .noticias .centraliza {
   position: relative;
 }
@@ -278,6 +283,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   }
 
 /* INFORMACOES */
+
 .informacoes .miolo {
   float: left;
   padding: 55px 0 0 150px;
@@ -456,6 +462,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .menu-mobile.hover { background-color: #B88B00; }
 
   /* RODAPE */
+
   .rodape { background-image: none; }
   .rodape .centraliza {  width: 100%; }
   .rodape h2 { font-size: 24px; margin-left: 10px;  }
@@ -464,6 +471,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 
   /* HOME */
+
   .destaques { background-image: none; height: auto; padding-bottom: 40px; }
   .destaques .label-destaques { font-size: 14px; }
   .destaques .miolo { width: auto; padding: 0 10px; position: relative; }
@@ -550,9 +558,9 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   padding: 150px 0 0 250px;
   width: 580px;
 }
-  .app-voos {background: url(../images/app-voo.png) no-repeat 0 5px;}
-  .app-viajantes {background: url(../images/app-viajantes.png) no-repeat 0 5px;}
-  .app-taxi {background: url(../images/app-taxi.png) no-repeat 0 5px;}
+  .section-aplicativos-e-ferramentas .app-voos {background: url(../images/app-voo.png) no-repeat 0 5px;}
+  .section-aplicativos-e-ferramentas .app-viajantes {background: url(../images/app-viajantes.png) no-repeat 0 5px;}
+  .section-aplicativos-e-ferramentas .app-taxi {background: url(../images/app-taxi.png) no-repeat 0 5px;}
 
   .mostra-app h2 {font-size: 21px; line-height: 28px;}
     .mostra-app h2 span {font-size: 26px;}
@@ -602,7 +610,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     }
 
   .lista-aplicativos-interna p { padding-right: 110px; }
-  .lk-seta { margin-right: 110px; }
+  .section-aplicativos-e-ferramentas .lk-seta { margin-right: 110px; }
 
 .conteudo-aplicativo .flex-prev {
   position: absolute;
@@ -640,7 +648,6 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .mostra-app h2 span { font-size: 18px; }
 
   .share-aplicativo .centraliza { width: auto; padding: 0 10px;  }
-
   
   .aplicativos-interna { margin: 93px 0 0 0; width: 100%; }
 
@@ -656,11 +663,11 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 }
 
+
 /* AEROPORTOS */
 
 .conteudo-aero {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;height: 1050px; position: relative;}
 .share-aero {background: #fbb900;height: 63px;}
-
 .conteudo-aero .miolo {
   float: left; 
   width: 655px;
@@ -745,40 +752,26 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   width:auto;
   overflow:hidden;
 }
-.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
-.mCustomScrollBox>.mCSB_scrollTools{
+.mCSB_container.mCS_no_scrollbar { margin-right:0; }
+.mCustomScrollBox>.mCSB_scrollTools {
   width:20px;
   height:100%;
   top:0;
   right:0;
   margin: 0 0 0 0;
 }
-.mCSB_scrollTools .mCSB_draggerContainer{
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0; 
-  height:auto;
-}
-.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
-.mCSB_scrollTools .mCSB_draggerRail{
-  width:20px;
-  height:100%;
-  margin:0 auto;
-  background-color: #007739; 
-}
-.mCSB_scrollTools .mCSB_dragger{
+.mCSB_scrollTools .mCSB_dragger {
   cursor:pointer;
   width:100%;
   height:30px;
 }
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
   width:20px;
   height:100%;
   margin:0 auto;
   background: #005428;
 }
+
 .box-apps {
   float: left;
   width: 450px;
@@ -805,7 +798,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
         width: 16px;
       }
 
-      .box-app-voo {
+.box-app-voo {
   height: 154px;
   background: url(../images/lista-app-voo.png) no-repeat right top;
   text-align: right;  
@@ -815,15 +808,12 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   height: 154px;
   background: url(../images/lista-app-viajantes.png) no-repeat right top;
   text-align: right;
-  }
+}
 
 .box-app-taxi {
-
-background: url(../images/lista-app-taxi.png) no-repeat right top;
-height: 154px;
-text-align: right;
-
-  
+  background: url(../images/lista-app-taxi.png) no-repeat right top;
+  height: 154px;
+  text-align: right;
 }
   .box-apps h3 {
     font-size: 20px;
@@ -850,7 +840,9 @@ text-align: right;
 
 .share-aero .centraliza {width: 915px;}
 .share-aero .addthis_toolbox {margin: 20px 0 0 0;}
+
 .page-aeroporto .rodape {background: #353535;}
+
 #aeroporto {float: left; width: 100%;}
 
 .select-aeroporto {
@@ -872,10 +864,7 @@ text-align: right;
   .conteudo-aero .miolo h2.verde { float: initial; }
   .conteudo-aero .lk-outro-aero { float: initial; display: block; margin: 10px 0 0 0; }
   .conteudo-aero .select-aeroporto { margin: 10px 0 0 0; }
-
-
   .conteudo-aero #aeroporto { padding-top: 10px; }
-
   .conteudo-aero .overflow-aero { width: 100%; height: auto; }
   .conteudo-aero .desc-aero { width: auto; margin: 0 0 20px 0; }
   .conteudo-aero .item-aero { width: auto; margin-left: 10px; clear: both; }
@@ -887,7 +876,7 @@ text-align: right;
   .box-apps h3 span { font-size: 18px; }
   .box-apps p { font-size: 12px; line-height: 14px; }
 
-  .flex-control-nav {
+  .section-aeroportos-brasileiros .flex-control-nav {
     top: 168px;
     right: 24px;
   }
@@ -898,6 +887,7 @@ text-align: right;
 
 /* GUIA DO PASSAGEIRO */
 
+/* XXX: Verificar se a remoção deste código impacta na seção Guia do Passageiro
 * {outline-color: transparent; outline-style: none; outline-width: medium}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 a, img, ul, ol, li, fieldset, form, label, input, select,
@@ -920,18 +910,12 @@ ul, ol {list-style: none}
 textarea {resize: vertical}
 table {border-collapse: separate; border-spacing: 0}
 th, td {font-weight: normal; text-align: left}
-
-
-.conteudo { background: #fcfef1 url(../images/guia-pagebg2.jpg) center -69px no-repeat; padding-top: 46px; min-height: 820px; clear: both; }
-
-.rodape { background: #353535; }
-
-.limites { width: 1167px; margin: 0 auto; }
-
+*/
+.section-guia-do-passageiro .conteudo { background: #fcfef1 url(../images/guia-pagebg2.jpg) center -69px no-repeat; padding-top: 46px; min-height: 820px; clear: both; }
+.section-guia-do-passageiro .rodape { background: #353535; }
+.section-guia-do-passageiro .limites { width: 1167px; margin: 0 auto; }
 
 .guia-menu { display: table;  }
-
-
 .guia-menu a {
   display: table-cell;
   height: 75px;
@@ -943,14 +927,11 @@ th, td {font-weight: normal; text-align: left}
     border-left: 2px solid #efa60d;
     font-family: 'gotham_roundedmedium'; 
 }
-
 .guia-menu a.antes-de-viajar { background: #f78600; }
 .guia-menu a.viagens-internacionais { background: #93166e; }
 .guia-menu a.durante-o-voo { background: #005428; }
 .guia-menu a.no-desembarque { background: #085973; }
-
 .guia-menu a:first-child { width: 291px; border-left: 0; }
-
 .guia-conteudo { height: 453px; overflow: hidden; }
 .guia-conteudo #tabs { overflow: hidden; display: table; }
 .guia-conteudo #tabs li { list-style: none; display: table-cell; vertical-align: top; }
@@ -970,7 +951,6 @@ th, td {font-weight: normal; text-align: left}
   line-height: 12px;
   font-family: 'gotham_roundedmedium'; 
 }
-
 .guia-conteudo #tabs li.current a { color: #fbaa11; }
 
 .antes-de-viajar #tabs li a { background-color: #f78600; }
@@ -1025,45 +1005,10 @@ th, td {font-weight: normal; text-align: left}
 .compartilhe-guia {float: left; width: 100%;}
 .guia-conteudo .addthis_toolbox { float: right; min-width: 280px; }
 
-
-.mCSB_container {
-  width:auto;
-  overflow:hidden;
-}
-.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
-.mCustomScrollBox>.mCSB_scrollTools{
-  width:20px;
-  height:100%;
-  top:0;
-  right:0;
+.section-guia-do-passageiro .mCustomScrollBox>.mCSB_scrollTools {
   margin: 0 20px 0 0;
 }
-.mCSB_scrollTools .mCSB_draggerContainer{
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0; 
-  height:auto;
-}
-.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
-.mCSB_scrollTools .mCSB_draggerRail{
-  width:20px;
-  height:100%;
-  margin:0 auto;
-  background-color: #007739; 
-}
-.mCSB_scrollTools .mCSB_dragger{
-  cursor:pointer;
-  width:100%;
-  height:30px;
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  width:20px;
-  height:100%;
-  margin:0 auto;
-    background: #005428;
-}
+
 .col-download-ebook {
   float: left;
   width: 400px;
@@ -1136,7 +1081,7 @@ th, td {font-weight: normal; text-align: left}
   .depoimentos .dep-6 {top: 72px; left: 325px;}
   .depoimentos .dep-7 {top: 72px; left: 388px;}
 
-.overlay {
+.section-guia-do-passageiro .overlay {
   float: left;
   width: 100%;
   height: 1000px;
@@ -1146,7 +1091,7 @@ th, td {font-weight: normal; text-align: left}
   opacity: 0.7;
   display: none;
 }
-.fechar-float {
+.section-guia-do-passageiro .fechar-float {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1155,7 +1100,7 @@ th, td {font-weight: normal; text-align: left}
   font-size: 14px;
   text-decoration: none;
 }
-.float {
+.section-guia-do-passageiro .float {
   position: fixed;
   z-index: 2;
   width: 1060px;
@@ -1167,17 +1112,17 @@ th, td {font-weight: normal; text-align: left}
   float: left;
   height: 520px;
 }
-  .float #video {
+  .section-guia-do-passageiro .float #video {
     float: left;  
     height: 520px;
     width: 820px;  
   }
-  .miniaturas-float {
+  .section-guia-do-passageiro .miniaturas-float {
     padding: 40px 0 0 30px;
     float: left;
     width: 210px;
   }
-  .miniaturas-float h2 {
+  .section-guia-do-passageiro .miniaturas-float h2 {
     font-size: 25px; 
     color: #007739; 
     line-height: 29px; 
@@ -1186,27 +1131,27 @@ th, td {font-weight: normal; text-align: left}
     font-weight: normal;
   }
 
-.miniaturas-float ul {float: left; width: 100%;}
-.miniaturas-float li {
+.section-guia-do-passageiro .miniaturas-float ul {float: left; width: 100%;}
+.section-guia-do-passageiro .miniaturas-float li {
   float: left;
   width: 100%;
   height: 63px;
   margin: 0 0 4px 0;
 }
-  .miniaturas-float li a {
+  .section-guia-do-passageiro .miniaturas-float li a {
     float: left;
     width: 63px;
     height: 63px;
   }  
-    .miniaturas-float li img {max-width: 100%;}
-  .miniaturas-float .prev {
+    .section-guia-do-passageiro .miniaturas-float li img {max-width: 100%;}
+  .section-guia-do-passageiro .miniaturas-float .prev {
     float: left;
     width: 100%;
     height: 30px;
     background: url(../images/setas-miniaturas.png) no-repeat center 0;
     text-indent: -9999px;
   }
-  .miniaturas-float .next {
+  .section-guia-do-passageiro .miniaturas-float .next {
     float: left;
     width: 100%;
     height: 30px;
@@ -1214,18 +1159,16 @@ th, td {font-weight: normal; text-align: left}
     text-indent: -9999px;
   }
 
-.lista-miniaturas-float {float: left; width: 100%; margin: 10px 0 10px 0;}
-
-
+.section-guia-do-passageiro .lista-miniaturas-float {float: left; width: 100%; margin: 10px 0 10px 0;}
 
 
 @media only screen and (max-width: 767px) {
 
-  .float { display: none; }
+  .section-guia-do-passageiro .float { display: none; }
 
-  .limites { width: 100%; }
+  .section-guia-do-passageiro .limites { width: 100%; }
 
-  .conteudo { background-image: none; min-height: none; padding-top: 0; }
+  .section-guia-do-passageiro .conteudo { background-image: none; min-height: none; padding-top: 0; }
 
   .guia-conteudo {
     height: auto;
@@ -1254,8 +1197,7 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs { display: inherit; width: 100%; }
   .guia-conteudo #tabs li { display: block; }
   .guia-conteudo #tabs li a {
-    display: block;
-    
+    display: block;    
     width: auto;
     height: auto;
     text-align: left;
@@ -1292,7 +1234,7 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs li.current a:after { content:''; display: block; width: 25px; height: 17px; background-image: url(../images/mobile/seta-branca-voltar.png); background-position: right center; background-repeat: no-repeat; position: absolute; top: 7px; right: 0; }
   .guia-conteudo #tabs.hover li.current a:after { background-image: none; }
 
-  #tabs-content .tabs-content-scrool { height: auto!important; padding: 10px!important; }
+  #tabs-content .tabs-content-scrool { height: auto !important; padding: 10px !important; }
 
   .durante-o-voo #tabs-content,
   .no-desembarque #tabs-content { width: auto; }
@@ -1340,6 +1282,7 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs li.current a:after { background-image: url(../images/mobile/seta-branca-voltar@2x.png); background-size: 25px 17px; }
 
 }
+
 
 /* DESTAQUES */
 
@@ -1398,45 +1341,6 @@ th, td {font-weight: normal; text-align: left}
 
 #miolo-noticias {max-height: 800px;}
 
-.mCSB_container {
-  width:auto;
-  overflow:hidden;
-}
-.mCSB_container.mCS_no_scrollbar{ margin-right:0; }
-.mCustomScrollBox>.mCSB_scrollTools{
-  width:20px;
-  height:100%;
-  top:0;
-  right:0;
-  margin: 0 0 0 0;
-}
-.mCSB_scrollTools .mCSB_draggerContainer{
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0; 
-  height:auto;
-}
-.mCSB_scrollTools a+.mCSB_draggerContainer{ margin:70px 0; }
-.mCSB_scrollTools .mCSB_draggerRail{
-  width:20px;
-  height:100%;
-  margin:0 auto;
-  background-color: #007739; 
-}
-.mCSB_scrollTools .mCSB_dragger{
-  cursor:pointer;
-  width:100%;
-  height:30px;
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-  width:20px;
-  height:100%;
-  margin:0 auto;
-  background: #005428;
-}
-
 .outras-noticias {
   float: left;
   width: 100%;
@@ -1485,6 +1389,7 @@ th, td {font-weight: normal; text-align: left}
     .outras-noticias strong { margin: 0; display: block; float: inherit; }
 
 }
+
 
 /* PLONE */
 
