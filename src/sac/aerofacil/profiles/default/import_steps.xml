@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <import-steps>
  <import-step id="sac.aerofacil-upgrades" version="20140202-01"
-              handler="sac.aerofacil.setuphandlers.doUpgrades"
+              handler="sac.aerofacil.setuphandlers.do_upgrades"
               title="Do upgrades">
   <dependency step="plone_content" />
   Do upgrades
