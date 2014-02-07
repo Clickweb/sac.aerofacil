@@ -29,6 +29,7 @@
   <!-- Home -->
   <before css:content="#edit-bar" css:theme="#topo" css:if-content=".section-home" />
   <replace css:content=".destaques" css:theme-children=".destaques" css:if-content="" />
+  <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home" css:if-content="" />
   <replace css:content=".noticias" css:theme-children=".noticias" css:if-content="" />
   
 </rules>

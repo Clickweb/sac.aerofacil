@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br"
+    xmlns:addthis="hhttp://www.addthis.com/help/api-spec#sthash.bCHnIPjQ.dpuf">
 <head>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
   <script src="js/jquery.min.js"></script>
@@ -23,32 +25,32 @@
           <li>/AviacaoGovBr</li>
         </ul>
         <div class="compartilha-topo">
-          <!--div class="addthis_toolbox addthis_default_style" addthis:title="Aerofácil | Seu guia para viajar de avião" addthis:url="http://aerofacil.gov.br/">
-            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <div class="addthis_toolbox addthis_default_style" addthis:title="Aerofácil | Seu guia para viajar de avião" addthis:url="http://aerofacil.gov.br/">
+            <a class="addthis_button_facebook_like"></a>
             <a class="addthis_button_tweet"></a>
             <a class="addthis_counter addthis_pill_style"></a>
-          </div-->
+          </div>
         </div>
       </div>
     </div>
     <div class="faixa topo">
       <div class="centraliza">
-        <h1><a href="theme.html">Aerofácil | Seu guia para viajar de avião</a></h1>
+        <h1><a href="">Aerofácil | Seu guia para viajar de avião</a></h1>
         <ul class="menu">
-          <li><a href="${portal_url}/aplicativos-e-ferramentas" title="Aplicativos e ferramentas" rel="aplicativos"><span class="ico-aplicativos-e-ferramentas"></span>Aplicativos e ferramentas</a></li>
-          <li class="menu-nivel-2"><a href="guia-do-passageiro" title="Guia do passageiro" rel="guia"><span class="ico-guia-do-passageiro"></span>Guia do passageiro</a></li>
-          <li class="menu-nivel-3"><a href="aeroportos-brasileiros" title="Aeroportos brasileiros" rel="aeroportos"><span class="ico-aeroportos-brasileiros"></span>Aeroportos brasileiros</a></li>
+          <li><a href="aplicativos-e-ferramentas" title="Aplicativos e ferramentas" rel="aplicativos-e-ferramentas"><span class="ico-aplicativos-e-ferramentas"></span>Aplicativos e ferramentas</a></li>
+          <li class="menu-nivel-2"><a href="guia-do-passageiro" title="Guia do passageiro" rel="guia-do-passageiro"><span class="ico-guia-do-passageiro"></span>Guia do passageiro</a></li>
+          <li class="menu-nivel-3"><a href="aeroportos-brasileiros" title="Aeroportos brasileiros" rel="aeroportos-brasileiros"><span class="ico-aeroportos-brasileiros"></span>Aeroportos brasileiros</a></li>
           <li class="menu-nivel-4"><a href="noticias" title="Notícias" rel="noticias"><span class="ico-noticias"></span>Notícias</a></li>
           <li class="menu-nivel-5"><a href="informacoes" title="Informações" rel="informacoes"><span class="ico-informacoes"></span>Informações</a></li>
         </ul>
       </div>    
     </div>
-    <!--script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52d689b815098ae7"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-52d689b815098ae7"></script>
     <script type="text/javascript">
       var addthis_config = addthis_config||{};
       addthis_config.data_track_addressbar = false;
       addthis_config.data_track_clickback = false;
-    </script-->
+    </script>
   </div>
   <div class="conteudo">
     <div class="menu-flutuante">
@@ -67,10 +69,7 @@
             O aeromóvel é um meio de transporte urbano automatizado em via elevada de concepção inteiramente brasileira e que utiliza um singular sistema de propulsão pneumática, inventado por Oskar Coester.<br>
             <strong>Em Porto Alegre o projeto contou com investimento de R$ 37,8 milhões – 1 km - Concluído em Agosto de 2013 – Ligação entre a estação de Trem até o Aeroporto</strong>
           </p>
-          <a href="destaques.html" class="lk-seta-grande amarelo">Saiba mais</a>
-          <!-- XXX: Transformar imagem de css: background-image para tag
-          <img src="imgs/destaque-foto.jpg" class="pull-right" width="540" height="540" alt="Destaque - Foto" />
-          -->
+          <a href="destaques/novos-modeos-de-integracao-de-meios-de-transportes" class="lk-seta-grande amarelo">Saiba mais</a>
         </div>
       </div>
     </div>
@@ -117,58 +116,15 @@
         <div class="miolo">
           <h2>Aeroportos <span class="amarelo">do Brasil.</span></h2>
           <p>Informações sobre os principais aeroportos do Brasil, mapas, lojas, restaurantes, entre outros.</p>
-          <a href="aeroporto" class="lk-aeroporto-home verde"><span>Escolha o aeroporto</span></a>
+          <a href="#" class="lk-aeroporto-home verde"><span>Escolha o aeroporto</span></a>
           <select class="select-aeroporto-home">
-            <!--<option value="Acre">Acre</option>-->
             <option value="altamira">Altamira - PA</option>
             <option value="bage">Bagé - RS</option>
-            <option value="belem">Belém/VAL-DE-CANS - PA</option>
-            <option value="pampulha">Belo Horizonte - Pampulha - BH</option>
-            <option value="boa-vista">Boa Vista - RR</option>
             <option value="brasilia">Brasília - DF</option>
             <option value="campina-grande">Campina Grande - PB</option>
-            <option value="campo-grande">Campo Grande - MS</option>
-            <option value="carajas">Carajás - PA</option>
-            <option value="confins">Confins - MG</option>
             <option value="congonhas">São Paulo - Congonhas - SP</option>
-            <option value="corumba">Corumbá - MS</option>
-            <option value="cuiaba">Cuiabá - MT</option>
-            <option value="curitiba">Curitiba - PR</option>
-            <option value="florianopolis">Florianópolis - SC</option>
-            <option value="fortaleza">Fortaleza - CE</option>          
-            <option value="foz-do-iguacu">Foz do Iguaçu - PR</option>
-            <option value="goiania">Goiânia - GO</option>
-            <option value="guarulhos">Guarulhos - SP</option>
-            <option value="ilheus">Ilhéus - BA</option>
-            <option value="imperatriz-maranhao">Imperatriz - MA</option>
-            <option value="joao-pessoa">João Pessoa - PB</option>
-            <option value="juazeiro-norte">Juazeiro do Norte - CE</option>
-            <option value="londrina">Londrina - PR</option>
-            <option value="macapa">Macapá - AP</option>
-            <option value="alagoas">Maceiío - AL</option>
-            <option value="manaus">Manaus - AM</option>
-            <option value="maraba">Marabá - PA</option>
-            <option value="montes-claros">Montes Claros - MG</option>
-            <option value="natal">Natal - RN</option>
-            <option value="navegantes">Navegantes - SC</option>          
-            <option value="paulo-afonso">Paulo Afonso - BA</option>
-            <option value="pelotas">Pelotas - RS</option>
-            <option value="petrolina">Petrolina - PE</option>
-            <option value="ponta-pora">Ponta Porã - MS</option>
-            <option value="porto-alegre">Porto Alegre - RS</option>
-            <option value="porto-velho">Porto Velho - RO</option>
-            <option value="recife">Recife - PE</option>
-            <option value="rio-branco">Rio Branco - AC</option>
             <option value="rio-de-janeiro-galeao">Rio de Janeiro - Galeão - RJ</option>
-            <option value="rio-de-janeiro-santos-dumont">Rio de Janeiro - Santos Dumont - RJ</option>
             <option value="salvador">Salvador - BA</option>
-            <option value="santarem">Santarém - PA</option>
-            <option value="sao-luis">São Luis - MA</option>
-            <option value="tefe">Tefé - AM</option>
-            <option value="uberaba">Uberaba - MG</option>
-            <option value="uberlandia">Uberlândia - MG</option>
-            <option value="uruguaiana">Uruguaiana - RS</option>
-            <option value="vitoria">Vitória - ES</option>
           </select>
         </div>
       </div>
@@ -238,7 +194,7 @@
           <div class="bloco-informacoes">
             <div>
               <a href="#" class="lk-seta-left verde open">Secretaria de Aviação Civil (SAC)</a>
-              <span class="texto-info" style="display:block">
+              <span class="texto-info" style="display: block">
                 A Secretaria de Aviação Civil da Presidência da República (SAC) é responsável por formular, coordenar e supervisionar as políticas para o desenvolvimento da aviação civil e das infraestruturas aeroportuária e aeronáutica civil. Possui status de Ministério e é subordinada à Presidência da República. A SAC também elabora estudos e projeções relativos aos assuntos de aviação civil, formula e implementa o planejamento estratégico do setor, elabora e aprova os planos de outorgas para exploração da infraestrutura aeroportuária e coordena os órgãos e entidades do sistema de aviação civil. <br>
                 <a href="http://www.aviacaocivil.gov.br" class="seta-info" target="_blank">Saiba Mais</a>
               </span>
@@ -262,7 +218,7 @@
             <h2>Redes Sociais</h2>
             <ul class="redes-rodape">
               <li class="rede-twitter"><a href="https://twitter.com/AviacaoGovBr">twitter</a></li>
-              <!--<li class="rede-youtube" style"display:none"><a href="#">youtube</a></li>-->
+              <!--<li class="rede-youtube" style"display: none"><a href="#">youtube</a></li>-->
               <li class="rede-facebook"><a href="https://www.facebook.com/AviacaoGovBr">facebook</a></li>          
             </ul>
           </div>

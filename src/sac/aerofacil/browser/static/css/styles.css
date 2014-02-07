@@ -612,7 +612,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .lista-aplicativos-interna p { padding-right: 110px; }
   .section-aplicativos-e-ferramentas .lk-seta { margin-right: 110px; }
 
-.conteudo-aplicativo .flex-prev {
+.section-aplicativos-e-ferramentas .flex-prev {
   position: absolute;
   width: 31px;
   height: 60px;
@@ -623,7 +623,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   left: -55px;
   
 }
-.conteudo-aplicativo .flex-next {
+.section-aplicativos-e-ferramentas .flex-next {
   position: absolute;
   width: 31px;
   height: 60px;
@@ -656,10 +656,10 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
   .lista-aplicativos-interna li { padding-bottom: 40px; }
 
-  .conteudo-aplicativo .flex-next { background-position: -16px 6px; left: 40px; }
-  .conteudo-aplicativo .flex-prev { left: inherit; left: 0px; background-position: 8px 6px; }
-  .conteudo-aplicativo .flex-next,
-  .conteudo-aplicativo .flex-prev { background-size: 37px 30px; height: 40px; bottom: -25px; top: inherit; }
+  .section-aplicativos-e-ferramentas .flex-next { background-position: -16px 6px; left: 40px; }
+  .section-aplicativos-e-ferramentas .flex-prev { left: inherit; left: 0px; background-position: 8px 6px; }
+  .section-aplicativos-e-ferramentas .flex-next,
+  .section-aplicativos-e-ferramentas .flex-prev { background-size: 37px 30px; height: 40px; bottom: -25px; top: inherit; }
 
 }
 
@@ -1413,4 +1413,9 @@ th, td {font-weight: normal; text-align: left}
 
 .conteudo {
     margin: 0 1em;
+}
+
+#content .item-aero a:link,
+#content .down-app a:link {
+    border: 0;
 }
