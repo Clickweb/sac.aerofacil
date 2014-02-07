@@ -40,11 +40,11 @@ setup(
         'five.pt',
         'Pillow',
         'Plone',
-        'plone.app.dexterity [grok]',
         'plone.api',
+        'plone.app.dexterity [grok]',
         'setuptools',
         'z3c.jbot',
-        'collective.cover',
+        'collective.cover==1.0a7',
         'sc.embedder'
     ],
     extras_require={
