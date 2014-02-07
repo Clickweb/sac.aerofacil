@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from five import grok
 from plone.supermodel import model
+from sac.aerofacil import interfaces
 
 grok.templatedir('templates')
 
@@ -17,3 +18,4 @@ class Aplicativo(grok.View):
     grok.name('view')
     grok.context(IAplicativo)
     grok.require('zope2.View')
+    grok.implements(interfaces.IAplicativo)
