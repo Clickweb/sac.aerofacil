@@ -5,6 +5,10 @@ from zope.interface import Interface
 from plone.theme.interfaces import IDefaultPloneLayer
 
 
+class IHome(IDefaultPloneLayer):
+    """Interface de marcação que define um Zope 3 browser layer."""
+
+
 class ISACAerofacilLayer(IDefaultPloneLayer):
     """Interface de marcação que define um Zope 3 browser layer."""
 

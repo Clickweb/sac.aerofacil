@@ -274,6 +274,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     font-family: 'gothambold';
     font-weight: normal;
   }
+  .lista-noticia strong .title-noticia-index { color: #007739; }
   .lista-noticia span {
     font-size: 15px;
     color: #fcfef1;
@@ -350,13 +351,14 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 }
   .nav-rodape a {font-family: 'gotham_roundedbook';}
   .rodape .ministerios {
+    background: url(../images/ministerios_rodape_01.png) no-repeat;
     float: right;
-    width: 409px;
-    height: 61px;
-    text-indent: -9999px;
-    background: url(../images/ministerios_rodape.png) no-repeat;
-    margin: 60px 0 0 0;
+    width: 411px;
+    height: 161px;
+    vertical-align: text-bottom;
+    margin: 0;
   }
+  .rodape .ministerios a { margin: 89px 0 0 0; float: left;}
 .select-aeroporto-home {
   font-family: Verdana;
   color: #262626;
@@ -467,7 +469,11 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .rodape .centraliza {  width: 100%; }
   .rodape h2 { font-size: 24px; margin-left: 10px;  }
   .rodape .nav-rodape { float: inherit; margin: 10px 0 20px 10px; width: auto; height: 172px }
-  .rodape .ministerios { width: 200px; height: 30px; background-size: 200px 30px; margin: 0 auto 0; float: inherit; display: block; clear: both; }
+  .rodape .ministerios { width: 200px; height: 78px; background-size: 200px 43px; margin: 0 auto 0; float: inherit; display: block; clear: both; }
+  .rodape .ministerios a { margin: 43px 0 0 0; }
+  .rodape .ministerios .rodape-ministerio-cidades img { width: 48px; height: 35px; }
+  .rodape .ministerios .rodape-secretaria img { width: 51px; height: 35px; }
+  .rodape .ministerios .rodape-governo img { width: 100px; height: 35px; }
 
 
   /* HOME */
@@ -539,13 +545,13 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 /* APLICATIVOS */
 
-.conteudo-aplicativo {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
-.share-aplicativo {background: #fbb900;height: 63px;}
-.page-aplicativo .rodape {background: #353535;}
-.share-aplicativo .centraliza {width: 915px;}
-.share-aplicativo .addthis_toolbox {margin: 20px 0 0 0;}
+.conteudo-aplicativos-e-ferramentas {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
+.share-aplicativos-e-ferramentas {background: #fbb900;height: 63px;}
+.share-aplicativos-e-ferramentas .centraliza {width: 915px;}
+.share-aplicativos-e-ferramentas .addthis_toolbox {margin: 20px 0 0 0;}
+.section-aplicativos-e-ferramentas .rodape {background: #353535;}
 
-.conteudo-aero .miolo {
+.conteudo-aeroportos-brasileiros .miolo {
   float: left; 
   width: 655px;
   padding: 80px 0 0 155px;
@@ -621,7 +627,6 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   clear: both;
   top: 45px;
   left: -55px;
-  
 }
 .section-aplicativos-e-ferramentas .flex-next {
   position: absolute;
@@ -635,7 +640,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 @media only screen and (max-width: 767px) {
 
-  .conteudo-aplicativo { background-image: none; max-height: none; padding-bottom: 40px; }
+  .conteudo-aplicativos-e-ferramentas { background-image: none; max-height: none; padding-bottom: 40px; }
 
   .mostra-app { margin: 0; padding: 0 10px; width: auto; }
 
@@ -647,7 +652,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .mostra-app h2 { font-size: 16px; line-height: 28px; padding: 25px 0 15px; }
   .mostra-app h2 span { font-size: 18px; }
 
-  .share-aplicativo .centraliza { width: auto; padding: 0 10px;  }
+  .share-aplicativos-e-ferramentas .centraliza { width: auto; padding: 0 10px; }
   
   .aplicativos-interna { margin: 93px 0 0 0; width: 100%; }
 
@@ -666,20 +671,19 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 /* AEROPORTOS */
 
-.conteudo-aero {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;height: 1050px; position: relative;}
-.share-aero {background: #fbb900;height: 63px;}
-.conteudo-aero .miolo {
+.conteudo-aeroportos-brasileiros {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;height: 1050px; position: relative;}
+.conteudo-aeroportos-brasileiros .miolo {
   float: left; 
   width: 655px;
   padding: 80px 0 0 155px;
   position: relative;
 }
-.conteudo-aero .miolo h2.verde {
+.conteudo-aeroportos-brasileiros .miolo h2.verde {
   background: url(../images/seta_dir.png) no-repeat 0 center;
   text-indent: 20px;
   float: left;
 }
-.conteudo-aero .lk-outro-aero {
+.conteudo-aeroportos-brasileiros .lk-outro-aero:link {
   font-size: 12px;
   color: #989993;
   text-decoration: none;
@@ -689,7 +693,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   padding: 1px 0 0 18px;
   margin: 5px 0 0 10px;
 }
-.conteudo-aero .miolo h2 {
+.conteudo-aeroportos-brasileiros .miolo h2 {
   clear: both;
 }
 .desc-aero {
@@ -838,10 +842,11 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       margin-right: 120px;
     }
 
-.share-aero .centraliza {width: 915px;}
-.share-aero .addthis_toolbox {margin: 20px 0 0 0;}
+.share-aeroportos-brasileiros {background: #fbb900; height: 63px;}
+.share-aeroportos-brasileiros .centraliza {width: 915px;}
+.share-aeroportos-brasileiros .addthis_toolbox {margin: 20px 0 0 0;}
 
-.page-aeroporto .rodape {background: #353535;}
+.section-aeroportos-brasileiros .rodape {background: #353535;}
 
 #aeroporto {float: left; width: 100%;}
 
@@ -858,18 +863,18 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 @media only screen and (max-width: 767px) {
 
-  .conteudo-aero { background-image: none; height: auto; }
-  .conteudo-aero .centraliza { width: auto; padding: 0 10px; }
-  .conteudo-aero .miolo { width: 100%; padding: 0; }
-  .conteudo-aero .miolo h2.verde { float: initial; }
-  .conteudo-aero .lk-outro-aero { float: initial; display: block; margin: 10px 0 0 0; }
-  .conteudo-aero .select-aeroporto { margin: 10px 0 0 0; }
-  .conteudo-aero #aeroporto { padding-top: 10px; }
-  .conteudo-aero .overflow-aero { width: 100%; height: auto; }
-  .conteudo-aero .desc-aero { width: auto; margin: 0 0 20px 0; }
-  .conteudo-aero .item-aero { width: auto; margin-left: 10px; clear: both; }
+  .conteudo-aeroportos-brasileiros { background-image: none; height: auto; }
+  .conteudo-aeroportos-brasileiros .centraliza { width: auto; padding: 0 10px; }
+  .conteudo-aeroportos-brasileiros .miolo { width: 100%; padding: 0; }
+  .conteudo-aeroportos-brasileiros .miolo h2.verde { float: initial; }
+  .conteudo-aeroportos-brasileiros .lk-outro-aero { float: initial; display: block; margin: 10px 0 0 0; }
+  .conteudo-aeroportos-brasileiros .select-aeroporto { margin: 10px 0 0 0; }
+  .conteudo-aeroportos-brasileiros #aeroporto { padding-top: 10px; }
+  .conteudo-aeroportos-brasileiros .overflow-aero { width: 100%; height: auto; }
+  .conteudo-aeroportos-brasileiros .desc-aero { width: auto; margin: 0 0 20px 0; }
+  .conteudo-aeroportos-brasileiros .item-aero { width: auto; margin-left: 10px; clear: both; }
 
-  .share-aero .centraliza { width: auto; padding: 0 10px; }
+  .share-aeroportos-brasileiros .centraliza { width: auto; padding: 0 10px; }
 
   .box-apps { width: 100%; height: 154px; margin: 0; }
   .box-apps h3 { font-size: 16px; }
@@ -887,7 +892,8 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 /* GUIA DO PASSAGEIRO */
 
-/* XXX: Verificar se a remoção deste código impacta na seção Guia do Passageiro
+/* XXX: Verificar se a remoção deste código impacta visualmente na seção
+
 * {outline-color: transparent; outline-style: none; outline-width: medium}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 a, img, ul, ol, li, fieldset, form, label, input, select,
@@ -996,11 +1002,11 @@ th, td {font-weight: normal; text-align: left}
 .no-desembarque #tabs { float: left; }
 .durante-o-voo #tabs-content,
 .no-desembarque #tabs-content { float: right; width: 960px; }
-.durante-o-voo #tabs-content .tabs-content-scrool,
-.no-desembarque #tabs-content .tabs-content-scrool { padding: 40px 0 10px 40px; height: 370px; }
+.durante-o-voo #tabs-content .tabs-content-scroll,
+.no-desembarque #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 370px; }
 
-.viagens-internacionais #tabs-content .tabs-content-scrool,
-.antes-de-viajar #tabs-content .tabs-content-scrool { padding: 40px 0 10px 40px; height: 220px; }
+.viagens-internacionais #tabs-content .tabs-content-scroll,
+.antes-de-viajar #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 220px; }
 
 .compartilhe-guia {float: left; width: 100%;}
 .guia-conteudo .addthis_toolbox { float: right; min-width: 280px; }
@@ -1226,7 +1232,6 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs li a.ico12 { background-position: 8px -413px; }
   .guia-conteudo #tabs li a.ico13 { background-position: 8px -454px; }
 
-
   .guia-conteudo #tabs.hover li { display: block; }
   .guia-conteudo #tabs li { display: none; }
   .guia-conteudo #tabs li.current { display: block; position: relative; }
@@ -1234,7 +1239,7 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs li.current a:after { content:''; display: block; width: 25px; height: 17px; background-image: url(../images/mobile/seta-branca-voltar.png); background-position: right center; background-repeat: no-repeat; position: absolute; top: 7px; right: 0; }
   .guia-conteudo #tabs.hover li.current a:after { background-image: none; }
 
-  #tabs-content .tabs-content-scrool { height: auto !important; padding: 10px !important; }
+  #tabs-content .tabs-content-scroll { height: auto !important; padding: 10px !important; }
 
   .durante-o-voo #tabs-content,
   .no-desembarque #tabs-content { width: auto; }
@@ -1253,8 +1258,6 @@ th, td {font-weight: normal; text-align: left}
     height: 155px;
     width: auto;
     padding: 20px 0 0 95px;
-
-
   }
 
   .col-download-ebook .lk-seta.amarelo:last-child {
@@ -1288,7 +1291,7 @@ th, td {font-weight: normal; text-align: left}
 
 .conteudo-destaques {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
 
-.page-destaques .rodape {background: #353535;}
+.section-destaques .rodape {background: #353535;}
 
 .conteudo-destaques .miolo {
   float: left; 
@@ -1304,7 +1307,7 @@ th, td {font-weight: normal; text-align: left}
   float: left;
   padding: 0 0 20px 25px;
 }
-.share-noticias {background: #fbb900;height: 63px;}
+.share-noticias {background: #fbb900; height: 63px;}
 .share-noticias .centraliza {width: 915px;}
 .share-noticias .addthis_toolbox {margin: 20px 0 0 0;}
 
@@ -1317,15 +1320,12 @@ th, td {font-weight: normal; text-align: left}
 
 }
 
+
 /* NOTICIAS */
 
 .conteudo-noticias {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1; max-height: 1287px; position: relative;}
 
-.share-noticias {background: #fbb900;height: 63px;}
-.share-noticias .centraliza {width: 915px;}
-.share-noticias .addthis_toolbox {margin: 20px 0 0 0;}
-
-.page-noticias .rodape {background: #353535;}
+.section-noticias .rodape {background: #353535;}
 
 .conteudo-noticias .miolo {
   float: left; 
@@ -1393,6 +1393,10 @@ th, td {font-weight: normal; text-align: left}
 
 /* PLONE */
 
+.compartilha-topo {
+    width: auto;
+}
+
 #portal-personaltools {
     background: #fcbe00;
 }
@@ -1416,6 +1420,7 @@ th, td {font-weight: normal; text-align: left}
 }
 
 #content .item-aero a:link,
+#content .lk-outro-aero:link,
 #content .down-app a:link {
     border: 0;
 }

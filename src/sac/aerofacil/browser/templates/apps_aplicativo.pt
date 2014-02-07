@@ -15,7 +15,7 @@
     </li>
     <li class="app-voo">
       <h3>Aplicativo <span class="amarelo">Infraero voos online</span></h3>
-      <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas. </p>
+      <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas.</p>
       <a class="lk-seta verde"
           tal:attributes="href string:${apps}/infraero-voos-online">Acesse</a>
     </li>

@@ -1,6 +1,9 @@
-        <select class="select-aeroporto-home">
+        <a href="#" class="lk-outro-aero">Escolher outro aeroporto</a>
+        <select tal:attributes="class view/klass">
           <tal:block repeat="aeroporto view/aeroportos">
-               <option tal:attributes="value aeroporto/id"
-                    tal:content="aeroporto/pretty_title_or_id">Altamira - PA</option>
+            <option value=""
+                tal:condition="repeat/aeroporto/start">Selecione</option>
+            <option tal:attributes="value aeroporto/id"
+                tal:content="aeroporto/pretty_title_or_id">Altamira - PA</option>
           </tal:block>
         </select>

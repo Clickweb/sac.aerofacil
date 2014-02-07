@@ -18,7 +18,7 @@
 
     <browser:viewlet
         name="sac.aerofacil.destaques_home"
-        for="plone.app.layout.navigation.interfaces.INavigationRoot"
+        for="..interfaces.IHome"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IAboveContent"
         class=".viewlets.DestaquesHomeViewlet"
@@ -28,7 +28,7 @@
 
     <browser:viewlet
         name="sac.aerofacil.noticias_home"
-        for="plone.app.layout.navigation.interfaces.INavigationRoot"
+        for="..interfaces.IHome"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.NoticiasHomeViewlet"
@@ -47,18 +47,18 @@
         />
 
     <browser:viewlet
-        name="sac.aerofacil.ebook"
-        for="..interfaces.IGuiaDoPassageiro"
+        name="sac.aerofacil.apps_aplicativo"
+        for="..interfaces.IAplicativo"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".viewlets.EBookViewlet"
+        class=".viewlets.AppsAplicativoViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
         />
 
     <browser:viewlet
         name="sac.aerofacil.apps_aplicativo"
-        for="..interfaces.IAplicativo"
+        for="..content.aplicativo.IAplicativo"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.AppsAplicativoViewlet"
@@ -76,24 +76,82 @@
         permission="zope2.View"
         />
 
-    <!--browser:viewlet
-        name="sac.aerofacil.select_aeroporto"
-        for="..interfaces.IAeroporto"
+    <browser:viewlet
+        name="sac.aerofacil.apps_aeroporto"
+        for="..content.aeroporto.IAeroporto"
         view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.AppsAeroportoViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.select_aeroporto"
+        for="..interfaces.IHome"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.SelectAeroportoViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
         />
 
     <browser:viewlet
-        name="sac.aerofacil.share"
-        for="*"
+        name="sac.aerofacil.select_aeroporto"
+        for="..content.aeroporto.IAeroporto"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentTitle"
+        class=".viewlets.SelectAeroportoViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.ebook"
+        for="..interfaces.IGuiaDoPassageiro"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        class=".viewlets.EBookViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.share"
+        for="..content.aeroporto.IAeroporto"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.ShareViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
-        /-->
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.share"
+        for="..interfaces.IAplicativo"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.ShareViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.share"
+        for="Products.ATContentTypes.interface.IATNewsItem"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.ShareViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <class class="sac.aerofacil.content.aplicativo.Aplicativo">
+        <implements interface="..interfaces.IAplicativo" />
+    </class>
+
+    <class class="sac.aerofacil.content.aeroporto.Aeroporto">
+        <implements interface="..interfaces.IAeroporto" />
+    </class>
 
 </configure>

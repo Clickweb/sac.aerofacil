@@ -92,17 +92,28 @@ class SelectAeroportoViewlet(ViewletBase):
         if 'aeroportos-brasileiros' in getNavigationRootObject(context, portal).objectIds():
             path = portal['aeroportos-brasileiros'].getPhysicalPath()
         catalog = getToolByName(self.context, 'portal_catalog')
-        brains = catalog(portal_type='News Item',
+        brains = catalog(portal_type='sac.aerofacil.aeroporto',
                          review_state='published',
                          path='/'.join(path),
                          sort_on='Date',
                          sort_order='reverse')
-        brains = [b for b in brains if not b.id == context.id]
         return brains
+
+    @memoize
+    def klass(self):
+        if self.context.restrictedTraverse('plone_context_state').is_portal_root():
+            return 'select-aeroporto-home'
+        return 'select-aeroporto'
 
 
 class ShareViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/share.pt')
+
+    @memoize
+    def section(self):
+        context = aq_inner(self.context)
+        self.portal = self.portal_state.portal()
+        return context.getPhysicalPath()[len(self.portal.getPhysicalPath()):][0]
 
 
 def search_catalog(context=None,
@@ -117,7 +128,7 @@ def search_catalog(context=None,
     review_state = review_state or 'published'
     sort_on = sort_on or 'Date',
     sort_order = sort_order or 'reverse',
-    sort_limit = sort_limit
+    sort_limit = sort_limit or 5
     if path in getNavigationRootObject(context, portal).objectIds():
         path = portal[path].getPhysicalPath()
     catalog = getToolByName(context, 'portal_catalog')

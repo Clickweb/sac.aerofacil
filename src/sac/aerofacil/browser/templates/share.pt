@@ -1,12 +1,15 @@
 <tal:block xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:addthis="hhttp://www.addthis.com/help/api-spec#sthash.bCHnIPjQ.dpuf"
-      xmlns:fb="http://ogp.me/ns/fb#">
-  <div class="faixa share-noticias">
+      xmlns:addthis="http://www.addthis.com/help/api-spec#sthash.bCHnIPjQ.dpuf">
+  <div tal:attributes="class string:faixa share-${view/section}">
     <div class="centraliza">
       <!-- AddThis Button BEGIN -->
-      <div class="addthis_toolbox addthis_default_style" addthis:title="Aerofácil - Destaques" addthis:url="http://aerofacil.gov.br/destaques">
-        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+      <div class="addthis_toolbox addthis_default_style"
+          addthis:title="Aerofácil - Aeroportos Brasileiros"
+          addthis:url="http://aerofacil.gov.br/aeroportos-brasileiros"
+          tal:attributes="addthis:title string:${context/@@plone_portal_state/portal_title} - ${context/aq_parent/Title};
+                          addthis:url context/aq_parent/absolute_url">
+        <a class="addthis_button_facebook_like"></a>
         <a class="addthis_button_tweet"></a>
         <a class="addthis_counter addthis_pill_style"></a>
       </div>

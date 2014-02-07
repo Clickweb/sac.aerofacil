@@ -3,14 +3,21 @@
   <order manager="plone.abovecontent" skinname="Sunburst Theme">
     <viewlet name="sac.aerofacil.destaques_home" />
   </order>
+  <order manager="plone.abovecontenttitle" skinname="Sunburst Theme">
+    <viewlet name="sac.aerofacil.select_aeroporto" />
+  </order>
   <order manager="plone.belowcontent" skinname="Sunburst Theme">
     <viewlet name="sac.aerofacil.noticias_home" />
     <viewlet name="sac.aerofacil.outras_noticias" />
-    <viewlet name="sac.aerofacil.ebook" />
     <viewlet name="sac.aerofacil.apps_aplicativo" />
     <viewlet name="sac.aerofacil.apps_aeroporto" />
     <viewlet name="sac.aerofacil.select_aeroporto" />
-    <viewlet name="sac.aerofacil.share" />
+  </order>
+  <order manager="plone.belowcontentbody" skinname="Sunburst Theme">
+    <viewlet name="sac.aerofacil.ebook" insert-before="*" />
+  </order>
+  <order manager="plone.portalfooter" skinname="Sunburst Theme">
+    <viewlet name="sac.aerofacil.share" insert-before="*" />
   </order>
   <hidden manager="plone.portalheader" skinname="Sunburst Theme">
     <viewlet name="plone.searchbox" />

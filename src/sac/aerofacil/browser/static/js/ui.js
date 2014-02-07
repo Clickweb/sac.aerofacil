@@ -101,18 +101,20 @@
                 }
             });
 
-            $('.item-aero a').click(function() {
-                if (!$(this).hasClass('externo')) {
-                    $(this).parent().find('span').slideToggle();
-                    return false;
-                }
-            });
+            // $('.item-aero a').click(function() {
+            //     if (!$(this).hasClass('externo')) {
+            //         $(this).parent().find('span').slideToggle();
+            //         return false;
+            //     }
+            // });
 
             // TODO: Criar browser view que entregue somente o miolo da página
             var aero = $(location).attr('href');
             aero = aero.split('/');
             aero = aero[aero.length - 1];
             if (aero) {
+                // TODO: Evitar carregamento AJAX na página de entrada
+                // if (aero === context.id) { return }
                 $('#aeroporto').load(portal_url + 'aeroportos-brasileiros/' + aero + ' #aeroporto', function () {
                     $('.item-aero a').click(function() {
                         if (!$(this).hasClass('externo')) {
