@@ -1,3 +1,7 @@
+<tal:block xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:addthis="hhttp://www.addthis.com/help/api-spec#sthash.bCHnIPjQ.dpuf"
+      xmlns:fb="http://ogp.me/ns/fb#">
   <div class="faixa share-noticias">
     <div class="centraliza">
       <!-- AddThis Button BEGIN -->
@@ -9,3 +13,4 @@
       <!-- AddThis Button END -->
     </div>
   </div>
+</tal:block>
