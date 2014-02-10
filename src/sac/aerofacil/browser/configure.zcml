@@ -110,7 +110,7 @@
         name="sac.aerofacil.ebook"
         for="..interfaces.IGuiaDoPassageiro"
         view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
         class=".viewlets.EBookViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
@@ -128,7 +128,7 @@
 
     <browser:viewlet
         name="sac.aerofacil.share"
-        for="..interfaces.IAplicativo"
+        for="..content.aplicativo.IAplicativo"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
         class=".viewlets.ShareViewlet"
