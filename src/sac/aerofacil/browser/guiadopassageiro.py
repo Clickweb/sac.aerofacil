@@ -19,8 +19,8 @@ class GuiaDoPassageiro(grok.View):
     grok.require('zope2.View')
 
     @memoize
-    def guias(self):
-        """Devolve mapeamento entre guias e abas.
+    def subsecoes(self):
+        """Devolve mapeamento entre subseções e suas abas internas.
         """
         context = aq_inner(self.context)
         portal = context.restrictedTraverse('@@plone_portal_state').portal()
@@ -28,21 +28,21 @@ class GuiaDoPassageiro(grok.View):
         if not 'guia-do-passageiro' in getNavigationRootObject(context, portal).objectIds():
             return None
         catalog = getToolByName(context, 'portal_catalog')
-        guias = catalog(portal_type='Folder',
-                        review_state='published',
-                        path={'query': '/'.join(path),
-                              'depth': 1},
-                        sort_on='getObjPositionInParent',
-                        sort_limit=4)[:4]
-        return {guia: self.abas(guia) for guia in guias}
+        subsecoes = catalog(portal_type='Folder',
+                            review_state='published',
+                            path={'query': '/'.join(path),
+                                  'depth': 1},
+                            sort_on='getObjPositionInParent',
+                            sort_limit=4)[:4]
+        return [(subsecao, self.abas(subsecao)) for subsecao in subsecoes]
 
     @memoize
-    def abas(self, guia=None):
-        """Devolve abas a partir das guias da seção Guia do passageiro.
+    def abas(self, subsecao):
+        """Devolve abas internas de uma subseção do Guia do passageiro.
         """
         context = aq_inner(self.context)
         portal = context.restrictedTraverse('@@plone_portal_state').portal()
-        path = portal['guia-do-passageiro'][guia.id].getPhysicalPath()
+        path = portal['guia-do-passageiro'][subsecao.id].getPhysicalPath()
         catalog = getToolByName(context, 'portal_catalog')
         abas = catalog(portal_type='Document',
                        review_state='published',
@@ -50,8 +50,7 @@ class GuiaDoPassageiro(grok.View):
                              'depth': 1},
                        sort_on='getObjPositionInParent',
                        sort_limit=12)[:12]
-        # import pdb; pdb.set_trace()
         return abas
 
     def is_current(self):
-        return True
+        return False

@@ -890,6 +890,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 }
 
+
 /* GUIA DO PASSAGEIRO */
 
 /* XXX: Verificar se a remoção deste código impacta visualmente na seção
@@ -921,17 +922,17 @@ th, td {font-weight: normal; text-align: left}
 .section-guia-do-passageiro .rodape { background: #353535; }
 .section-guia-do-passageiro .limites { width: 1167px; margin: 0 auto; }
 
-.guia-menu { display: table;  }
+.guia-menu { display: table; }
 .guia-menu a {
   display: table-cell;
   height: 75px;
   text-align: center;
-    vertical-align: middle;
-    color: #ffffff;
-    font-size: 19px;
-    width: 290px;
-    border-left: 2px solid #efa60d;
-    font-family: 'gotham_roundedmedium'; 
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 19px;
+  width: 290px;
+  border-left: 2px solid #efa60d;
+  font-family: 'gotham_roundedmedium'; 
 }
 .guia-menu a.antes-de-viajar { background: #f78600; }
 .guia-menu a.viagens-internacionais { background: #93166e; }
@@ -959,21 +960,21 @@ th, td {font-weight: normal; text-align: left}
 }
 .guia-conteudo #tabs li.current a { color: #fbaa11; }
 
-.antes-de-viajar #tabs li a { background-color: #f78600; }
-.antes-de-viajar #tabs li a:hover { background-color: #84400d; }
-.antes-de-viajar #tabs li.current a { background-color: #84400d; color: #fbaa11; }
+.subsection-antes-de-viajar #tabs li a { background-color: #f78600; }
+.subsection-antes-de-viajar #tabs li a:hover { background-color: #84400d; }
+.subsection-antes-de-viajar #tabs li.current a { background-color: #84400d; color: #fbaa11; }
 
-.viagens-internacionais #tabs li a { background-color: #93166e; }
-.viagens-internacionais #tabs li a:hover { background-color: #7c105c; }
-.viagens-internacionais #tabs li.current a { background-color: #7c105c; }
+.subsection-viagens-internacionais #tabs li a { background-color: #93166e; }
+.subsection-viagens-internacionais #tabs li a:hover { background-color: #7c105c; }
+.subsection-viagens-internacionais #tabs li.current a { background-color: #7c105c; }
 
-.durante-o-voo #tabs li a { background-color: #005428; }
-.durante-o-voo #tabs li a:hover { background-color: #007739; }
-.durante-o-voo #tabs li.current a { background-color: #007739; }
+.subsection-durante-o-voo #tabs li a { background-color: #005428; }
+.subsection-durante-o-voo #tabs li a:hover { background-color: #007739; }
+.subsection-durante-o-voo #tabs li.current a { background-color: #007739; }
 
-.no-desembarque #tabs li a { background-color: #085973; }
-.no-desembarque #tabs li a:hover { background-color: #05475c; }
-.no-desembarque #tabs li.current a { background-color: #05475c; }
+.subsection-no-desembarque #tabs li a { background-color: #085973; }
+.subsection-no-desembarque #tabs li a:hover { background-color: #05475c; }
+.subsection-no-desembarque #tabs li.current a { background-color: #05475c; }
 
 .guia-conteudo #tabs li a.ico1 { background-position: 16px 73px; }
 .guia-conteudo #tabs li a.ico2 { background-position: -80px 73px; }
@@ -998,17 +999,16 @@ th, td {font-weight: normal; text-align: left}
 .guia-conteudo #tabs-content p { margin: 0 60px 20px 0; color:#262626; font-size: 17px; line-height: 28px; font-family: 'gotham_roundedbook'; }
 .guia-conteudo #tabs-content p strong { font-family: 'gotham_roundedmedium'; }
 
-.durante-o-voo #tabs,
-.no-desembarque #tabs { float: left; }
-.durante-o-voo #tabs-content,
-.no-desembarque #tabs-content { float: right; width: 960px; }
-.durante-o-voo #tabs-content .tabs-content-scroll,
-.no-desembarque #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 370px; }
+.subsection-durante-o-voo #tabs,
+.subsection-no-desembarque #tabs { float: left; }
+.subsection-durante-o-voo #tabs-content,
+.subsection-no-desembarque #tabs-content { float: right; width: 960px; }
+.subsection-durante-o-voo #tabs-content .tabs-content-scroll,
+.subsection-no-desembarque #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 370px; }
 
-.viagens-internacionais #tabs-content .tabs-content-scroll,
-.antes-de-viajar #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 220px; }
+.subsection-viagens-internacionais #tabs-content .tabs-content-scroll,
+.subsection-antes-de-viajar #tabs-content .tabs-content-scroll { padding: 40px 0 10px 40px; height: 220px; }
 
-.compartilhe-guia {float: left; width: 100%;}
 .guia-conteudo .addthis_toolbox { float: right; min-width: 280px; }
 
 .section-guia-do-passageiro .mCustomScrollBox>.mCSB_scrollTools {
@@ -1180,7 +1180,7 @@ th, td {font-weight: normal; text-align: left}
     height: auto;
     background-color: #f78600;
   }
-  .compartilhe-guia { padding: 10px 0; background-color: #f78600; }
+  .share-guia-do-passageiro { padding: 10px 0; background-color: #f78600; }
 
   .guia-menu {display: block; margin-bottom: 50px; width: 100%; }
   .guia-menu a {
@@ -1423,4 +1423,17 @@ th, td {font-weight: normal; text-align: left}
 #content .lk-outro-aero:link,
 #content .down-app a:link {
     border: 0;
+}
+
+#content .guia-menu a,
+.guia-conteudo #tabs li a {
+  color: #fff !important;
+}
+
+#content #tabs {
+  margin-left: 0;
+}
+
+#content .current {
+  background: inherit;
 }

@@ -23,7 +23,7 @@
   <!-- Column Content -->
   <!-- TODO: Copiar classe do conteudo -->
   <!-- EBREHAULT -->
-  <xsl:template match="//*[contains(@class, 'conteudo')]">
+  <xsl:template match="//*[starts-with(@class, 'conteudo')]">
     <xsl:copy>
         <xsl:attribute name="class"><xsl:value-of select="$conteudo_klass" /></xsl:attribute>
         <xsl:apply-templates select="@*[not(name()='class')]|node()" />
@@ -56,8 +56,9 @@
           <xsl:value-of select="substring((body/@class), 'section-', 0)" />
       </xsl:attribute>
   </xsl:template> -->
+  <replace css:content-children="#portal-column-content" css:theme-children=".conteudo" css:if-content=".section-guia-do-passageiro" />
   <replace css:theme-children=".conteudo"
-      css:if-not-content=".section-home.template-view, .section-home.template-folder_listing"><!-- , .section-guia-do-passageiro -->
+      css:if-not-content=".section-home.template-view, .section-home.template-folder_listing">
       <div class="centraliza">
         <div class="miolo">
           <xsl:copy-of css:select="#portal-column-content > *" />

@@ -109,8 +109,8 @@
     <browser:viewlet
         name="sac.aerofacil.ebook"
         for="..interfaces.IGuiaDoPassageiro"
-        view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        view="..browser.guiadopassageiro.GuiaDoPassageiro"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.EBookViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
@@ -141,6 +141,16 @@
         for="Products.ATContentTypes.interface.IATNewsItem"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        class=".viewlets.ShareViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="sac.aerofacil.share"
+        for="..interfaces.IGuiaDoPassageiro"
+        view="..browser.guiadopassageiro.GuiaDoPassageiro"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
         class=".viewlets.ShareViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"

@@ -11,10 +11,11 @@
     <div class="limites">
 
       <div class="guia-menu">
-        <tal:block repeat="guia view/guias">
-        <a tal:attributes="href guia/getURL;
-                           class guia/id"
-            tal:content="guia/Title">Antes de viajar</a>
+        <tal:block repeat="subsecao view/subsecoes">
+        <a tal:define="subsecao python:subsecao[0]"
+            tal:attributes="href subsecao/getURL;
+                            class subsecao/id"
+            tal:content="subsecao/Title">Antes de viajar</a>
         </tal:block>
       </div>
 
@@ -23,8 +24,8 @@
         <!-- TABS -->
         <ul id="tabs">
           <tal:block repeat="aba python:view.abas(context)">
-          <li tal:define="numero python:repeat['aba'].number() + 1"
-              tal:attributes="class python:'current' if view.is_current() else ''">
+          <li tal:define="numero repeat/aba/number"
+              tal:attributes="class python:'current' if view.is_current() else nothing">
             <a tal:attributes="href string:#aba${numero};
                                class string:ico${numero}"
                 tal:content="aba/Title">Compra da passagem</a>
@@ -34,70 +35,19 @@
 
         <!-- TAB CONTENT -->
         <div id="tabs-content">
-          <tal:block repeat="aba python:view.abas(context)">
+          <tal:block define="abas python:view.abas(context)"
+              repeat="aba abas">
           <div tal:attributes="id string:aba${repeat/aba/number};
                                class python:'animated current' if view.is_current() else 'animated'">
-            <div class="tabs-content-scroll">
-              <p><strong>O governo controla o preço das passagens aéreas?</strong></p>
-              <p>Não. São as empresas aéreas que estabelecem os preços
-              das passagens. As tarifas aéreas no Brasil seguem o regime de
-              liberdade tarifária, que vale tanto para voos nacionais quanto
-              para voos internacionais com origem no país.</p>
-              <p><strong>Sou obrigado a adquirir o seguro de viagem?</strong></p>
-              <p>Ao comprar sua passagem, você não é obrigado a adquirir
-              seguros de viagem: esses serviços são adicionais e facultativos.
-              O preço da passagem para crianças é igual ao de adultos?
-              Em voos nacionais, o valor da passagem de crianças de colo
-              com menos de dois anos de idade que não estejam ocupando
-              assento não poderá ultrapassar 10% da tarifa paga pelo adulto.</p>
-            </div>
+              <div class="tabs-content-scroll"
+                  tal:define="aba aba/getObject"
+                  tal:content="structure aba/getText" />
           </div>
           </tal:block>
         </div>
 
-        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
-        <!-- XXX: Código abaixo será substituído por viewlet -->
-        <div class="compartilhe-guia">
-          <!-- AddThis Button BEGIN -->
-          <div class="addthis_toolbox addthis_default_style"
-              addthis:title="Antes de Viajar | Guia do Passageiro | Aerofácil"
-              addthis:url="http://aerofacil.gov.br/guia-do-passageiro/antes-de-viajar"
-              tal:attributes="addthis:title string:${context/@@plone_portal_state/portal_title} - ${context/Title};
-                              addthis:url context/absolute_url">
-            <a class="addthis_button_facebook_like"></a>
-            <a class="addthis_button_tweet"></a>
-            <a class="addthis_counter addthis_pill_style"></a>
-          </div>
-          <!-- AddThis Button END -->
-        </div>
-
       </div>
       
-      <div tal:replace="structure provider:plone.belowcontentbody" />
-      <!-- XXX: Código abaixo será substituído por viewlet -->
-      <!-- <div class="col-download-ebook">
-        <a class="download-ebook" href="guiapassageiro.pdf" target="_blank">
-          ebook
-          <span class="titulo verde">Guia do Passageiro</span>
-          <span class="descricao">Baixe a versão em PDF do Guia do Passageiro e fique sempre bem informado.</span>
-          <span class="lk-seta amarelo">Baixar</span><br>
-        </a>
-        <a href="http://issuu.com/manunodari/docs/guiapassageiro" target="_blank" class="lk-seta amarelo lk-issu">Visualizar</a>
-      </div> -->
-
-      <!-- XXX: Código abaixo será substituído por viewlet -->
-      <!-- <div class="depoimentos">
-        depoimentos
-        <span class="titulo verde">De brasileiro para brasileiro</span>
-        <a href="#" class="dep-1" data-id-video="EqDsU62ZOrg">Depoimento 1</a>
-        <a href="#" class="dep-2" data-id-video="EqDsU62ZOrg">Depoimento 2</a>
-        <a href="#" class="dep-3" data-id-video="EqDsU62ZOrg">Depoimento 3</a>
-        <a href="#" class="dep-4" data-id-video="EqDsU62ZOrg">Depoimento 4</a>
-        <a href="#" class="dep-5" data-id-video="EqDsU62ZOrg">Depoimento 5</a>
-        <a href="#" class="dep-6" data-id-video="EqDsU62ZOrg">Depoimento 6</a>
-        <a href="#" class="dep-7" data-id-video="EqDsU62ZOrg">Depoimento 7</a>
-      </div> -->
-
     </div>
         
     </tal:main-macro>
