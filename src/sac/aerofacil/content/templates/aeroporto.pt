@@ -1,15 +1,11 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
-      metal:use-macro="context/main_template/macros/master"
-      i18n:domain="sac.aerofacil">
+      metal:use-macro="context/main_template/macros/master">
 <body>
 
 <metal:main fill-slot="main">
-    <tal:main-macro metal:define-macro="main"
-        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+    <tal:main-macro metal:define-macro="main">
 
         <h2 class="verde">Aeroporto</h2>
 
@@ -28,30 +24,35 @@
             <div class="overflow-aero">
 
                 <div class="desc-aero"
+                    tal:condition="context/body"
                     tal:content="structure context/body/output" />
 
-                <div class="item-aero item-restaurante">
+                <div class="item-aero item-restaurante"
+                    tal:condition="context/restaurantes">
                     <a href="#">
                         <strong>Restaurantes</strong><br>      
                     </a>
                     <span tal:content="structure context/restaurantes/output" />
                 </div>
 
-                <div class="item-aero item-lojas">
+                <div class="item-aero item-lojas"
+                    tal:condition="context/lojas">
                     <a href="#">
                         <strong>Lojas</strong><br>      
                     </a>
                     <span tal:content="structure context/lojas/output" />
                 </div>
 
-                <div class="item-aero item-localizacao">
+                <div class="item-aero item-localizacao"
+                    tal:condition="context/localizacao">
                     <a href="#">
                         <strong>Localização</strong><br>      
                     </a>
                     <span tal:content="structure context/localizacao" />
                 </div>
 
-                <div class="item-aero item-estacionamento">
+                <div class="item-aero item-estacionamento"
+                    tal:condition="context/estacionamento">
                     <a href="#">
                         <strong>Estacionamento</strong><br>      
                     </a>

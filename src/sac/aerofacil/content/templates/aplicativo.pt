@@ -1,20 +1,18 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
-      lang="en"
       metal:use-macro="context/main_template/macros/master">
 <body>
 
 <metal:main fill-slot="main">
-    <tal:main-macro metal:define-macro="main"
-        tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+    <tal:main-macro metal:define-macro="main">
 
         <div class="mostra-app app-voos">
 
             <div tal:replace="structure provider:plone.abovecontenttitle" />
 
             <h2 class="verde">Aplicativo
-                <span class="amarelo" tal:content="context/title" />
+                <span class="amarelo" tal:content="context/Title" />
             </h2>
 
             <div tal:replace="structure provider:plone.belowcontenttitle" />

@@ -71,7 +71,7 @@
                     }
                 });
             });
-            location.href = portal_url + "/aeroportos-brasileiros/" + val;
+            location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
         });
 
 
@@ -114,20 +114,23 @@
             aero = aero[aero.length - 1];
             if (aero) {
                 // TODO: Evitar carregamento AJAX na página de entrada
-                // if (aero === context.id) { return }
-                $('#aeroporto').load(portal_url + 'aeroportos-brasileiros/' + aero + ' #aeroporto', function () {
-                    $('.item-aero a').click(function() {
-                        if (!$(this).hasClass('externo')) {
-                            $(this).parent().find('span').slideToggle();
-                            return false;
-                        }
+                if (!/#$/.test(aero)) {
+                    $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + aero + ' #aeroporto', function () {
+                        // TODO: Remove me (see l104)
+                        $('.item-aero a').click(function() {
+                            if (!$(this).hasClass('externo')) {
+                                $(this).parent().find('span').slideToggle();
+                                return false;
+                            }
+                        });
+                        // TODO: Remove me (see l98)
+                        $(".overflow-aero").mCustomScrollbar({
+                            advanced: {
+                               updateOnContentResize: true
+                            }
+                        });
                     });
-                    $(".overflow-aero").mCustomScrollbar({
-                        advanced: {
-                           updateOnContentResize: true
-                        }
-                    });
-                });
+                }
             }
 
             $('.lk-outro-aero').click(function() {
@@ -233,7 +236,7 @@
                 e.preventDefault();
             });
 
-            $(".tabs-content-scrool").mCustomScrollbar({
+            $(".tabs-content-scroll").mCustomScrollbar({
                 advanced: {
                     updateOnContentResize: true
                 }
