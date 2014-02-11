@@ -2,9 +2,11 @@
     "use strict";
     $(document).ready(function() {
 
+
         // HOME
 
         if (location.href === portal_url) {
+
             $('.menu a').on('click', function() {
                 var rel = $(this).attr('rel');
                 var dist = $('.' + rel).offset().top;

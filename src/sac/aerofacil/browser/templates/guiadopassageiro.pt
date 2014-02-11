@@ -19,11 +19,12 @@
         </tal:block>
       </div>
 
-      <div class="guia-conteudo">
+      <div class="guia-conteudo"
+          tal:define="abas python:view.abas(context)">
         <ul id="tabs">
-          <tal:block repeat="aba python:view.abas(context)">
+          <tal:block repeat="aba abas">
           <li tal:define="numero repeat/aba/number"
-              tal:attributes="class python:'current' if view.is_current() else nothing">
+              tal:attributes="class python:'current' if not repeat['aba'].index else nothing">
             <a tal:attributes="href string:#aba${numero};
                                class string:ico${numero}"
                 tal:content="aba/Title">Compra da passagem</a>
@@ -31,10 +32,9 @@
           </tal:block>
         </ul>
         <div id="tabs-content">
-          <tal:block define="abas python:view.abas(context)"
-              repeat="aba abas">
+          <tal:block repeat="aba abas">
           <div tal:attributes="id string:aba${repeat/aba/number};
-                               class python:'animated current' if view.is_current() else 'animated'">
+                               class python:'animated current' if not repeat['aba'].index else 'animated'">
               <div class="tabs-content-scroll"
                   tal:define="aba aba/getObject"
                   tal:content="structure aba/getText" />

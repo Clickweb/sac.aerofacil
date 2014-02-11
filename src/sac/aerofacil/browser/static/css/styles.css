@@ -959,7 +959,7 @@ th, td {font-weight: normal; text-align: left}
   line-height: 12px;
   font-family: 'gotham_roundedmedium'; 
 }
-.guia-conteudo #tabs li.current a { color: #fbaa11; }
+.guia-conteudo #tabs li.current a { color: #fbaa11 !important; }
 
 .subsection-antes-de-viajar #tabs li a { background-color: #f78600; }
 .subsection-antes-de-viajar #tabs li a:hover { background-color: #84400d; }
@@ -1024,7 +1024,7 @@ th, td {font-weight: normal; text-align: left}
 }
   .lk-issu {
     position: absolute;
-    bottom: 22px;
+    bottom: 18px;
     left: 125px;
   }
 .download-ebook {
@@ -1034,7 +1034,7 @@ th, td {font-weight: normal; text-align: left}
   width: 275px;  
   padding: 20px 0 0 125px;
   font-family: 'gotham_roundedlight';
-  color: #2d2d2d;
+  color: #2d2d2d !important;
   font-size: 15px;
   float: left;
 }
@@ -1045,7 +1045,13 @@ th, td {font-weight: normal; text-align: left}
   font-size: 26px;
   line-height: 40px;
 }
-.download-ebook span.descricao { font-size: 11px; display: block; line-height: 18px; }
+.download-ebook span.descricao {
+  color: #000;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 11px;
+  display: block;
+  line-height: 18px;
+}
 .download-ebook span.baixar {
   font-family: 'gothambold';
   display: block;

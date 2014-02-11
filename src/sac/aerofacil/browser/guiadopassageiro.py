@@ -51,6 +51,3 @@ class GuiaDoPassageiro(grok.View):
                        sort_on='getObjPositionInParent',
                        sort_limit=12)[:12]
         return abas
-
-    def is_current(self):
-        return False
