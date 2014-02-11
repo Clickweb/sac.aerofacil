@@ -893,8 +893,8 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 /* GUIA DO PASSAGEIRO */
 
-/* XXX: Verificar se a remoção deste código impacta visualmente na seção
-
+/* XXX: Verificar se a remoção deste código impacta visualmente na seção */
+/*
 * {outline-color: transparent; outline-style: none; outline-width: medium}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 a, img, ul, ol, li, fieldset, form, label, input, select,
@@ -918,6 +918,7 @@ textarea {resize: vertical}
 table {border-collapse: separate; border-spacing: 0}
 th, td {font-weight: normal; text-align: left}
 */
+
 .section-guia-do-passageiro .conteudo { background: #fcfef1 url(../images/guia-pagebg2.jpg) center -69px no-repeat; padding-top: 46px; min-height: 820px; clear: both; }
 .section-guia-do-passageiro .rodape { background: #353535; }
 .section-guia-do-passageiro .limites { width: 1167px; margin: 0 auto; }
@@ -1426,21 +1427,22 @@ th, td {font-weight: normal; text-align: left}
 }
 
 #content .guia-menu a,
-.guia-conteudo #tabs li a {
-  color: #fff !important;
+.section-guia-do-passageiro #tabs li a {
+  color: #fff;
 }
 
 #content #tabs {
   margin-left: 0;
 }
 
+#content .guia-menu a:hover,
+#content #tabs li:not(.current) a:hover {
+  color: #fff !important;
+}
+
 #content .current {
   background: inherit;
 }
-
-/*.hiddenStructure {
-  padding: 0 !important;
-}*/
 
 .conteudo-noticias #viewlet-below-content-title {
   padding: 0 20px;
@@ -1448,4 +1450,8 @@ th, td {font-weight: normal; text-align: left}
 
 #content {
   font-size: 100%;
+}
+
+.section-guia-do-passageiro #content {
+  margin: 1em 0 2em;
 }

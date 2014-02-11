@@ -20,8 +20,6 @@
       </div>
 
       <div class="guia-conteudo">
-
-        <!-- TABS -->
         <ul id="tabs">
           <tal:block repeat="aba python:view.abas(context)">
           <li tal:define="numero repeat/aba/number"
@@ -32,8 +30,6 @@
           </li>
           </tal:block>
         </ul>
-
-        <!-- TAB CONTENT -->
         <div id="tabs-content">
           <tal:block define="abas python:view.abas(context)"
               repeat="aba abas">
@@ -45,6 +41,7 @@
           </div>
           </tal:block>
         </div>
+        <div tal:replace="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
       </div>
       

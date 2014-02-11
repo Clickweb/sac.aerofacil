@@ -66,7 +66,7 @@
   </replace>
   <before css:content-children="#portal-column-one" css:theme-children=".conteudo" css:if-content="" />
   <after css:content-children="#portal-column-two" css:theme-children=".conteudo" css:if-content="" />
-  <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape" />
+  <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape" css:if-not-content=".share-guia-do-passageiro" />
 
   <!-- Home -->
   <before css:content="#edit-bar" css:theme="#topo" css:if-content=".section-home" />
