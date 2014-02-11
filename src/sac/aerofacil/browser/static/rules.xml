@@ -23,13 +23,12 @@
   <!-- Column Content -->
   <!-- TODO: Copiar classe do conteudo -->
   <!-- EBREHAULT -->
-  <xsl:template match="//*[starts-with(@class, 'conteudo')]">
+  <xsl:template match="//div[starts-with(@class, 'conteudo')]">
     <xsl:copy>
         <xsl:attribute name="class"><xsl:value-of select="$conteudo_klass" /></xsl:attribute>
         <xsl:apply-templates select="@*[not(name()='class')]|node()" />
     </xsl:copy>
   </xsl:template>
-  <!--Identity template copies content forward -->
   <xsl:template match="@*|node()">
       <xsl:copy>
           <xsl:apply-templates select="@*|node()"/>
@@ -40,17 +39,17 @@
       <xsl:attribute name="class"><xsl:value-of select="$conteudo_klass" /></xsl:attribute>
   </before> -->
   <!-- LAURENCE -->
-  <!-- <replace content="/html/body/div[2]/@class">
+  <!-- <replace theme="/html/body/div[2]/@class">
     <xsl:attribute name="class"><xsl:value-of select="."/> $conteudo_klass</xsl:attribute>
   </replace> -->
-  <!-- D6 01 -->  
+  <!-- DAVI 01 -->
   <!-- <replace attributes="class" css:theme=".conteudo">$conteudo_klass</replace> -->
-  <!-- D6 02 -->  
+  <!-- DAVI 02 -->
   <!-- <replace css:theme=".conteudo">
       <xsl:attribute name="class">$conteudo_klass</xsl:attribute>
       <xsl:value-of select="."/> 
   </replace> -->
-  <!-- D6 03 -->  
+  <!-- DAVI 03 -->
   <!-- <xsl:template match="//div[contains(concat(' ', normalize-space(@class), ' '), ' conteudo ')]">
       <xsl:attribute name="class">
           <xsl:value-of select="substring((body/@class), 'section-', 0)" />
@@ -74,5 +73,14 @@
   <replace css:content=".destaques" css:theme-children=".destaques" css:if-content="" />
   <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home" css:if-content="" />
   <replace css:content=".noticias" css:theme-children=".noticias" css:if-content="" />
-  
+  <!-- TODO: Links absolutos na home para subseções do Guia do Passageiro -->
+  <!-- <xsl:template match="//div[contains(@class, 'guia-do-passageiro')]/div/div/p/a">
+    <a class="lk-seta-left verde" target="_blank">
+      <xsl:attribute name="href">htttp://<xsl:value-of select="./@href" /></xsl:attribute>
+      <xsl:apply-templates mode="raw" />
+      <xsl:value-of select="." />
+      <xsl:copy />
+    </a>
+  </xsl:template> -->
+
 </rules>

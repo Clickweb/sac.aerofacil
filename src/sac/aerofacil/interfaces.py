@@ -5,17 +5,12 @@ from zope.interface import Interface
 from plone.theme.interfaces import IDefaultPloneLayer
 
 
-class IHome(IDefaultPloneLayer):
-    """Interface de marcação que define um Zope 3 browser layer."""
-
-
 class ISACAerofacilLayer(IDefaultPloneLayer):
     """Interface de marcação que define um Zope 3 browser layer."""
 
 
-class IAeroporto(Interface):
-    """Interface de marcação para seção Aeroporto.
-    """
+class IHome(Interface):
+    """Interface de marcação que define um Zope 3 browser layer."""
 
 
 class IAplicativo(Interface):
@@ -25,4 +20,9 @@ class IAplicativo(Interface):
 
 class IGuiaDoPassageiro(Interface):
     """Interface de marcação para seção Guia do Passageiro.
+    """
+
+
+class IAeroporto(Interface):
+    """Interface de marcação para seção Aeroporto.
     """
