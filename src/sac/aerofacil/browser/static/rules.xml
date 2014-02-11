@@ -58,7 +58,7 @@
   </xsl:template> -->
   <replace css:content-children="#portal-column-content" css:theme-children=".conteudo" css:if-content=".section-guia-do-passageiro" />
   <replace css:theme-children=".conteudo"
-      css:if-not-content=".section-home.template-view, .section-home.template-folder_listing">
+      css:if-not-content=".section-home.template-document_view, .section-home.template-folder_listing">
       <div class="centraliza">
         <div class="miolo">
           <xsl:copy-of css:select="#portal-column-content > *" />
