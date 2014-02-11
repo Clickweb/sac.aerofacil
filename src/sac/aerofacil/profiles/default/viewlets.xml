@@ -11,7 +11,6 @@
   </order>
   <order manager="plone.belowcontent" skinname="Sunburst Theme">
     <viewlet name="sac.aerofacil.noticias_home" />
-    <viewlet name="sac.aerofacil.outras_noticias" />
     <viewlet name="sac.aerofacil.apps_aplicativo" />
     <viewlet name="sac.aerofacil.apps_aeroporto" />
     <viewlet name="sac.aerofacil.select_aeroporto" />
@@ -19,6 +18,7 @@
   </order>
   <order manager="plone.portalfooter" skinname="Sunburst Theme">
     <viewlet name="sac.aerofacil.share" insert-before="*" />
+    <viewlet name="sac.aerofacil.outras_noticias" insert-after="sac.aerofacil.share" />
   </order>
   <hidden manager="plone.portalheader" skinname="Sunburst Theme">
     <viewlet name="plone.searchbox" />

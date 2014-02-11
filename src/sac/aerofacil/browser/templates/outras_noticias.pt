@@ -6,7 +6,8 @@
     <tal:block repeat="noticia noticias">
       <a tal:attributes="href noticia/getURL;
                          title noticia/pretty_title_or_id;
-                         rel noticia/id">
+                         rel noticia/id"
+          tal:content="noticia/pretty_title_or_id">
         Pesquisa revela humor do brasileiro com aeroportos</a><br>
     </tal:block>
   </div>

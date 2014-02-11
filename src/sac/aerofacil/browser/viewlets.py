@@ -50,9 +50,8 @@ class OutrasNoticiasViewlet(NoticiasHomeViewlet):
     render = ViewPageTemplateFile('templates/outras_noticias.pt')
 
     def noticias(self):
-        """ Exclui a noticia corrente da listagem.
+        """ Exclui a notícia corrente da listagem.
         """
-        # brains = super(NoticiasHomeViewlet, self).noticias()
         context = aq_inner(self.context)
         portal = self.portal_state.portal()
         path = tuple()
@@ -64,8 +63,8 @@ class OutrasNoticiasViewlet(NoticiasHomeViewlet):
                          path='/'.join(path),
                          sort_on='Date',
                          sort_order='reverse',
-                         sort_limit=1)[:1]
-        brains = [b for b in brains if not b.id == context.id]
+                         sort_limit=6)[:6]
+        brains = [b for b in brains if not b.id == context.id][:5]
         return brains
 
 

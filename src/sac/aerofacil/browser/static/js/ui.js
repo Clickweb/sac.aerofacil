@@ -2,82 +2,85 @@
     "use strict";
     $(document).ready(function() {
 
-        // GERAL
+        // HOME
 
-        $('.menu a').on('click', function() {
-            var rel = $(this).attr('rel');
-            var dist = $('.' + rel).offset().top;
-            $('html, body').animate({
-                scrollTop: dist
-            }, 1000);
-            return false;
-        });
+        if (location.href === portal_url) {
+            $('.menu a').on('click', function() {
+                var rel = $(this).attr('rel');
+                var dist = $('.' + rel).offset().top;
+                $('html, body').animate({
+                    scrollTop: dist
+                }, 1000);
+                return false;
+            });
 
-        $(".menu-mobile").on("click", function() {
-            $(".menu").toggleClass("hover");
-            $(".menu-mobile").toggleClass("hover");
-        });
+            $(".menu-mobile").on("click", function() {
+                $(".menu").toggleClass("hover");
+                $(".menu-mobile").toggleClass("hover");
+            });
 
-        $('.menu-flutuante a').on('click', function() {
-            var rel = $(this).attr('rel');
-            var dist = $('.' + rel).offset().top;
-            $('html, body').animate({
-                scrollTop: dist
-            }, 1000);
-            return false;
-        });
+            $('.menu-flutuante a').on('click', function() {
+                var rel = $(this).attr('rel');
+                var dist = $('.' + rel).offset().top;
+                $('html, body').animate({
+                    scrollTop: dist
+                }, 1000);
+                return false;
+            });
 
-        $(window).scroll(function () {
-            var scr = $(window).scrollTop();
-            if (scr < 400) {
-                $('.menu-flutuante').hide();
-            } else {
-                $('.menu-flutuante').show();
+            $(window).scroll(function () {
+                var scr = $(window).scrollTop();
+                if (scr < 400) {
+                    $('.menu-flutuante').hide();
+                } else {
+                    $('.menu-flutuante').show();
+                }
+            });
+
+            $('.bloco-informacoes .lk-seta-left').click(function() {
+                $('.bloco-informacoes .lk-seta-left').removeClass('open');
+                $('.texto-info').slideUp();
+                $(this).addClass('open');
+                $(this).parent().find('.texto-info').slideDown();
+                return false;
+            });
+
+            var lista_noticias = $(".lista-noticias");
+            if (lista_noticias.length) {
+                lista_noticias.flexslider({
+                    animation: "slide",
+                    controlNav: false
+                });
             }
-        });
 
-        $('.bloco-informacoes .lk-seta-left').click(function() {
-            $('.bloco-informacoes .lk-seta-left').removeClass('open');
-            $('.texto-info').slideUp();
-            $(this).addClass('open');
-            $(this).parent().find('.texto-info').slideDown();
-            return false;
-        });
-
-        var lista_noticias = $(".lista-noticias");
-        if (lista_noticias.length) {
-            lista_noticias.flexslider({
-                animation: "slide",
-                controlNav: false
+            $('.lk-aeroporto-home').click(function() {
+                $(this).hide();
+                $('.select-aeroporto-home').fadeIn();
+                return false;
             });
+
+            $('.select-aeroporto-home').change(function() {
+                var val = $(this).val();
+                $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + val + ' #aeroporto', function() {
+                    $('.item-aero a').click(function() {
+                        $(this).parent().find('span').slideToggle();
+                        return false;
+                    });
+                    $(".overflow-aero").mCustomScrollbar({
+                        advanced: {
+                            updateOnContentResize: true
+                        }
+                    });
+                });
+                location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
+            });
+
         }
-
-        $('.lk-aeroporto-home').click(function() {
-            $(this).hide();
-            $('.select-aeroporto-home').fadeIn();
-            return false;
-        });
-
-        $('.select-aeroporto-home').change(function() {
-            var val = $(this).val();
-            $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + val + ' #aeroporto', function() {
-                $('.item-aero a').click(function() {
-                    $(this).parent().find('span').slideToggle();
-                    return false;
-                });
-                $(".overflow-aero").mCustomScrollbar({
-                    advanced: {
-                        updateOnContentResize: true
-                    }
-                });
-            });
-            location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
-        });
 
 
         // APLICATIVOS
 
-        if (location.href.indexOf("/aplicativos-e-ferramentas") != -1) {
+        else if (location.href.indexOf("/aplicativos-e-ferramentas") != -1) {
             $('.aplicativos-interna').flexslider({
                 animation: "slide",
                 controlNav: false
