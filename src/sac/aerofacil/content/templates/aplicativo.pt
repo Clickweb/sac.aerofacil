@@ -7,7 +7,7 @@
 <metal:main fill-slot="main">
     <tal:main-macro metal:define-macro="main">
 
-        <div class="mostra-app app-voos">
+        <div tal:attributes="class string:mostra-app app-${context/id}">
 
             <div tal:replace="structure provider:plone.abovecontenttitle" />
 
