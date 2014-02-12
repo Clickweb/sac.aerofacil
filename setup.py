@@ -17,8 +17,8 @@ long_description = \
 
 setup(
     name='sac.aerofacil',
-    version='0.1',
-    description="Implementacao Plone do site AeroFacil (SAC)",
+    version='0.9',
+    description="Implementação Plone do site Aerofácil (SAC/PR)",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -36,16 +36,16 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'five.grok',
-        'five.pt',
         'Pillow',
         'Plone',
+        'five.grok',
+        'five.pt',
         'plone.api',
-        'plone.app.dexterity [grok]',
+        'plone.app.dexterity [grok, relations]',
+        'plone.app.drafts',
         'setuptools',
-        'z3c.jbot',
-        'collective.cover==1.0a7',
-        'sc.embedder'
+        'sc.embedder==1.0b3',
+        'z3c.jbot==0.7.1',
     ],
     extras_require={
         'test': [
