@@ -211,12 +211,6 @@
                 });
             });
 
-            $("#miolo-noticias").mCustomScrollbar({
-              advanced: {
-                  updateOnContentResize: true
-              }
-            });
-
             $('.outras-noticias a:odd').addClass('amarelo');
 
         }

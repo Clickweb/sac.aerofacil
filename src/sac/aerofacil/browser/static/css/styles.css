@@ -74,8 +74,8 @@ body {
 /* FIM FUNDOS */
 
 /* ITENS GERAIS */
-.verde {color: #007739 !important;}
-.amarelo {color: #fbb900 !important;}
+.verde, #content .verde:hover {color: #007739 !important;}
+.amarelo, #content .amarelo:hover {color: #fbb900 !important;}
 h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; font-family: 'gothambold'; font-weight: normal;}
   h2 span {clear: both; display: block;}
 .lk-seta-grande {float: right; font-size: 15px; font-weight: bold; color: #007739; background: url(../images/setas.png) no-repeat right 0; line-height: 25px; padding: 0 30px 0 0; font-family: 'gothambold';}
@@ -1327,13 +1327,13 @@ th, td {font-weight: normal; text-align: left}
   padding: 60px 0 30px 80px;
   position: relative;
 }
-  .conteudo-destaques .miolo h2 {padding: 0 0 20px 0;}
+  .conteudo-destaques .miolo h2 {padding: 0 0 20px 25px; clear: both;}
   .conteudo-destaques .miolo p {padding: 0 0 20px 30px;}
 
 .conteudo-destaques .miolo h2.verde {
   background: url(../images/seta_dir.png) no-repeat 0 8px;
   float: left;
-  padding: 0 0 20px 25px;
+  padding: 0 0 0 25px;
 }
 .share-noticias {background: #fbb900; height: 63px;}
 .share-noticias .centraliza {width: 915px;}
@@ -1355,7 +1355,7 @@ th, td {font-weight: normal; text-align: left}
 
 .section-noticias .rodape {background: #353535;}
 
-.conteudo-noticias .miolo {
+.conteudo-noticias > div > .miolo {
   float: left; 
   width: 745px;
   padding: 60px 0 30px 80px;
@@ -1443,8 +1443,12 @@ th, td {font-weight: normal; text-align: left}
     clear: both;
 }
 
-.conteudo {
-    margin: 0 1em;
+#content {
+  font-size: 100%;
+}
+
+#content .current {
+  background: inherit;
 }
 
 #content .item-aero a:link,
@@ -1467,16 +1471,12 @@ th, td {font-weight: normal; text-align: left}
   color: #fff !important;
 }
 
-#content .current {
-  background: inherit;
+.conteudo {
+    margin: 0 1em;
 }
 
 .conteudo-noticias #viewlet-below-content-title {
   padding: 0 20px;
-}
-
-#content {
-  font-size: 100%;
 }
 
 .section-guia-do-passageiro #content {
