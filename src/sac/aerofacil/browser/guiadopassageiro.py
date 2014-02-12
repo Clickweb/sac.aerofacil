@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collections import deque
 from five import grok
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
@@ -34,6 +35,10 @@ class GuiaDoPassageiro(grok.View):
                                   'depth': 1},
                             sort_on='getObjPositionInParent',
                             sort_limit=4)[:4]
+        subsecoes = deque(subsecoes)
+        ids = [brain.id for brain in subsecoes]
+        steps = -ids.index(context.id)
+        subsecoes.rotate(steps)
         return [(subsecao, self.abas(subsecao)) for subsecao in subsecoes]
 
     @memoize
