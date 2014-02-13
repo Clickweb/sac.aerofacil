@@ -211,8 +211,6 @@
                 });
             });
 
-            $('.outras-noticias a:odd').addClass('amarelo');
-
         }
 
 

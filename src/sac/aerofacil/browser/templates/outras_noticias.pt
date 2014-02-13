@@ -4,9 +4,11 @@
   <div class="centraliza">
     <strong>Outras notícias:</strong><br>
     <tal:block repeat="noticia noticias">
-      <a tal:attributes="href noticia/getURL;
-                         title noticia/pretty_title_or_id;
-                         rel noticia/id"
+      <a tal:define="klass python:'amarelo' if repeat['noticia'].odd() else nothing"
+          tal:attributes="href noticia/getURL;
+                          title noticia/pretty_title_or_id;
+                          rel noticia/id;
+                          class klass"
           tal:content="noticia/pretty_title_or_id">
         Pesquisa revela humor do brasileiro com aeroportos</a><br>
     </tal:block>
