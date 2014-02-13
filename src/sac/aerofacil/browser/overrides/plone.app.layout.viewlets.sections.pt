@@ -15,3 +15,10 @@
     </tal:tabs>
   </ul>
 </tal:sections>
+<tal:comment replace="nothing">
+  <!-- TODO: Viewlet independente para fornecer classe `.conteudo-$secao` -->
+</tal:comment>
+<div tal:define="portal context/@@plone_portal_state/portal;
+                 is_root context/@@plone_context_state/is_portal_root;
+                 klass python:not is_root and context.getPhysicalPath()[len(portal.getPhysicalPath()):][0] or ''"
+    tal:attributes="class string:conteudo-$klass faixa" />

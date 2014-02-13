@@ -8,9 +8,6 @@
 
   <!-- Head -->
   <copy attributes="lang dir" css:content="html" css:theme="html" />
-  <!-- TODO: Descartar linhas comentadas quando resolver bug do registro dos resources: http://stackoverflow.com/questions/18877354/how-can-i-make-plone-portal-registries-find-and-cook-new-style-static-resources -->
-  <!--before css:content="head base, head meta, head link, head style, head script" css:theme-children="head" /-->
-  <!--replace css:content="head title" css:theme="head title" /-->
   <replace css:content-children="head" css:theme-children="head" />
 
   <!-- Top -->
@@ -20,63 +17,40 @@
   <copy attributes="href title" css:content="#portal-logo" css:theme=".topo h1 a" />
   <replace css:content=".menu" css:theme=".menu" />
 
-  <!-- Column Content -->
-  <!-- TODO: Copiar classe do conteudo -->
-  <!-- EBREHAULT -->
-  <xsl:template match="//div[starts-with(@class, 'conteudo')]">
-    <xsl:copy>
-        <xsl:attribute name="class"><xsl:value-of select="$conteudo_klass" /></xsl:attribute>
-        <xsl:apply-templates select="@*[not(name()='class')]|node()" />
-    </xsl:copy>
-  </xsl:template>
-  <xsl:template match="@*|node()">
-      <xsl:copy>
-          <xsl:apply-templates select="@*|node()"/>
-      </xsl:copy>
-  </xsl:template>
-  <!-- GLICK -->
-  <!-- <before css:theme-children=".conteudo">
-      <xsl:attribute name="class"><xsl:value-of select="$conteudo_klass" /></xsl:attribute>
-  </before> -->
-  <!-- LAURENCE -->
-  <!-- <replace theme="/html/body/div[2]/@class">
-    <xsl:attribute name="class"><xsl:value-of select="."/> $conteudo_klass</xsl:attribute>
-  </replace> -->
-  <!-- DAVI 01 -->
-  <!-- <replace attributes="class" css:theme=".conteudo">$conteudo_klass</replace> -->
-  <!-- DAVI 02 -->
-  <!-- <replace css:theme=".conteudo">
-      <xsl:attribute name="class">$conteudo_klass</xsl:attribute>
-      <xsl:value-of select="."/> 
-  </replace> -->
-  <!-- DAVI 03 -->
-  <!-- <xsl:template match="//div[contains(concat(' ', normalize-space(@class), ' '), ' conteudo ')]">
-      <xsl:attribute name="class">
-          <xsl:value-of select="substring((body/@class), 'section-', 0)" />
-      </xsl:attribute>
-  </xsl:template> -->
-  <replace css:content-children="#portal-column-content" css:theme-children=".conteudo" css:if-content=".section-guia-do-passageiro" />
+  <!-- Columns and Content -->
+  <merge attributes="class" css:content="div[class^='conteudo']" css:theme=".conteudo" css-if-not-content=".section-guia-do-passageiro" />
+  <replace css:content-children="#portal-column-content"
+      css:theme-children=".conteudo" method="raw"
+      css:if-content=".section-guia-do-passageiro" />
   <replace css:theme-children=".conteudo"
-      css:if-not-content=".section-home.template-document_view, .section-home.template-folder_listing">
+      css:if-not-content=".section-home.template-document_view,
+                          .section-home.template-folder_listing">
       <div class="centraliza">
         <div class="miolo">
           <xsl:copy-of css:select="#portal-column-content > *" />
         </div>
       </div>
   </replace>
-  <before css:content-children="#portal-column-one" css:theme-children=".conteudo" css:if-content="" />
-  <after css:content-children="#portal-column-two" css:theme-children=".conteudo" css:if-content="" />
-  <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape" css:if-not-content=".share-guia-do-passageiro" />
+  <before css:content-children="#portal-column-one" css:theme-children=".conteudo" />
+  <after css:content-children="#portal-column-two" css:theme-children=".conteudo" />
+  <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape"
+      css:if-not-content=".share-guia-do-passageiro" />
 
   <!-- Home -->
-  <before css:content="#edit-bar" css:theme="#topo" css:if-content=".section-home" />
-  <replace css:content=".destaques" css:theme-children=".destaques" css:if-content="" />
-  <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home" css:if-content="" />
-  <replace css:content=".noticias" css:theme-children=".noticias" css:if-content="" />
+  <before css:content="#edit-bar" css:theme="#topo"
+      css:if-content=".section-home" />
+  <replace css:content=".destaques" css:theme-children=".destaques"
+      css:if-content="" />
+  <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home"
+      css:if-content="" />
+  <replace css:content=".noticias" css:theme-children=".noticias"
+     css:if-content="" />
   <!-- TODO: Links absolutos na home para subseções do Guia do Passageiro -->
   <!-- <xsl:template match="//div[contains(@class, 'guia-do-passageiro')]/div/div/p/a">
     <a class="lk-seta-left verde" target="_blank">
-      <xsl:attribute name="href">htttp://<xsl:value-of select="./@href" /></xsl:attribute>
+      <xsl:attribute name="href">
+        <xsl:value-of select="$portal_url" /><xsl:value-of select="./@href" />
+      </xsl:attribute>
       <xsl:apply-templates mode="raw" />
       <xsl:value-of select="." />
       <xsl:copy />
