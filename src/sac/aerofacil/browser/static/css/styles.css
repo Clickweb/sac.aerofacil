@@ -936,7 +936,11 @@ th, td {font-weight: normal; text-align: left}
 .guia-menu a:first-child { width: 291px; border-left: 0; }
 .guia-conteudo { height: 453px; overflow: hidden; }
 .guia-conteudo #tabs { overflow: hidden; display: table; }
-.guia-conteudo #tabs li { list-style: none; display: table-cell; vertical-align: top; }
+.guia-conteudo #tabs li {
+  list-style: none;
+  display: table-cell;
+  vertical-align: top;
+}
 .guia-conteudo #tabs li a {
   display: table-cell;
   color: #fff;
@@ -948,10 +952,16 @@ th, td {font-weight: normal; text-align: left}
   border: 1px solid #efa60d;
   vertical-align: middle;
   padding: 0 4px 65px;
-  background-image: url(../images/guia-sprite.png);
-  background-repeat: no-repeat;
   line-height: 12px;
   font-family: 'gotham_roundedmedium'; 
+}
+.guia-conteudo #tabs li a:after {
+  background-image: url(../images/guia-sprite.png);
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 75px;
+  margin: 20px 0 -95px;
 }
 .guia-conteudo #tabs li.current a { color: #fbaa11 !important; }
 
@@ -971,26 +981,38 @@ th, td {font-weight: normal; text-align: left}
 .subsection-no-desembarque #tabs li a:hover { background-color: #05475c; }
 .subsection-no-desembarque #tabs li.current a { background-color: #05475c; }
 
-.guia-conteudo #tabs li a.ico1 { background-position: 16px 73px; }
-.guia-conteudo #tabs li a.ico2 { background-position: -80px 73px; }
-.guia-conteudo #tabs li a.ico3 { background-position: -176px 73px; }
-.guia-conteudo #tabs li a.ico4 { background-position: -275px 73px; }
-.guia-conteudo #tabs li a.ico5 { background-position: -370px 73px; }
-.guia-conteudo #tabs li a.ico6 { background-position: -472px 73px; }
-.guia-conteudo #tabs li a.ico7 { background-position: -566px 73px; }
-.guia-conteudo #tabs li a.ico8 { background-position: -666px 73px; }
-.guia-conteudo #tabs li a.ico9 { background-position: -763px 73px; }
-.guia-conteudo #tabs li a.ico10 { background-position: -859px 73px; }
-.guia-conteudo #tabs li a.ico11 { background-position: -958px 73px; }
-.guia-conteudo #tabs li a.ico12 { background-position: -1053px 73px; }
-.guia-conteudo #tabs li a.ico13 { background-position: -1148px 73px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-1:after { background-position: 14px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-2:after { background-position: -82px -7px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-3:after { background-position: -178px 4px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-4:after { background-position: -277px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-5:after { background-position: -372px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-6:after { background-position: -474px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-7:after { background-position: -568px -7px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-8:after { background-position: -668px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-9:after { background-position: -765px -19px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-10:after { background-position: -861px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-11:after { background-position: -960px -2px; }
+.guia-conteudo #tabs li a.ico-antes-de-viajar-12:after { background-position: -1055px -2px; }
 
-.guia-conteudo #tabs li:first-child a { width: 88px; }
-.guia-conteudo #tabs li:last-child a { width: 88px; }
+.guia-conteudo #tabs li a.ico-durante-o-voo-1:after { background-position: 14px -71px; }
+.guia-conteudo #tabs li a.ico-durante-o-voo-2:after { background-position: -82px -87px; }
+
+.guia-conteudo #tabs li a.ico-no-desembarque-1:after { background-position: 14px -155px; }
+.guia-conteudo #tabs li a.ico-no-desembarque-2:after { background-position: -82px -155px; }
+
+.guia-conteudo #tabs li a.ico-viagens-internacionais-1:after { background-position: 14px -225px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-2:after { background-position: -82px -231px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-3:after { background-position: -178px -231px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-4:after { background-position: -277px -220px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-5:after { background-position: -372px -220px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-6:after { background-position: -474px -236px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-7:after { background-position: -568px -231px; }
+.guia-conteudo #tabs li a.ico-viagens-internacionais-8:after { background-position: -668px -231px; }
+
+.guia-conteudo #tabs li:first-child a, .guia-conteudo #tabs li:last-child a { width: 88px; }
 
 .guia-conteudo #tabs-content > div { clear: both; display: none; }
-.guia-conteudo #tabs-content .current { display: block; }
-.guia-conteudo #tabs-content #home.first { display: block; }
+.guia-conteudo #tabs-content .current, .guia-conteudo #tabs-content #home.first { display: block; }
 .guia-conteudo #tabs-content p { margin: 0 60px 20px 0; color:#262626; font-size: 17px; line-height: 28px; font-family: 'gotham_roundedbook'; }
 .guia-conteudo #tabs-content p strong { font-family: 'gotham_roundedmedium'; }
 

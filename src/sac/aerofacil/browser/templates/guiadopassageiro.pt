@@ -26,7 +26,7 @@
           <li tal:define="numero repeat/aba/number"
               tal:attributes="class python:'current' if not repeat['aba'].index else nothing">
             <a tal:attributes="href string:#aba${numero};
-                               class string:ico${numero}"
+                               class string:ico-${context/id}-${numero}"
                 tal:content="aba/Title">Compra da passagem</a>
           </li>
           </tal:block>
