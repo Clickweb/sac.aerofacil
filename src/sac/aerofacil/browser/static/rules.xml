@@ -35,11 +35,14 @@
   <after css:content-children="#portal-column-two" css:theme-children=".conteudo" />
   <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape"
       css:if-not-content=".share-guia-do-passageiro" />
+  <after css:content="#portal-footer-wrapper script" css:theme="#rodape" />
 
   <!-- Home -->
   <before css:content="#edit-bar" css:theme="#topo"
       css:if-content=".section-home" />
   <replace css:content=".destaques" css:theme-children=".destaques"
+      css:if-content="" />
+  <replace css:content=".lista-aplicativos" css:theme=".lista-aplicativos"
       css:if-content="" />
   <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home"
       css:if-content="" />

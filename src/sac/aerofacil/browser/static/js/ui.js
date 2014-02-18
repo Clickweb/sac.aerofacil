@@ -5,7 +5,8 @@
 
         // HOME
 
-        if (location.href === portal_url) {
+        var current_url = location.protocol + '//' + location.host + location.pathname;
+        if (current_url === portal_url || current_url.slice(0, -1) === portal_url) {
 
             $('.menu a').on('click', function() {
                 var rel = $(this).attr('rel');
@@ -114,7 +115,7 @@
             // });
 
             // TODO: Criar browser view que entregue somente o miolo da página
-            var aero = $(location).attr('href');
+            var aero = location.href;
             aero = aero.split('/');
             aero = aero[aero.length - 1];
             if (aero) {
@@ -157,6 +158,27 @@
                 return false;
             });
 
+          $('.select-aeroporto').change(function () {
+              var val = $(this).val();
+              $('#aeroporto').load(portal_url + 'aeroportos-brasileiros/' + val + ' #aeroporto', function() {
+                  $('.item-aero a').click(function() {
+                      if(!$(this).hasClass('externo')) {
+                        $(this).parent().find('span').slideToggle();
+                        return false;
+                      }
+                  });
+                  $(".overflow-aero").mCustomScrollbar({
+                      advanced: {
+                          updateOnContentResize: true
+                      }
+                  });
+            });
+
+            location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
+
+            });
+
+
         }
 
 
@@ -171,6 +193,12 @@
                 speed: 800
             });
 
+            $("#miolo-noticias").mCustomScrollbar({
+                advanced: {
+                    updateOnContentResize: true
+                }
+            });
+
         }
 
 
@@ -178,7 +206,7 @@
 
         else if (location.href.indexOf("/noticias") != -1) {
 
-            var noticia = $(location).attr('href');
+            var noticia = location.href;
             noticia = noticia.split('/');
             noticia = noticia[noticia.length - 1];
             $('#miolo-noticias').load(portal_url + '/noticias/' + noticia + ' #content', function() {

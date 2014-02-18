@@ -27,6 +27,16 @@
         />
 
     <browser:viewlet
+        name="sac.aerofacil.apps_home"
+        for="..interfaces.IHome"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        class=".viewlets.AppsHomeViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
         name="sac.aerofacil.noticias_home"
         for="..interfaces.IHome"
         view="plone.app.layout.globals.interfaces.IViewView"
@@ -48,30 +58,10 @@
 
     <browser:viewlet
         name="sac.aerofacil.apps_aplicativo"
-        for="..interfaces.IAplicativo"
-        view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".viewlets.AppsAplicativoViewlet"
-        layer="..interfaces.ISACAerofacilLayer"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="sac.aerofacil.apps_aplicativo"
         for="..content.aplicativo.IAplicativo"
         view="plone.app.layout.globals.interfaces.IViewView"
         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
         class=".viewlets.AppsAplicativoViewlet"
-        layer="..interfaces.ISACAerofacilLayer"
-        permission="zope2.View"
-        />
-
-    <browser:viewlet
-        name="sac.aerofacil.apps_aeroporto"
-        for="..interfaces.IAeroporto"
-        view="plone.app.layout.globals.interfaces.IViewView"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-        class=".viewlets.AppsAeroportoViewlet"
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
         />

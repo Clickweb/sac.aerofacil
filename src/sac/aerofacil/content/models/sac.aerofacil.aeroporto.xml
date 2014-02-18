@@ -10,18 +10,22 @@
     </field>
     <field name="restaurantes" type="plone.app.textfield.RichText">
       <description>Lista de restaurantes do aeroporto</description>
+      <required>False</required>
       <title>Restaurantes</title>
     </field>
     <field name="lojas" type="plone.app.textfield.RichText">
       <description>Lista de lojas do aeroporto</description>
+      <required>False</required>
       <title>Lojas</title>
     </field>
     <field name="localizacao" type="zope.schema.Text">
       <description>C&#243;digo HTML de incorpora&#231;&#227;o do mapa de localiza&#231;&#227;o do aeroporto</description>
+      <required>False</required>
       <title>Localiza&#231;&#227;o</title>
     </field>
     <field name="estacionamento" type="plone.app.textfield.RichText">
       <description>Informa&#231;&#245;es sobre o estacionamento do aeroporto</description>
+      <required>False</required>
       <title>Estacionamento</title>
     </field>
   </schema>

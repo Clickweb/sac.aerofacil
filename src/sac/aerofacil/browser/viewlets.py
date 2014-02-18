@@ -49,6 +49,7 @@ class NoticiasHomeViewlet(ViewletBase):
 class OutrasNoticiasViewlet(NoticiasHomeViewlet):
     render = ViewPageTemplateFile('templates/outras_noticias.pt')
 
+    @memoize
     def noticias(self):
         """ Exclui a notícia corrente da listagem.
         """
@@ -72,11 +73,29 @@ class EBookViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/ebook.pt')
 
 
-class AppsAplicativoViewlet(ViewletBase):
+class AppsHomeViewlet(ViewletBase):
+    render = ViewPageTemplateFile('templates/apps_home.pt')
+
+    @memoize
+    def apps(self):
+        context = aq_inner(self.context)
+        portal = self.portal_state.portal()
+        if 'aplicativos-e-ferramentas' in getNavigationRootObject(context, portal).objectIds():
+            path = portal['aplicativos-e-ferramentas'].getPhysicalPath()
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(portal_type='sac.aerofacil.aplicativo',
+                         review_state='published',
+                         path='/'.join(path),
+                         sort_on='getObjPositionInParent',
+                         sort_limit=3)[:3]
+        return brains
+
+
+class AppsAplicativoViewlet(AppsHomeViewlet):
     render = ViewPageTemplateFile('templates/apps_aplicativo.pt')
 
 
-class AppsAeroportoViewlet(AppsAplicativoViewlet):
+class AppsAeroportoViewlet(AppsHomeViewlet):
     render = ViewPageTemplateFile('templates/apps_aeroporto.pt')
 
 
@@ -94,8 +113,7 @@ class SelectAeroportoViewlet(ViewletBase):
         brains = catalog(portal_type='sac.aerofacil.aeroporto',
                          review_state='published',
                          path='/'.join(path),
-                         sort_on='Date',
-                         sort_order='reverse')
+                         sort_on='sortable_title')
         return brains
 
     @memoize

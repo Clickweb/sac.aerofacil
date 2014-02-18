@@ -1,23 +1,14 @@
-<div class="aplicativos-interna">
-  <ul class="slides lista-aplicativos-interna"
-      tal:define="apps string:${context/@@plone_portal_state/portal_url}/aplicativos-e-ferramentas">
-    <li class="app-viajantes">
-      <h3>Aplicativo <span>Viajantes</span></h3>
-      <p>Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais.</p>
+<div class="aplicativos-interna"
+    tal:define="apps view/apps"
+    tal:condition="apps">
+  <ul class="slides lista-aplicativos-interna">
+  <tal:block repeat="app apps">
+    <li tal:attributes="class string:app-${app/id}">
+      <h3>Aplicativo <span tal:content="app/Title">Viajantes</span></h3>
+      <p tal:content="app/Description">Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais.</p>
       <a class="lk-seta verde"
-          tal:attributes="href string:${apps}/viajantes">Acesse</a>
+          tal:attributes="href app/getURL">Acesse</a>
     </li>
-    <li class="app-taxi">
-      <h3>Aplicativo <span>Onde tem táxi aqui</span></h3>
-      <p>Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
-      <a class="lk-seta verde"
-          tal:attributes="href string:${apps}/onde-tem-taxi-aqui">Acesse</a>
-    </li>
-    <li class="app-voo">
-      <h3>Aplicativo <span class="amarelo">Infraero voos online</span></h3>
-      <p>Infraero Voos Online é o aplicativo feito para quem quer fazer uma viagem de avião sem surpresas e problemas.</p>
-      <a class="lk-seta verde"
-          tal:attributes="href string:${apps}/infraero-voos-online">Acesse</a>
-    </li>
+    </tal:block>
   </ul>
 </div>

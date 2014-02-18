@@ -19,7 +19,8 @@
    <element value="Folder"/>
   </property>
   <property name="webstats_js"
-     type="text">  &lt;script type="text/javascript"&gt;
+     type="text">  &lt;script type="text/javascript" src="http://sawpf.com/1.0.js"&gt;&lt;/script&gt;
+       &lt;script type="text/javascript"&gt;
    
        var _gaq = _gaq || [];
        _gaq.push(['_setAccount', 'UA-47217709-1']);
