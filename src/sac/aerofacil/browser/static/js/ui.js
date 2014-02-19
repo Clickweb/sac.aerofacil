@@ -254,7 +254,7 @@
             var videoDepoimento;
 
             $('#tabs li a').click(function(e) {
-                $('#tabs li, #tabs-content .current').removeClass('current').removeClass('fadeInLeft');
+                $('#tabs .current, #tabs-content .current').removeClass('current').removeClass('fadeInLeft');
                 $(this).parent().addClass('current');
                 var currentTab = $(this).attr('href');
                 $(currentTab).addClass('current fadeInLeft');
