@@ -12,7 +12,7 @@
     <browser:resourceDirectory name="sac.aerofacil" directory="static" />
 
     <!-- Register a theme for installation into the site -->
-    <plone:static directory="static" name="aerofacil" type="theme" />
+    <plone:static type="theme" name="aerofacil" directory="static" />
 
     <!-- Viewlets registration -->
 

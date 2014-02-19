@@ -1,11 +1,12 @@
         <tal:block define="aeroportos view/aeroportos"
-            tal:condition="aeroportos">
+            condition="aeroportos">
             <a href="#" class="lk-outro-aero">Escolher outro aeroporto</a>
             <select tal:attributes="class view/klass">
               <tal:block repeat="aeroporto aeroportos">
                 <option value=""
                     tal:condition="repeat/aeroporto/start">Selecione</option>
-                <option tal:attributes="value aeroporto/id"
+                <option tal:condition="python:aeroporto.id != context.id"
+                    tal:attributes="value aeroporto/id"
                     tal:content="aeroporto/pretty_title_or_id">Altamira - PA</option>
               </tal:block>
             </select>

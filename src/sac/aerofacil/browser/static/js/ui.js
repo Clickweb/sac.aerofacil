@@ -63,19 +63,9 @@
             });
 
             $('.select-aeroporto-home').change(function() {
-                var val = $(this).val();
-                $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + val + ' #aeroporto', function() {
-                    $('.item-aero a').click(function() {
-                        $(this).parent().find('span').slideToggle();
-                        return false;
-                    });
-                    $(".overflow-aero").mCustomScrollbar({
-                        advanced: {
-                            updateOnContentResize: true
-                        }
-                    });
-                });
-                location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
+                if (val !== "") {
+                    location.href = portal_url + "/aeroportos-brasileiros/" + $(this).val();
+                }
             });
 
         }
@@ -107,37 +97,12 @@
                 }
             });
 
-            // $('.item-aero a').click(function() {
-            //     if (!$(this).hasClass('externo')) {
-            //         $(this).parent().find('span').slideToggle();
-            //         return false;
-            //     }
-            // });
-
-            // TODO: Criar browser view que entregue somente o miolo da página
-            var aero = location.href;
-            aero = aero.split('/');
-            aero = aero[aero.length - 1];
-            if (aero) {
-                // TODO: Evitar carregamento AJAX na página de entrada
-                if (!/#$/.test(aero)) {
-                    $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + aero + ' #aeroporto', function () {
-                        // TODO: Remove me (see l104)
-                        $('.item-aero a').click(function() {
-                            if (!$(this).hasClass('externo')) {
-                                $(this).parent().find('span').slideToggle();
-                                return false;
-                            }
-                        });
-                        // TODO: Remove me (see l98)
-                        $(".overflow-aero").mCustomScrollbar({
-                            advanced: {
-                               updateOnContentResize: true
-                            }
-                        });
-                    });
+            $('.item-aero a').click(function() {
+                if (!$(this).hasClass('externo')) {
+                    $(this).parent().find('span').slideToggle();
+                    return false;
                 }
-            }
+            });
 
             $('.lk-outro-aero').click(function() {
                 $(this).hide();
@@ -158,26 +123,25 @@
                 return false;
             });
 
-          $('.select-aeroporto').change(function () {
-              var val = $(this).val();
-              $('#aeroporto').load(portal_url + 'aeroportos-brasileiros/' + val + ' #aeroporto', function() {
-                  $('.item-aero a').click(function() {
-                      if(!$(this).hasClass('externo')) {
-                        $(this).parent().find('span').slideToggle();
-                        return false;
-                      }
-                  });
-                  $(".overflow-aero").mCustomScrollbar({
-                      advanced: {
-                          updateOnContentResize: true
-                      }
-                  });
+            $('.select-aeroporto').change(function () {
+                var val = $(this).val();
+                // TODO: Criar browser view que entregue somente o miolo da página
+                $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + val + ' #aeroporto', function() {
+                    $('.item-aero a').click(function() {
+                        if(!$(this).hasClass('externo')) {
+                          $(this).parent().find('span').slideToggle();
+                          return false;
+                        }
+                    });
+                    $(".overflow-aero").mCustomScrollbar({
+                        advanced: {
+                            updateOnContentResize: true
+                        }
+                    });
+                });
+                var new_url = portal_url + "/aeroportos-brasileiros/" + val;
+                window.history.replaceState({}, $(this).text(), new_url);
             });
-
-            location.href = portal_url + "/aeroportos-brasileiros/" + val + "#";
-
-            });
-
 
         }
 
