@@ -1077,7 +1077,7 @@ th, td {font-weight: normal; text-align: left}
   width: 275px;  
   padding: 20px 0 0 125px;
   font-family: 'gotham_roundedlight';
-  color: #2d2d2d !important;
+  color: #2d2d2d;
   font-size: 15px;
   float: left;
 }
@@ -1493,8 +1493,14 @@ a.managePortletsFallback {
 
 #content .item-aero a:link,
 #content .lk-outro-aero:link,
-#content .down-app a:link {
-    border: 0;
+#content .down-app a:link,
+#content .col-download-ebook a:link {
+  border: 0;
+}
+
+.download-ebook,
+#content .download-ebook:hover {
+  color: #2d2d2d !important;
 }
 
 #content .guia-menu a,

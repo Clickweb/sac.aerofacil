@@ -69,10 +69,6 @@ class OutrasNoticiasViewlet(NoticiasHomeViewlet):
         return brains
 
 
-class EBookViewlet(ViewletBase):
-    render = ViewPageTemplateFile('templates/ebook.pt')
-
-
 class AppsHomeViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/apps_home.pt')
 
