@@ -337,7 +337,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   width: 920px;
   margin: 0 auto;
 }
-  .rodape h2 {font-size: 34px;}
+  .rodape h2 {font-size: 34px; font-family: Arial,Helvetica,sans-serif;}
 
 .nav-rodape {
   float: left;
@@ -796,7 +796,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
         width: 16px;
       }
 
-.box-app-voo {
+.box-app-infraero-voos-online {
   height: 154px;
   background: url(../images/lista-app-voo.png) no-repeat right top;
   text-align: right;  
