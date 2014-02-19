@@ -1567,3 +1567,9 @@ a.managePortletsFallback {
   height: auto;
   max-height: inherit;
 }
+
+.template-default_error_message .conteudo {
+  background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;
+  padding: 4em 20em 0 7em;
+  width: auto;
+}
