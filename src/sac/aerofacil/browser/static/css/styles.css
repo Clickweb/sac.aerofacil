@@ -133,10 +133,10 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     width: 420px;
     padding: 0 0 5px 0;
   }
-    .menu li.menu-nivel-2 {text-indent: 35px; background-position: 42px 0;}
-    .menu li.menu-nivel-3 {text-indent: 70px; background-position: 80px 0;}
-    .menu li.menu-nivel-4 {text-indent: 100px; background-position: 116px 0;}
-    .menu li.menu-nivel-5 {text-indent: 128px; background-position: 143px 0;}
+    .menu li.menu-nivel-2 {text-indent: 35px;}
+    .menu li.menu-nivel-3 {text-indent: 70px;}
+    .menu li.menu-nivel-4 {text-indent: 100px;}
+    .menu li.menu-nivel-5 {text-indent: 128px;}
   .menu a {
     font-size: 14px;
     color: #2d2d2d;
@@ -145,9 +145,9 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
     background: url(../images/marcador.png) no-repeat 0 0;
     padding: 0 0 10px 20px;
   }
-  .menu span {width: 17px; height: 17px; display: inline-block; vertical-align: top; margin: 3px 0 0 4px;}
+  .menu span {width: 13px; height: 17px; display: inline-block; vertical-align: top; margin: 3px 0 0 4px;}
     .menu .ico-aplicativos-e-ferramentas {background: url(../images/mn-aplicativos.png) no-repeat 0 0;}
-    .menu .ico-guia-do-passageiro {background: url(../images/mn-guia.png) no-repeat 6px 0;}
+    .menu .ico-guia-do-passageiro {background: url(../images/mn-guia.png) no-repeat 0 0;}
     .menu .ico-aeroportos-brasileiros {background: url(../images/mn-aeroportos.png) no-repeat 0 0;}
     .menu .ico-noticias {background: url(../images/mn-noticias.png) no-repeat 0 0;}
     .menu .ico-informacoes {background: url(../images/mn-noticias.png) no-repeat 0 0;}
