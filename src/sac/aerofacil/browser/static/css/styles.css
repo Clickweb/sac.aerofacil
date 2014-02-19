@@ -1569,3 +1569,18 @@ a.managePortletsFallback {
   padding: 4em 20em 0 7em;
   width: auto;
 }
+
+
+/* OPERA */
+
+noindex:-o-prefocus, .guia-conteudo #tabs li a {
+  height: 140px;
+}
+
+noindex:-o-prefocus, .guia-conteudo #tabs li a:after {
+  margin: 10px 0 -90px;
+}
+
+noindex:-o-prefocus, .guia-conteudo #tabs li a.ico-antes-de-viajar-9:after {
+  margin: 5px 0 -80px;
+}
