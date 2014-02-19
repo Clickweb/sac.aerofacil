@@ -3,7 +3,8 @@
     tal:condition="apps">
   <ul class="slides lista-aplicativos-interna">
   <tal:block repeat="app apps">
-    <li tal:attributes="class string:app-${app/id}">
+    <li tal:condition="python:app.id != context.id"
+        tal:attributes="class string:app-${app/id}">
       <h3>Aplicativo <span tal:content="app/Title">Viajantes</span></h3>
       <p tal:content="app/Description">Aplicativo da Receita Federal do Brasil destinado aos viajantes internacionais.</p>
       <a class="lk-seta verde"
