@@ -63,8 +63,9 @@
             });
 
             $('.select-aeroporto-home').change(function() {
-                if (val !== "") {
-                    location.href = portal_url + "/aeroportos-brasileiros/" + $(this).val();
+                var aero = $(this).val();
+                if (aero !== "") {
+                    location.href = portal_url + "/aeroportos-brasileiros/" + aero;
                 }
             });
 
@@ -74,10 +75,12 @@
         // APLICATIVOS
 
         else if (location.href.indexOf("/aplicativos-e-ferramentas") != -1) {
+
             $('.aplicativos-interna').flexslider({
                 animation: "slide",
                 controlNav: false
             });
+
         }
 
 
@@ -123,10 +126,17 @@
                 return false;
             });
 
-            $('.select-aeroporto').change(function () {
-                var val = $(this).val();
-                // TODO: Criar browser view que entregue somente o miolo da página
-                $('#aeroporto').load(portal_url + '/aeroportos-brasileiros/' + val + ' #aeroporto', function() {
+            $('.select-aeroporto').change(function() {
+                var new_url = portal_url + '/aeroportos-brasileiros/' + $(this).val();
+                $('#aeroporto').load(new_url + ' #aeroporto', function(html) {
+                    var new_title = $(html)[50].text;
+                    var new_html = $("#aeroporto", html).html();
+                    var new_options = $(".select-aeroporto", $(html)).children();
+                    window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);
+                    document.title = new_title || document.title;
+                    $(".select-aeroporto").fadeOut("fast", function() {
+                        $(this).html(new_options).fadeIn("fast");
+                    });
                     $('.item-aero a').click(function() {
                         if(!$(this).hasClass('externo')) {
                           $(this).parent().find('span').slideToggle();
@@ -139,9 +149,14 @@
                         }
                     });
                 });
-                var new_url = portal_url + "/aeroportos-brasileiros/" + val;
-                window.history.replaceState({}, $(this).text(), new_url);
             });
+
+            window.onpopstate = function(e) {
+                if (e.state) {
+                    document.getElementById("aeroporto").innerHTML = e.state.html;
+                    document.title = e.state.pageTitle;
+                }
+            };
 
         }
 
@@ -170,28 +185,23 @@
 
         else if (location.href.indexOf("/noticias") != -1) {
 
-            var noticia = location.href;
-            noticia = noticia.split('/');
-            noticia = noticia[noticia.length - 1];
-            $('#miolo-noticias').load(portal_url + '/noticias/' + noticia + ' #content', function() {
-                $("#miolo-noticias").mCustomScrollbar({
-                    advanced: {
-                        updateOnContentResize: true
-                    }
-              });
-            });
-
             $("#miolo-noticias").mCustomScrollbar({
                 advanced: {
                     updateOnContentResize: true
                 }
             });
 
-            $('.outras-noticias a').click(function () {
-                var noticia = $(this).attr('href');
-                noticia = noticia.split('/');
+            $('.outras-noticias a').click(function(e) {
+                e.preventDefault();
+                var noticia = $(this).attr('href').split('/');
+                debugger;
                 noticia = noticia[noticia.length - 1];
-                $('#miolo-noticias').load(portal_url + '/noticias/' + noticia + ' #content', function() {
+                var new_url = portal_url + '/noticias/' + noticia;
+                $('#miolo-noticias').load(new_url + ' #content', function(html) {
+                    var new_title = $(html)[50].text;
+                    var new_html = $("#miolo-noticias", html).html();
+                    window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);
+                    document.title = new_title || document.title;
                     $("#miolo-noticias").mCustomScrollbar({
                         advanced: {
                             updateOnContentResize: true
