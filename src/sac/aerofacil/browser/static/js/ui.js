@@ -129,11 +129,11 @@
             $('.select-aeroporto').change(function() {
                 var new_url = portal_url + '/aeroportos-brasileiros/' + $(this).val();
                 $('#aeroporto').load(new_url + ' #aeroporto', function(html) {
-                    var new_title = $(html)[50].text;
+                    var new_title = $(html)[14].text || document.title;
                     var new_html = $("#aeroporto", html).html();
                     var new_options = $(".select-aeroporto", $(html)).children();
+                    document.title = new_title;
                     window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);
-                    document.title = new_title || document.title;
                     $(".select-aeroporto").fadeOut("fast", function() {
                         $(this).html(new_options).fadeIn("fast");
                     });
@@ -194,14 +194,13 @@
             $('.outras-noticias a').click(function(e) {
                 e.preventDefault();
                 var noticia = $(this).attr('href').split('/');
-                debugger;
                 noticia = noticia[noticia.length - 1];
                 var new_url = portal_url + '/noticias/' + noticia;
                 $('#miolo-noticias').load(new_url + ' #content', function(html) {
-                    var new_title = $(html)[50].text;
+                    var new_title = $(html)[14].text || document.title;
                     var new_html = $("#miolo-noticias", html).html();
+                    document.title = new_title;
                     window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);
-                    document.title = new_title || document.title;
                     $("#miolo-noticias").mCustomScrollbar({
                         advanced: {
                             updateOnContentResize: true
@@ -212,6 +211,14 @@
                     });
                 });
             });
+
+            window.onpopstate = function(e) {
+                if (e.state) {
+                    document.getElementById("miolo-noticias").innerHTML = e.state.html;
+                    document.title = e.state.pageTitle;
+                }
+            };
+
 
         }
 
