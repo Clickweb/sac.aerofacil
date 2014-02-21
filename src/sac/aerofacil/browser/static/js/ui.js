@@ -6,7 +6,7 @@
         // HOME
 
         var current_url = location.protocol + '//' + location.host + location.pathname;
-        if (current_url === portal_url || current_url.slice(0, -1) === portal_url) {
+        if ((current_url === portal_url) || (current_url.slice(0, -1) === portal_url)) {
 
             $('.menu a').on('click', function() {
                 var rel = $(this).attr('rel');
