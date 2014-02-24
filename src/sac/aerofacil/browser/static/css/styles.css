@@ -1062,7 +1062,6 @@ th, td {font-weight: normal; text-align: left}
   font-size: 15px;
   float: right;
   position: relative;
-  display: none;
 }
 .depoimentos span.titulo {
   font-family: 'gothambold';
@@ -1438,7 +1437,8 @@ a.managePortletsFallback {
 #content .item-aero a:link,
 #content .lk-outro-aero:link,
 #content .down-app a:link,
-#content .col-download-ebook a:link {
+#content .col-download-ebook a:link,
+#content .float a:link {
   border: 0;
 }
 
@@ -1481,7 +1481,22 @@ a.managePortletsFallback {
   margin: 0;
 }
 
-.section-guia-do-passageiro #edit-bar {
+body:not(.template-guiadopassageiro) .conteudo {
+  background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;
+}
+
+.template-atct_edit.section-guia-do-passageiro #content,
+.template-folder_listing #content,
+body.section-guia-do-passageiro:not(.template-guiadopassageiro) #content,
+.template-view #content,
+.template-standard_view #content,
+.template-summary_view #content {
+  margin: 0 1.2em 2em 1.15em;
+  padding: 1em 0.5em;
+}
+
+.section-guia-do-passageiro #edit-bar,
+.section-guia-do-passageiro .portalMessage {
   margin: 0 1.5em;
 }
 

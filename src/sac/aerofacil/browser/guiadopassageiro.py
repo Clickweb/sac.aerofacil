@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from collections import deque
+from collections import OrderedDict
 from five import grok
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
@@ -29,17 +30,17 @@ class GuiaDoPassageiro(grok.View):
         if not 'guia-do-passageiro' in getNavigationRootObject(context, portal).objectIds():
             return None
         catalog = getToolByName(context, 'portal_catalog')
-        subsecoes = catalog(portal_type='Folder',
+        brains = catalog(portal_type='Folder',
                             review_state='published',
                             path={'query': '/'.join(path),
                                   'depth': 1},
                             sort_on='getObjPositionInParent',
                             sort_limit=4)[:4]
-        subsecoes = deque(subsecoes)
-        ids = [brain.id for brain in subsecoes]
+        brains = deque(brains)
+        ids = [brain.id for brain in brains]
         steps = -ids.index(context.id)
-        subsecoes.rotate(steps)
-        return [(subsecao, self.abas(subsecao)) for subsecao in subsecoes]
+        brains.rotate(steps)
+        return [(brain, self.abas(brain)) for brain in brains]
 
     @memoize
     def abas(self, subsecao):
@@ -49,10 +50,29 @@ class GuiaDoPassageiro(grok.View):
         portal = context.restrictedTraverse('@@plone_portal_state').portal()
         path = portal['guia-do-passageiro'][subsecao.id].getPhysicalPath()
         catalog = getToolByName(context, 'portal_catalog')
-        abas = catalog(portal_type='Document',
-                       review_state='published',
-                       path={'query': '/'.join(path),
-                             'depth': 1},
-                       sort_on='getObjPositionInParent',
-                       sort_limit=12)[:12]
-        return abas
+        brains = catalog(portal_type='Document',
+                         review_state='published',
+                         path={'query': '/'.join(path),
+                               'depth': 1},
+                         sort_on='getObjPositionInParent',
+                         sort_limit=12)[:12]
+        return brains
+
+    @memoize
+    def depoimentos(self):
+        context = aq_inner(self.context)
+        portal = context.restrictedTraverse('@@plone_portal_state').portal()
+        path = portal['guia-do-passageiro']['depoimentos'].getPhysicalPath()
+        catalog = getToolByName(context, 'portal_catalog')
+        brains = catalog(portal_type='sc.embedder',
+                         review_state='published',
+                         path={'query': '/'.join(path),
+                               'depth': 1},
+                         sort_on='getObjPositionInParent',
+                         sort_limit=18)[:18]
+        depoimentos = OrderedDict()
+        for b in brains:
+            video_obj = b.getObject()
+            depoimentos[b] = {'video_id': video_obj.url.split('v=')[1].split('&')[0],
+                              'thumb': video_obj.tag(scale='thumb')}
+        return depoimentos

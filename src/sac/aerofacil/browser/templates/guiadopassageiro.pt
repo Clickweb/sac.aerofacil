@@ -6,7 +6,30 @@
 <body>
 
 <metal:main fill-slot="main">
-  <tal:main-macro metal:define-macro="main">
+  <tal:main-macro metal:define-macro="main"
+      tal:define="depoimentos view/depoimentos">
+
+    <div class="overlay"></div>
+    <div class="float">
+      <a href="#" class="fechar-float">Fechar (x)</a>
+      <div id="video"></div>
+      <div class="miniaturas-float">
+        <h2>De brasileiro para brasileiro.</h2>
+        <a href="#" class="prev">Anterior</a>
+        <div class="lista-miniaturas-float">
+          <ul>
+            <li tal:repeat="depoimento depoimentos">
+              <a href="#"
+                  tal:define="d python:depoimentos[depoimento]"
+                  tal:attributes="data-id-video python:d['video_id']">
+                <img tal:replace="structure python:d['thumb']" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="next">Proxima</a>
+      </div>
+    </div>
 
     <div class="limites">
 
@@ -54,8 +77,22 @@
         </a>
         <a href="http://issuu.com/manunodari/docs/guiapassageiro" target="_blank" class="lk-seta amarelo lk-issu">Visualizar</a>
       </div>
+
+      <div class="depoimentos">
+        depoimentos
+        <span class="titulo verde">De brasileiro para brasileiro</span>
+        <tal:block repeat="depoimento depoimentos">
+        <a href="#"
+            tal:define="d python:depoimentos[depoimento]"
+            tal:condition="python:repeat.depoimento.index < 7"
+            tal:attributes="class string:dep-${repeat/depoimento/number};
+                            data-id-video python:d['video_id']"
+            tal:content="depoimento/Title" />
+        </tal:block>
+      </div>
+
     </div>
-        
+
     </tal:main-macro>
 </metal:main>
 
