@@ -43,6 +43,7 @@ setup(
         'plone.api',
         'plone.app.dexterity [grok, relations]',
         'plone.app.drafts',
+        'quintagroup.seoptimizer==4.3',
         'setuptools',
         'sc.embedder==1.0b3',
         'z3c.jbot==0.7.1',
