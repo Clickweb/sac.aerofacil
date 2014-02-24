@@ -178,7 +178,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .aeroportos-brasileiros .miolo {
   float: left;
   padding: 230px 0 0 160px;
-  width: 520px; 
+  width: 520px;
 }
 .aeroportos-brasileiros .miolo .amarelo {font-size: 22px; letter-spacing: 0; line-height: 25px;}
 .aeroportos-brasileiros .miolo p {padding: 5px 0 10px 0;}
@@ -503,7 +503,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .section-aplicativos-e-ferramentas .rodape {background: #353535;}
 
 .conteudo-aeroportos-brasileiros .miolo {
-  float: left; 
+  float: left;
   width: 655px;
   padding: 80px 0 0 155px;
   position: relative;
@@ -539,7 +539,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 }
 .lista-aplicativos-interna {position: relative;}
 .lista-aplicativos-interna li {
-    float: left;    
+    float: left;
     font-size: 13px;
     line-height: 18px;
     text-align: right;
@@ -570,7 +570,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   position: absolute;
   width: 31px;
   height: 60px;
-  background: url(../images/setas-noticias.png) no-repeat 0 0;  
+  background: url(../images/setas-noticias.png) no-repeat 0 0;
   text-indent: -9999px;
   clear: both;
   top: 45px;
@@ -580,8 +580,8 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   position: absolute;
   width: 31px;
   height: 60px;
-  background: url(../images/setas-noticias.png) no-repeat -43px 0;  
-  text-indent: -9999px;    
+  background: url(../images/setas-noticias.png) no-repeat -43px 0;
+  text-indent: -9999px;
   top: 45px;
   right: -55px;
 }
@@ -601,7 +601,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   .mostra-app h2 span { font-size: 18px; }
 
   .share-aplicativos-e-ferramentas .centraliza { width: auto; padding: 0 10px; }
-  
+
   .aplicativos-interna { margin: 93px 0 0 0; width: 100%; }
 
   .lista-aplicativos-interna h3 { font-size: 16px; line-height: 18px; }
@@ -621,7 +621,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
 .conteudo-aeroportos-brasileiros {background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;height: 1050px; position: relative;}
 .conteudo-aeroportos-brasileiros .miolo {
-  float: left; 
+  float: left;
   width: 655px;
   padding: 80px 0 0 155px;
   position: relative;
@@ -637,7 +637,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   text-decoration: none;
   font-family: 'gothambold';
   background: url(../images/seta-cinza.png) no-repeat 0 center;
-  float: left;  
+  float: left;
   padding: 1px 0 0 18px;
   margin: 5px 0 0 10px;
 }
@@ -647,7 +647,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .desc-aero {
   font-size: 12px;
   float: left;
-  width: 630px;  
+  width: 630px;
   margin: 0 0 40px 0;
 }
 .item-aero {
@@ -675,7 +675,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       width: auto;
       float: none;
       color: #007739;
-      text-decoration: underline;      
+      text-decoration: underline;
     }
     .item-aero a strong {
       font-size: 20px;
@@ -686,8 +686,8 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
       font-size: 12px;
       float: left;
       width: 100%;
-      padding: 0 0 0 0; 
-      display: none;     
+      padding: 0 0 0 0;
+      display: none;
     }
     .item-aero p {
       padding: 0 0 10px 0;
@@ -695,7 +695,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .overflow-aero {
   float: left;
   width: 655px;
-  height: 720px;  
+  height: 720px;
   overflow: hidden;
   position: relative;
 }
@@ -721,14 +721,14 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .box-apps {
   float: left;
   width: 450px;
-  height: 154px;  
+  height: 154px;
   margin: -18px 0 0 120px;
   position: relative;
 }
   .flex-control-nav {
     position: absolute;
     top: 80px;
-    right: -60px;    
+    right: -60px;
   }
   .flex-control-nav li { float: left; }
     .flex-control-nav a {
@@ -747,7 +747,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .box-app-infraero-voos-online {
   height: 154px;
   background: url(../images/lista-app-voo.png) no-repeat right top;
-  text-align: right;  
+  text-align: right;
 }
 
 .box-app-viajantes {
@@ -875,7 +875,7 @@ th, td {font-weight: normal; text-align: left}
   font-size: 19px;
   width: 290px;
   border-left: 2px solid #efa60d;
-  font-family: 'gotham_roundedmedium'; 
+  font-family: 'gotham_roundedmedium';
 }
 .guia-menu a.antes-de-viajar { background: #f78600; }
 .guia-menu a.viagens-internacionais { background: #93166e; }
@@ -901,7 +901,7 @@ th, td {font-weight: normal; text-align: left}
   vertical-align: middle;
   padding: 0 4px 65px;
   line-height: 12px;
-  font-family: 'gotham_roundedmedium'; 
+  font-family: 'gotham_roundedmedium';
 }
 .guia-conteudo #tabs li a:after {
   background-image: url(../images/guia-sprite.png);
@@ -1022,7 +1022,7 @@ th, td {font-weight: normal; text-align: left}
   background: url(../images/ebook.png) 0 0 no-repeat;
   display: block;
   height: 155px;
-  width: 275px;  
+  width: 275px;
   padding: 20px 0 0 125px;
   font-family: 'gotham_roundedlight';
   color: #2d2d2d;
@@ -1075,7 +1075,7 @@ th, td {font-weight: normal; text-align: left}
     float: left;
     width: 64px;
     height: 64px;
-    text-indent: -9999px;    
+    text-indent: -9999px;
   }
   .depoimentos .dep-1 {top: 72px; left: 0;}
   .depoimentos .dep-2 {top: 72px; left: 65px;}
@@ -1091,7 +1091,7 @@ th, td {font-weight: normal; text-align: left}
   height: 1000px;
   position: fixed;
   background: #001f0f;
-  z-index: 1;  
+  z-index: 1;
   opacity: 0.7;
   display: none;
 }
@@ -1099,7 +1099,7 @@ th, td {font-weight: normal; text-align: left}
   position: absolute;
   top: 10px;
   right: 10px;
-  font-family: 'gothambold'; 
+  font-family: 'gothambold';
   color: #262626;
   font-size: 14px;
   text-decoration: none;
@@ -1111,15 +1111,15 @@ th, td {font-weight: normal; text-align: left}
   padding: 0 35px 0 65px;
   left: -100%;
   margin: -260px 0 0 -580px;
-  top: 50%;  
+  top: 50%;
   background: #fbb900;
   float: left;
   height: 520px;
 }
   .section-guia-do-passageiro .float #video {
-    float: left;  
+    float: left;
     height: 520px;
-    width: 820px;  
+    width: 820px;
   }
   .section-guia-do-passageiro .miniaturas-float {
     padding: 40px 0 0 30px;
@@ -1127,11 +1127,11 @@ th, td {font-weight: normal; text-align: left}
     width: 210px;
   }
   .section-guia-do-passageiro .miniaturas-float h2 {
-    font-size: 25px; 
-    color: #007739; 
-    line-height: 29px; 
-    letter-spacing: -1px; 
-    font-family: 'gothambold'; 
+    font-size: 25px;
+    color: #007739;
+    line-height: 29px;
+    letter-spacing: -1px;
+    font-family: 'gothambold';
     font-weight: normal;
   }
 
@@ -1146,7 +1146,7 @@ th, td {font-weight: normal; text-align: left}
     float: left;
     width: 63px;
     height: 63px;
-  }  
+  }
     .section-guia-do-passageiro .miniaturas-float li img {max-width: 100%;}
   .section-guia-do-passageiro .miniaturas-float .prev {
     float: left;
@@ -1200,7 +1200,7 @@ th, td {font-weight: normal; text-align: left}
   .guia-conteudo #tabs { display: inherit; width: 100%; }
   .guia-conteudo #tabs li { display: block; }
   .guia-conteudo #tabs li a {
-    display: block;    
+    display: block;
     width: auto;
     height: auto;
     text-align: left;
@@ -1291,7 +1291,7 @@ th, td {font-weight: normal; text-align: left}
 .section-destaques .rodape {background: #353535;}
 
 .conteudo-destaques .miolo {
-  float: left; 
+  float: left;
   width: 655px;
   padding: 60px 0 30px 80px;
   position: relative;
@@ -1322,7 +1322,7 @@ th, td {font-weight: normal; text-align: left}
 .section-noticias .rodape {background: #353535;}
 
 .conteudo-noticias > div > .miolo {
-  float: left; 
+  float: left;
   width: 745px;
   padding: 60px 0 30px 80px;
   position: relative;
@@ -1367,7 +1367,7 @@ th, td {font-weight: normal; text-align: left}
   }
     .outras-noticias a.amarelo {
       color: #fbb900;
-      background: url(../images/seta-amarelo-normal.png) no-repeat 0 0;      
+      background: url(../images/seta-amarelo-normal.png) no-repeat 0 0;
     }
 
 @media only screen and (max-width: 767px) {
