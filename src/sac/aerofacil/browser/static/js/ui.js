@@ -9,7 +9,7 @@
         if ((current_url === portal_url) || (current_url.slice(0, -1) === portal_url)) {
 
             $('.menu a').on('click', function() {
-                var rel = $(this).attr('rel');
+                var rel = $(this).data('rel');
                 var dist = $('.' + rel).offset().top;
                 $('html, body').animate({
                     scrollTop: dist
@@ -23,7 +23,7 @@
             });
 
             $('.menu-flutuante a').on('click', function() {
-                var rel = $(this).attr('rel');
+                var rel = $(this).data('rel');
                 var dist = $('.' + rel).offset().top;
                 $('html, body').animate({
                     scrollTop: dist

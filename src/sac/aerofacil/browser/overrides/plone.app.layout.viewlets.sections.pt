@@ -7,7 +7,7 @@
           tal:attributes="class string:menu-nivel-${repeat/tab/number}">
         <a tal:attributes="href tab/url;
                            title tab/description|tab/name|nothing;
-                           rel tab/id">
+                           data-rel tab/id">
           <span tal:attributes="class string:ico-${tab/id}" />
           <span tal:replace="tab/name">Tab Name</span>
         </a>
