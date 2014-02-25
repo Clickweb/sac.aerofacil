@@ -80,7 +80,8 @@
         <a href="http://issuu.com/manunodari/docs/guiapassageiro" target="_blank" class="lk-seta amarelo lk-issu">Visualizar</a>
       </div>
 
-      <div class="depoimentos">
+      <div class="depoimentos"
+          tal:condition="depoimentos">
         depoimentos
         <span class="titulo verde">De brasileiro para brasileiro</span>
         <tal:block repeat="depoimento depoimentos">
