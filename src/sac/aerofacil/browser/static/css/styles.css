@@ -99,7 +99,7 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
   }
   .menu span {width: 13px; height: 17px; display: inline-block; vertical-align: top; margin: 3px 0 0 4px;}
     .menu .ico-aplicativos-e-ferramentas {background: url(../images/mn-aplicativos.png) no-repeat 0 0;}
-    .menu .ico-guia-do-passageiro {background: url(../images/mn-guia.png) no-repeat 0 0;}
+    .menu .ico-guia-do-passageiro {background: url(../images/mn-guia.png) no-repeat 3px 0;}
     .menu .ico-aeroportos-brasileiros {background: url(../images/mn-aeroportos.png) no-repeat 0 0;}
     .menu .ico-noticias {background: url(../images/mn-noticias.png) no-repeat 0 0;}
     .menu .ico-informacoes {background: url(../images/mn-noticias.png) no-repeat 0 0;}
@@ -501,13 +501,6 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 .share-aplicativos-e-ferramentas .centraliza {width: 915px;}
 .share-aplicativos-e-ferramentas .addthis_toolbox {margin: 20px 0 0 0;}
 .section-aplicativos-e-ferramentas .rodape {background: #353535;}
-
-.conteudo-aeroportos-brasileiros .miolo {
-  float: left;
-  width: 655px;
-  padding: 80px 0 0 155px;
-  position: relative;
-}
 
 .mostra-app {
   float: left;
@@ -1015,7 +1008,7 @@ th, td {font-weight: normal; text-align: left}
 }
   .lk-issu {
     position: absolute;
-    bottom: 18px;
+    bottom: 15px;
     left: 125px;
   }
 .download-ebook {
