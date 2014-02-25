@@ -10,26 +10,30 @@
       tal:define="depoimentos view/depoimentos">
 
     <div class="overlay"></div>
-    <div class="float">
+    <div class="float"
+        tal:define="arrows python:len(depoimentos) > 12">
       <a href="#" class="fechar-float">Fechar (x)</a>
       <div id="video"></div>
       <div class="miniaturas-float">
         <h2>De brasileiro para brasileiro.</h2>
-        <a href="#" class="prev">Anterior</a>
+        <a href="#" class="prev"
+            tal:condition="arrows">Anterior</a>
         <div class="lista-miniaturas-float">
           <ul>
-            <li tal:repeat="groups view/thumbs">
-              <tal:block tal:repeat="group groups">
+            <li tal:repeat="group view/thumbs">
+              <tal:block tal:repeat="brain group">
               <a href="#"
-                  tal:define="d python:groups[group]"
-                  tal:attributes="data-id-video python:d['video_id']">
-                <img tal:replace="structure python:d['thumb']" />
+                  tal:define="metadata python:group[brain]"
+                  tal:attributes="data-id-video python:metadata['video_id'];
+                                  title brain/Title">
+                <img tal:replace="structure python:metadata['thumb']" />
               </a>
               </tal:block>
             </li>
           </ul>
         </div>
-        <a href="#" class="next">Proxima</a>
+        <a href="#" class="next"
+            tal:condition="arrows">Proxima</a>
       </div>
     </div>
 

@@ -268,15 +268,19 @@
                 return false;
             });
 
-            $(".lista-miniaturas-float").jCarouselLite({
-                btnNext: ".next",
-                btnPrev: ".prev",
-                visible: 4,
-                speed: 800,
-                vertical: true
-            });
+            var miniaturas = $(".lista-miniaturas-float");
 
-            $('.miniaturas-float li a').click(function() {
+            if ($('li', miniaturas).length > 4) {
+                miniaturas.jCarouselLite({
+                    btnNext: ".next",
+                    btnPrev: ".prev",
+                    visible: 4,
+                    speed: 800,
+                    vertical: true
+                });
+            }
+
+            $('a', miniaturas).click(function() {
                 var dataid = $(this).attr('data-id-video');
                 trocaVideo(dataid);
                 return false;
