@@ -74,7 +74,7 @@ class GuiaDoPassageiro(grok.View):
         for b in brains:
             video_obj = b.getObject()
             depoimentos[b] = {'video_id': video_obj.url.split('v=')[1].split('&')[0],
-                              'thumb': video_obj.tag(scale='tile', css_class='')}
+                              'thumb': video_obj.tag(scale='tile', css_class='', alt=b.Title)}
         return depoimentos
 
     @memoize

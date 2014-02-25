@@ -13,7 +13,7 @@
           tal:attributes="href destaque/getURL">Saiba mais</a>
       <div tal:replace="nothing">
         <img tal:attributes="src string:${destaque/getURL}/image/image_view_fullscreen;
-                            alt destaque/Title" />
+                             alt destaque/Title" />
       </div>
     </div>
   </div>
