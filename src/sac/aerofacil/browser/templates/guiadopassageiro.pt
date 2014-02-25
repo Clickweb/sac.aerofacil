@@ -18,12 +18,14 @@
         <a href="#" class="prev">Anterior</a>
         <div class="lista-miniaturas-float">
           <ul>
-            <li tal:repeat="depoimento depoimentos">
+            <li tal:repeat="groups view/thumbs">
+              <tal:block tal:repeat="group groups">
               <a href="#"
-                  tal:define="d python:depoimentos[depoimento]"
+                  tal:define="d python:groups[group]"
                   tal:attributes="data-id-video python:d['video_id']">
                 <img tal:replace="structure python:d['thumb']" />
               </a>
+              </tal:block>
             </li>
           </ul>
         </div>

@@ -74,5 +74,19 @@ class GuiaDoPassageiro(grok.View):
         for b in brains:
             video_obj = b.getObject()
             depoimentos[b] = {'video_id': video_obj.url.split('v=')[1].split('&')[0],
-                              'thumb': video_obj.tag(scale='thumb')}
+                              'thumb': video_obj.tag(scale='tile', css_class='')}
         return depoimentos
+
+    @memoize
+    def thumbs(self):
+        """ Reagrupa um dicionário em uma lista de dicionários de 3 elementos.
+        """
+        thumbs = []
+        depoimentos = self.depoimentos().copy()
+        while depoimentos:
+            group = OrderedDict()
+            for i, brain in enumerate(depoimentos):
+                if i < 3:
+                    group[brain] = depoimentos.pop(brain)
+            thumbs.append(group)
+        return thumbs
