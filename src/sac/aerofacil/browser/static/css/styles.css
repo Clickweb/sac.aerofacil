@@ -1498,6 +1498,10 @@ body.section-guia-do-passageiro:not(.template-guiadopassageiro) #content,
   margin: 15px 0 -80px;
 }
 
+.section-guia-do-passageiro div.overlay {
+  margin: 0;
+}
+
 .portaltype-collection .miolo .verde {
   background: none;
   padding: 0.5em 0 0.25em;

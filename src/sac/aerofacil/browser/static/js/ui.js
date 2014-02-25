@@ -260,7 +260,9 @@
                 return false;
             });
 
-            $('.overlay, .fechar-float').click(function() {
+            $('.section-guia-do-passageiro').prepend($('.overlay, .float'));
+
+            $('.section-guia-do-passageiro .overlay, .fechar-float').click(function() {
                 $('.overlay').hide();
                 $('.float').css('left', '-100%');
                 $("#video").remove();
