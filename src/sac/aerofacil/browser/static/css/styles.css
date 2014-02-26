@@ -585,9 +585,9 @@ h2 {font-size: 30px; color: #007739; line-height: 34px; letter-spacing: -1px; fo
 
   .mostra-app { margin: 0; padding: 0 10px; width: auto; }
 
-  .app-infraero-voos-online { background: url(../images/mobile/home-aplicativos-voos.jpg) no-repeat top right; }
-  .app-viajantes { background: url(../images/mobile/home-aplicativos-viajantes.jpg) no-repeat top right; }
-  .app-onde-tem-taxi-aqui { background: url(../images/mobile/home-aplicativos-taxi.jpg) no-repeat top right; }
+  .section-aplicativos-e-ferramentas .app-infraero-voos-online { background: url(../images/mobile/home-aplicativos-voos.jpg) no-repeat top right; }
+  .section-aplicativos-e-ferramentas .app-viajantes { background: url(../images/mobile/home-aplicativos-viajantes.jpg) no-repeat top right; }
+  .section-aplicativos-e-ferramentas .app-onde-tem-taxi-aqui { background: url(../images/mobile/home-aplicativos-taxi.jpg) no-repeat top right; }
 
   .down-app a { display: block; }
   .mostra-app h2 { font-size: 16px; line-height: 28px; padding: 25px 0 15px; }
@@ -1433,6 +1433,10 @@ a.managePortletsFallback {
 #content .col-download-ebook a:link,
 #content .float a:link {
   border: 0;
+}
+
+#content .item-aero a:link {
+  color: #007739;
 }
 
 .download-ebook,
