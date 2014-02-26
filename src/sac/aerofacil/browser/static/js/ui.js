@@ -127,9 +127,15 @@
             });
 
             $('.select-aeroporto').change(function() {
-                var new_url = portal_url + '/aeroportos-brasileiros/' + $(this).val();
+                var val = $(this).val();
+                if (val === "") {
+                    return false;
+                }
+                var new_url = portal_url + '/aeroportos-brasileiros/' + val;
+                var new_title = document.title.split(" — ");
+                new_title[0] = $(':selected', this).text();
+                new_title = new_title.join(" — ");
                 $('#aeroporto').load(new_url + ' #aeroporto', function(html) {
-                    var new_title = $(html)[14].text || document.title;
                     var new_html = $("#aeroporto", html).html();
                     var new_options = $(".select-aeroporto", $(html)).children();
                     document.title = new_title;
@@ -196,8 +202,10 @@
                 var noticia = $(this).attr('href').split('/');
                 noticia = noticia[noticia.length - 1];
                 var new_url = portal_url + '/noticias/' + noticia;
+                var new_title = document.title.split(" — ");
+                new_title[0] = $(this).text();
+                new_title = new_title.join(" — ");
                 $('#miolo-noticias').load(new_url + ' #content', function(html) {
-                    var new_title = $(html)[14].text || document.title;
                     var new_html = $("#miolo-noticias", html).html();
                     document.title = new_title;
                     window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);

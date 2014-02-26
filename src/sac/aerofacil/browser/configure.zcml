@@ -57,6 +57,24 @@
         />
 
     <browser:viewlet
+        name="plone.htmlhead.title"
+        for="Products.ATContentTypes.interface.IATNewsItem"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".viewlets.TitleViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        for="..content.aeroporto.IAeroporto"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".viewlets.TitleViewlet"
+        layer="..interfaces.ISACAerofacilLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
         name="sac.aerofacil.apps_aplicativo"
         for="..content.aplicativo.IAplicativo"
         view="plone.app.layout.globals.interfaces.IViewView"

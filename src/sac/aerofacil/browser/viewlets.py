@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
+import cgi
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.navigation.root import getNavigationRootObject
 from plone.memoize.view import memoize
+from quintagroup.seoptimizer.browser.viewlets import TitleCommentNoframeViewlet
 
 
 class DestaquesHomeViewlet(ViewletBase):
@@ -129,6 +132,21 @@ class ShareViewlet(ViewletBase):
         return context.getPhysicalPath()[len(self.portal.getPhysicalPath()):][0]
 
 
+class TitleViewlet(TitleCommentNoframeViewlet):
+
+    def std_title(self):
+        page_title = safe_unicode(self.context_state.object_title())
+        parent_title = self.context.aq_parent.Title()
+        portal_title = safe_unicode(self.portal_state.portal_title())
+        if page_title == portal_title:
+            return u"<title>%s</title>" % (escape(portal_title))
+        else:
+            return u"<title>%s &mdash; %s &mdash; %s</title>" % (
+                escape(safe_unicode(page_title)),
+                escape(safe_unicode(parent_title)),
+                escape(safe_unicode(portal_title)))
+
+
 def search_catalog(context=None,
                    portal=None,
                    portal_type='',
@@ -152,3 +170,8 @@ def search_catalog(context=None,
                      sort_order=sort_order,
                      sort_limit=sort_limit)
     return brains
+
+def escape(value):
+    """Extended escape"""
+    value = cgi.escape(value, True)
+    return value.replace("'", "&apos;")
