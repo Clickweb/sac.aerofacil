@@ -3,6 +3,14 @@
     $(document).ready(function() {
 
 
+        // GERAL
+
+        $(".menu-mobile").on("click", function() {
+            $(".menu").toggleClass("hover");
+            $(".menu-mobile").toggleClass("hover");
+        });
+
+
         // HOME
 
         var current_url = location.protocol + '//' + location.host + location.pathname;
@@ -17,11 +25,6 @@
                 return false;
             });
 
-            $(".menu-mobile").on("click", function() {
-                $(".menu").toggleClass("hover");
-                $(".menu-mobile").toggleClass("hover");
-            });
-
             $('.menu-flutuante a').on('click', function() {
                 var rel = $(this).data('rel');
                 var dist = $('.' + rel).offset().top;
@@ -31,7 +34,7 @@
                 return false;
             });
 
-            $(window).scroll(function () {
+            $(window).scroll(function() {
                 var scr = $(window).scrollTop();
                 if (scr < 400) {
                     $('.menu-flutuante').hide();
