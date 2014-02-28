@@ -1183,7 +1183,7 @@ th, td {font-weight: normal; text-align: left}
     text-align: left;
     position: relative;
   }
-  .guia-menu a:first-child { width: auto; position: relative; bottom: -156px;  background-image:url(../images/mobile/seta-branca-ativo.png)!important; }
+  .guia-menu a:first-child { width: auto; position: relative; bottom: -172px; background-image: url(../images/mobile/seta-branca-ativo.png)!important; }
   .guia-menu a.antes-de-viajar { background: #f78600 url(../images/mobile/seta-branca.png) right center no-repeat; }
   .guia-menu a.viagens-internacionais { background: #93166e url(../images/mobile/seta-branca.png) right center no-repeat; }
   .guia-menu a.durante-o-voo { background: #005428 url(../images/mobile/seta-branca.png) right center no-repeat; }
@@ -1202,31 +1202,60 @@ th, td {font-weight: normal; text-align: left}
     border-right: 0;
     border-bottom: 1px solid #efa60d;
     padding: 10px 28px 10px 40px;
-    background-image: url(../images/mobile/guia-sprite.png);
   }
+  .guia-conteudo #tabs li a:after {
+    background-image: url(../images/mobile/guia-sprite.png);
+    height: 40px;
+    margin: -25px 0 -15px -33px;
+    width: 25px;
+   }
   .guia-conteudo #tabs li:last-child a,
   .guia-conteudo #tabs li:first-child a { width: auto; }
 
-  .guia-conteudo #tabs li a.ico1 { background-position: 8px 2px; }
-  .guia-conteudo #tabs li a.ico2 { background-position: 8px -33px; }
-  .guia-conteudo #tabs li a.ico3 { background-position: 8px -68px; }
-  .guia-conteudo #tabs li a.ico4 { background-position: 8px -105px; }
-  .guia-conteudo #tabs li a.ico5 { background-position: 8px -141px; }
-  .guia-conteudo #tabs li a.ico6 { background-position: 8px -179px; }
-  .guia-conteudo #tabs li a.ico7 { background-position: 8px -216px; }
-  .guia-conteudo #tabs li a.ico8 { background-position: 8px -257px; }
-  .guia-conteudo #tabs li a.ico9 { background-position: 8px -297px; }
-  .guia-conteudo #tabs li a.ico10 { background-position: 8px -329px; }
-  .guia-conteudo #tabs li a.ico11 { background-position: 8px -374px; }
-  .guia-conteudo #tabs li a.ico12 { background-position: 8px -413px; }
-  .guia-conteudo #tabs li a.ico13 { background-position: 8px -454px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-1:after { background-position: 0 4px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-2:after { background-position: 0 -33px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-3:after { background-position: 0 -69px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-4:after { background-position: 0 -105px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-5:after { background-position: 0 -144px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-6:after { background-position: 0 -183px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-7:after { background-position: 0 -222px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-8:after { background-position: 0 -261px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-9:after { background-position: 0 -305px; margin: -30px 0 -15px -33px;}
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-10:after { background-position: 0 -338px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-11:after { background-position: 0 -378px; }
+  .guia-conteudo #tabs li a.ico-antes-de-viajar-12:after { background-position: 0 -418px; }
+  .guia-conteudo #tabs li a.ico-durante-o-voo-1:after { background-position: 35px 4px; }
+  .guia-conteudo #tabs li a.ico-durante-o-voo-2:after { background-position: 35px -33px; }
+  .guia-conteudo #tabs li a.ico-no-desembarque-1:after { background-position: 65px 4px; }
+  .guia-conteudo #tabs li a.ico-no-desembarque-2:after { background-position: 65px -33px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-1:after { background-position: 95px 4px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-2:after { background-position: 95px -33px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-3:after { background-position: -178px -69px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-4:after { background-position: -277px -105px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-5:after { background-position: -372px -144px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-6:after { background-position: -474px -183px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-7:after { background-position: -568px -222px; }
+  .guia-conteudo #tabs li a.ico-viagens-internacionais-8:after { background-position: -668px -261px; }
 
   .guia-conteudo #tabs.hover li { display: block; }
   .guia-conteudo #tabs li { display: none; }
   .guia-conteudo #tabs li.current { display: block; position: relative; }
 
-  .guia-conteudo #tabs li.current a:after { content:''; display: block; width: 25px; height: 17px; background-image: url(../images/mobile/seta-branca-voltar.png); background-position: right center; background-repeat: no-repeat; position: absolute; top: 7px; right: 0; }
-  .guia-conteudo #tabs.hover li.current a:after { background-image: none; }
+  .guia-conteudo #tabs li.current:after {
+    background-image: url(../images/mobile/seta-branca-voltar.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    content:'';
+    display: block;
+    height: 17px;
+    margin-left: -25px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 25px;
+  }
+
+  .guia-conteudo #tabs.hover li.current:after { background-image: none; }
 
   #tabs-content .tabs-content-scroll { height: auto !important; padding: 10px !important; }
 
@@ -1263,9 +1292,9 @@ th, td {font-weight: normal; text-align: left}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
-  .guia-conteudo #tabs li a { background-image: url(../images/mobile/guia-sprite@2x.png); background-size: 25px 488px ; }
+  .guia-conteudo #tabs li a:after { background-image: url(../images/mobile/guia-sprite@2x.png); background-size: 25px 488px; }
 
-  .guia-menu a:first-child { background-image:url(../images/mobile/seta-branca-ativo@2x.png)!important; background-size: 25px 17px; }
+  .guia-menu a:first-child { background-image: url(../images/mobile/seta-branca-ativo@2x.png)!important; background-size: 25px 17px; }
   .guia-menu a.antes-de-viajar { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
   .guia-menu a.viagens-internacionais { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
   .guia-menu a.durante-o-voo { background-image: url(../images/mobile/seta-branca@2x.png); background-size: 25px 17px; }
@@ -1365,7 +1394,7 @@ th, td {font-weight: normal; text-align: left}
 @media only screen and (max-width: 767px) {
 
     .conteudo-noticias { background-image: none; max-height: inherit; }
-    .conteudo-noticias .miolo { width: auto; padding: 0 10px; max-height: none; }
+    .conteudo-noticias > div > .miolo { width: auto; padding: 0 10px; max-height: none; }
     #miolo-noticias { max-height: none; }
     .conteudo-noticias .miolo h2 { background-position: 0 0; }
     .conteudo-noticias .miolo p { padding: 0 10px 20px 20px; }
@@ -1494,7 +1523,8 @@ body.section-guia-do-passageiro:not(.template-guiadopassageiro) #content,
 
 .section-guia-do-passageiro #edit-bar,
 .section-guia-do-passageiro .portalMessage {
-  margin: 0 1.5em;
+  margin: 0 auto;
+  width: 1163px;
 }
 
 .guia-conteudo #tabs li a.ico-viagens-internacionais-6:after {
