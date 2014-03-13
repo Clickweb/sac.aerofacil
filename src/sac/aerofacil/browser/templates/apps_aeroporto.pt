@@ -4,7 +4,7 @@
   <div class="slides">
     <tal:block repeat="app apps">
     <div tal:attributes="class string:box-apps-aero box-app-${app/id};
-                         id string:app-{repeat/app/number}">
+                         id string:app-${repeat/app/number}">
       <h3>Aplicativo <span tal:content="app/Title">Onde tem táxi aqui</span></h3>
       <p tal:content="app/Description">Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
       <a class="lk-seta verde"

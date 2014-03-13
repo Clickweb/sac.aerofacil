@@ -28,7 +28,7 @@
                 <div class="item-aero item-restaurante"
                     tal:condition="context/restaurantes">
                     <a href="#">
-                        <strong>Restaurantes</strong><br>      
+                        <strong>Restaurantes</strong><br>
                     </a>
                     <span tal:content="structure context/restaurantes/output" />
                 </div>
@@ -36,7 +36,7 @@
                 <div class="item-aero item-lojas"
                     tal:condition="context/lojas">
                     <a href="#">
-                        <strong>Lojas</strong><br>      
+                        <strong>Lojas</strong><br>
                     </a>
                     <span tal:content="structure context/lojas/output" />
                 </div>
@@ -44,7 +44,7 @@
                 <div class="item-aero item-localizacao"
                     tal:condition="context/localizacao">
                     <a href="#">
-                        <strong>Localização</strong><br>      
+                        <strong>Localização</strong><br>
                     </a>
                     <span tal:content="structure context/localizacao" />
                 </div>
@@ -52,7 +52,7 @@
                 <div class="item-aero item-estacionamento"
                     tal:condition="context/estacionamento">
                     <a href="#">
-                        <strong>Estacionamento</strong><br>      
+                        <strong>Estacionamento</strong><br>
                     </a>
                     <span tal:content="structure context/estacionamento/output" />
                 </div>
