@@ -135,13 +135,13 @@
                     return false;
                 }
                 var new_url = portal_url + '/aeroportos-brasileiros/' + val;
-                var new_title = document.title.split(" — ");
+                var new_title = document.title.split(" | ");
                 new_title[0] = $(':selected', this).text();
-                new_title = new_title.join(" — ");
+                new_title = new_title.join(" | ");
                 $('#aeroporto').load(new_url + ' #aeroporto', function(html) {
                     var new_html = $("#aeroporto", html).html();
                     var new_options = $(".select-aeroporto", $(html)).children();
-                    document.title = new_title;
+                    document.title = new_title + " | Aeroportos brasileiros | Aerofácil";
                     window.history.pushState({"html": new_html, "pageTitle": new_title}, '', new_url);
                     $(".select-aeroporto").fadeOut("fast", function() {
                         $(this).html(new_options).fadeIn("fast");
