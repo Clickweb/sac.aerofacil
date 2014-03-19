@@ -3,6 +3,12 @@
       tal:condition="apps">
     <tal:block repeat="app apps">
     <li tal:attributes="class string:app-${app/id}">
+      <img tal:define="app app/getObject;
+                       image nocall:app/image;"
+          tal:attributes="src string:${app/absolute_url}/@@download/image/${image/filename};
+                       alt app/Title;
+                       width image/_width|nothing;
+                       height image/_height|nothing" />
       <h3>Aplicativo <span tal:content="app/Title">Onde tem táxi aqui</span></h3>
       <p tal:content="app/Description">Com esse APP você pode achar pontos de táxi mais próximos nas principais cidades brasileiras e deixar o carro em casa pra se divertir sem se preocupar!</p>
       <a class="lk-seta verde"

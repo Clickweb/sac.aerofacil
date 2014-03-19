@@ -7,7 +7,10 @@
 <metal:main fill-slot="main">
     <tal:main-macro metal:define-macro="main">
 
-        <div tal:attributes="class string:mostra-app app-${context/id}">
+        <div tal:define="image nocall:context/image;
+                         image_url string:${context/absolute_url}/@@download/image/${image/filename}"
+            tal:attributes="class string:mostra-app app-${context/id};
+                            style string:background-image: url(${image_url})">
 
             <div tal:replace="structure provider:plone.abovecontenttitle" />
 
@@ -22,7 +25,7 @@
             <div tal:replace="structure context/body/output" />
 
             <div class="down-app">
-                Baixar:<br>      
+                Baixar:<br>
                 <a class="lk-seta-left verde" target="_blank"
                     tal:condition="context/android"
                     tal:attributes="href context/android">Android</a>

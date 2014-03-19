@@ -12,6 +12,10 @@
       <description>Descri&#231;&#227;o detalhada do aplicativo.</description>
       <title>Corpo de texto</title>
     </field>
+    <field name="image" type="plone.namedfile.field.NamedBlobImage">
+      <description>Imagem ilustrativa do aplicativo</description>
+      <title>Imagem</title>
+    </field>
     <field name="android" type="zope.schema.TextLine">
       <description>URL para download</description>
       <required>False</required>
