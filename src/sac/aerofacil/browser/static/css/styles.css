@@ -1715,6 +1715,10 @@ body.section-guia-do-passageiro:not(.template-guiadopassageiro) #content,
   margin-bottom: 0.5em;
 }
 
+strong, b {
+  font-family: 'gothambold';
+}
+
 @media only screen and (max-width: 767px) {
 
   .template-default_error_message .conteudo {
