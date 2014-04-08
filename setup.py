@@ -38,6 +38,7 @@ setup(
     install_requires=[
         'Pillow',
         'Plone',
+        'archetypes.schemaextender',
         'five.grok',
         'five.pt',
         'plone.api',

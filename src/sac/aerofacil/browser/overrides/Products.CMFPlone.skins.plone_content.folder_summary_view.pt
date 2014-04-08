@@ -97,16 +97,16 @@
                     </div>
 
                     <p class="tileBody" tal:condition="item_description">
-                        <span class="description" tal:content="item_description">
+                        <span class="description" tal:content="structure item_description">
                             description
                         </span>
                     </p>
 
                     <p class="tileFooter">
                         <a href=""
-                           tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);"> 
-                           <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span> 
-                           <span i18n:translate="read_more">Read More&hellip;</span> 
+                           tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);">
+                           <span class="hiddenStructure"><span tal:replace="item_title_or_id" /> - </span>
+                           <span i18n:translate="read_more">Read More&hellip;</span>
                         </a>
                     </p>
 

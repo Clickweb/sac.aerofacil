@@ -1,20 +1,16 @@
 <div class="faixa destaques"
-    tal:define="destaques view/destaques"
-    tal:condition="destaques">
+    tal:define="destaque view/destaque"
+    tal:condition="destaque">
   <div class="centraliza">
-    <div class="miolo" tal:repeat="destaque destaques">
+    <div class="miolo">
       <span class="label-destaques">Destaques</span>
       <h2 tal:content="destaque/pretty_title_or_id">Novos Modelos <span class="amarelo">de Integração de Meios de Transportes.</span></h2>
-      <p tal:content="destaque/Description">
+      <p tal:content="structure destaque/Description">
         O aeromóvel é um meio de transporte urbano automatizado em via elevada de concepção inteiramente brasileira e que utiliza um singular sistema de propulsão pneumática, inventado por Oskar Coester.<br>
         <strong>Em Porto Alegre o projeto contou com investimento de R$ 37,8 milhões – 1 km - Concluído em Agosto de 2013 – Ligação entre a estação de Trem até o Aeroporto</strong>
       </p>
       <a class="lk-seta-grande amarelo"
           tal:attributes="href destaque/getURL">Saiba mais</a>
-      <div tal:replace="nothing">
-        <img tal:attributes="src string:${destaque/getURL}/image/image_view_fullscreen;
-                             alt destaque/Title" />
-      </div>
     </div>
   </div>
 </div>

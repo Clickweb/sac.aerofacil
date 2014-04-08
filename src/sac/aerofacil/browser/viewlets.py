@@ -14,7 +14,7 @@ class DestaquesHomeViewlet(ViewletBase):
     render = ViewPageTemplateFile('templates/destaques_home.pt')
 
     @memoize
-    def destaques(self):
+    def destaque(self):
         context = aq_inner(self.context)
         portal = self.portal_state.portal()
         path = tuple()
@@ -27,7 +27,7 @@ class DestaquesHomeViewlet(ViewletBase):
                          sort_on='Date',
                          sort_order='reverse',
                          sort_limit=1)[:1]
-        return brains
+        return brains[0] if len(brains) else None
 
 
 class NoticiasHomeViewlet(ViewletBase):
