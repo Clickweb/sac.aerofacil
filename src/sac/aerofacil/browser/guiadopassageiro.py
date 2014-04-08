@@ -7,7 +7,6 @@ from Products.CMFCore.utils import getToolByName
 from Products.ATContentTypes.interface import IATFolder
 from plone.app.layout.navigation.root import getNavigationRootObject
 from plone.memoize.view import memoize
-from sac.aerofacil import MessageFactory as _
 
 grok.templatedir('templates')
 
@@ -31,11 +30,11 @@ class GuiaDoPassageiro(grok.View):
             return None
         catalog = getToolByName(context, 'portal_catalog')
         brains = catalog(portal_type='Folder',
-                            review_state='published',
-                            path={'query': '/'.join(path),
-                                  'depth': 1},
-                            sort_on='getObjPositionInParent',
-                            sort_limit=4)[:4]
+                         review_state='published',
+                         path={'query': '/'.join(path),
+                               'depth': 1},
+                         sort_on='getObjPositionInParent',
+                         sort_limit=4)[:4]
         brains = deque(brains)
         ids = [brain.id for brain in brains]
         steps = -ids.index(context.id)
@@ -74,7 +73,10 @@ class GuiaDoPassageiro(grok.View):
         for b in brains:
             video_obj = b.getObject()
             depoimentos[b] = {'video_id': video_obj.url.split('v=')[1].split('&')[0],
-                              'thumb': video_obj.tag(scale='tile', css_class='', alt=b.Title)}
+                              'thumb': video_obj.tag(scale='tile',
+                                                     css_class=None,
+                                                     title=None,
+                                                     alt=b.Title)}
         return depoimentos
 
     @memoize
