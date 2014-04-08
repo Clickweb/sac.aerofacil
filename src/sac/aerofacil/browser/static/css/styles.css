@@ -1696,10 +1696,41 @@ body.section-guia-do-passageiro:not(.template-guiadopassageiro) #content,
 
 .template-default_error_message .conteudo {
   background: url(../images/bg-aero.jpg) no-repeat top center #fcfef1;
-  padding: 4em 20em 0 7em;
-  width: auto;
+  min-height: 820px;
 }
 
+.template-default_error_message .conteudo-guia-do-passageiro > div[class=''] {
+  margin: 0 auto;
+  width: 1050px;
+}
+
+.template-default_error_message #content {
+  float: left;
+  padding: 50px 0 0 75px;
+  margin: 0;
+  width: 650px;
+}
+
+.template-default_error_message .documentFirstHeading {
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .template-default_error_message .conteudo {
+    min-height: 0;
+  }
+
+  .template-default_error_message .conteudo-guia-do-passageiro > div[class=''] {
+    width: auto;
+  }
+
+  .template-default_error_message #content {
+    padding: 0 10px;
+    width: auto;
+  }
+
+}
 
 /* OPERA */
 
