@@ -46,6 +46,7 @@
         permission="zope2.View"
         />
 
+    <!-- Reativar para exibir notícias internas do site no carrossel da página inicial
     <browser:viewlet
         name="sac.aerofacil.outras_noticias"
         for="Products.ATContentTypes.interface.IATNewsItem"
@@ -55,6 +56,7 @@
         layer="..interfaces.ISACAerofacilLayer"
         permission="zope2.View"
         />
+    -->
 
     <browser:viewlet
         name="plone.htmlhead.title"

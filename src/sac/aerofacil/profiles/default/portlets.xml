@@ -10,4 +10,13 @@
  <assignment name="events" category="context" key="/"
     manager="plone.rightcolumn" type="portlets.Events" visible="False"  remove="True" />
 
+ <assignment name="rss-noticias-da-sac" category="context" key="/"
+    manager="plone.rightcolumn" type="portlets.rss" visible="True">
+  <property name="count">5</property>
+  <property
+     name="url">http://www.aviacaocivil.gov.br/noticias/ultimas-noticias/RSS</property>
+  <property name="portlet_title">Notícias da SAC</property>
+  <property name="timeout">100</property>
+ </assignment>
+
 </portlets>

@@ -36,8 +36,8 @@
         </div>
       </div>
   </replace>
-  <before css:content-children="#portal-column-one" css:theme-children=".conteudo" />
-  <after css:content-children="#portal-column-two" css:theme-children=".conteudo" />
+  <before css:content-children="#portal-column-one" css:theme-children=".conteudo" css:if-content=".template-manage-portlets" />
+  <after css:content-children="#portal-column-two" css:theme-children=".conteudo" css:if-content=".template-manage-portlets" />
   <before css:content="div[class*=share], .outras-noticias" css:theme="#rodape"
       css:if-not-content=".share-guia-do-passageiro" />
   <after css:content="#portal-footer-wrapper script" css:theme="#rodape" />
@@ -51,7 +51,7 @@
       css:if-content="" />
   <replace css:content=".select-aeroporto-home" css:theme=".select-aeroporto-home"
       css:if-content="" />
-  <replace css:content=".noticias" css:theme-children=".noticias"
+  <replace css:content=".portletRss .noticias" css:theme-children=".noticias"
      css:if-content="" />
   <!-- TODO: Links absolutos na home para subseções do Guia do Passageiro -->
   <!-- <xsl:template match="//div[contains(@class, 'guia-do-passageiro')]/div/div/p/a">
