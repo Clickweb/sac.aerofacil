@@ -18,7 +18,6 @@
   </order>
   <order manager="plone.portalfooter" skinname="Sunburst Theme">
     <viewlet name="sac.aerofacil.share" insert-before="*" />
-    <viewlet name="sac.aerofacil.outras_noticias" insert-after="sac.aerofacil.share" />
   </order>
   <hidden manager="plone.portalheader" skinname="Sunburst Theme">
     <viewlet name="plone.searchbox" />

@@ -19,14 +19,35 @@
     <grok:grok package="." />
 
     <!-- Register the installation GenericSetup extension profile -->
-    <!-- TODO: this could be simplified to just one line:
-    <genericsetup:registerDefaultProfile /> -->
     <genericsetup:registerProfile
         name="default"
         title="Aerofácil"
         directory="profiles/default"
         description="Perfil de instalação do hotsite Aerofácil (SAC/PR)"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
+
+    <!-- Register upgrade step GenericSetup extension profile -->
+    <genericsetup:registerProfile
+        name="upgrade_to_1001"
+        title="Aerofácil - Atualização"
+        directory="profiles/upgrade_to_1001"
+        description="Perfil de atualização do hotsite Aerofácil (SAC/PR)"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <!-- Register upgrade step to import RSS from Secretaria de Aviação Civil website -->
+    <genericsetup:upgradeSteps
+        source="1000"
+        destination="1001"
+        profile="sac.aerofacil:default">
+        <genericsetup:upgradeStep
+            title="Replace news source for home carousel"
+            description="News should come from an external source fetched by a RSS portlet and not by an internal collection anymore"
+            handler=".upgrades.fix_news_carousel_source"
+            />
+    </genericsetup:upgradeSteps>
 
 </configure>
